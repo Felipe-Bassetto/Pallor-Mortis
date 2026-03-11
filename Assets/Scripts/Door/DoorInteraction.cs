@@ -7,22 +7,32 @@ public class DoorInteraction : MonoBehaviour
     private Camera cameraPrincipal;
     public bool trancada;
     public GameObject doorPivot;
+    private Quaternion rotacaoPortaAberta = Quaternion.Euler(0, 90, 0);
+    private Quaternion rotacaoPortaFechada = Quaternion.Euler(0, 0, 0);
+    public float velocidadeRotacao = 1f;
+    LayerMask layerMask;
+
+    private bool aberta = false;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
         cameraPrincipal = Camera.main;
+        layerMask = LayerMask.GetMask("Door");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;    
+        if (Input.GetMouseButtonUp(0))
         {
-            Vector2 mousePos = cameraPrincipal.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D hit = Physics2D.OverlapPoint(mousePos);
-            if (hit != null && hit.gameObject == gameObject)
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
+                Debug.Log(hit);
                 if(trancada)
                 {
                     Debug.Log("Trancada, fala da personagem, pop up");
@@ -30,12 +40,13 @@ public class DoorInteraction : MonoBehaviour
                 else
                 {
                     Debug.Log("Abre");
+                    if(aberta)aberta = false;
+                    else aberta = true;
                 }
-            }
-            
+            }            
         }
-        
-        
 
+        if(aberta)doorPivot.transform.rotation = Quaternion.RotateTowards(doorPivot.transform.rotation,rotacaoPortaAberta,velocidadeRotacao * Time.unscaledDeltaTime);
+        else doorPivot.transform.rotation = Quaternion.RotateTowards(doorPivot.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
     }
 }
