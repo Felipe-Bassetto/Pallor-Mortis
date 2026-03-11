@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class DoorInteraction : MonoBehaviour
 {
+
+    [Header("Camera")]
     private Camera cameraPrincipal;
+
+    [Header("Porta")]
     public bool trancada;
     public GameObject doorPivot;
     private Quaternion rotacaoPortaAberta = Quaternion.Euler(0, 90, 0);
     private Quaternion rotacaoPortaFechada = Quaternion.Euler(0, 0, 0);
     public float velocidadeRotacao = 1f;
     LayerMask layerMask;
-
     private bool aberta = false;
-
-    
+    public int doorNum;
+    private string pivotName;
 
     // Start is called before the first frame update
     void Start()
     {
         cameraPrincipal = Camera.main;
         layerMask = LayerMask.GetMask("Door");
+        Debug.Log(doorPivot.name);
     }
 
     // Update is called once per frame
@@ -32,6 +36,8 @@ public class DoorInteraction : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
+                pivotName = hit.collider.gameObject.name;
+                Debug.Log(pivotName);
                 Debug.Log(hit);
                 if(trancada)
                 {
@@ -46,7 +52,7 @@ public class DoorInteraction : MonoBehaviour
             }            
         }
 
-        if(aberta)doorPivot.transform.rotation = Quaternion.RotateTowards(doorPivot.transform.rotation,rotacaoPortaAberta,velocidadeRotacao * Time.unscaledDeltaTime);
-        else doorPivot.transform.rotation = Quaternion.RotateTowards(doorPivot.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
+        if(aberta & (pivotName == gameObject.name))doorPivot.transform.rotation = Quaternion.RotateTowards(doorPivot.transform.rotation,rotacaoPortaAberta,velocidadeRotacao * Time.unscaledDeltaTime);
+        else if(!aberta & (pivotName == gameObject.name))doorPivot.transform.rotation = Quaternion.RotateTowards(doorPivot.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
     }
 }
