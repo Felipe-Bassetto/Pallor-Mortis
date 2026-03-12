@@ -17,10 +17,11 @@ public class ItensController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*If(Input.GetKeyDown(KeyCode.Q))
+        bool drop = Input.GetKeyDown(KeyCode.Q);
+        if(drop)
         {
             dropItem();
-        }*/
+        }
     }
 
     public void addItem(GameObject item)
