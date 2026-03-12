@@ -24,7 +24,6 @@ public class DoorInteraction : MonoBehaviour
     {
         cameraPrincipal = Camera.main;
         layerMask = LayerMask.GetMask("Door");
-        Debug.Log(doorPivot.name);
     }
 
     // Update is called once per frame
@@ -37,8 +36,6 @@ public class DoorInteraction : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
                 pivotName = hit.collider.gameObject.name;
-                Debug.Log(pivotName);
-                Debug.Log(hit);
                 if(trancada)
                 {
                     Debug.Log("Trancada, fala da personagem, pop up");
