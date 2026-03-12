@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 647805719}
   - component: {fileID: 647805718}
   - component: {fileID: 647805717}
+  - component: {fileID: 647805722}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -499,6 +500,18 @@ Transform:
   - {fileID: 366977003}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647805722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647805716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d35d58ab272cbd4c9be7fca38b4fe0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &892182826
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +785,8 @@ GameObject:
   - component: {fileID: 1736844357}
   - component: {fileID: 1736844356}
   - component: {fileID: 1736844355}
-  m_Layer: 0
+  - component: {fileID: 1736844359}
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,6 +879,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736844359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736844354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9e4547cc64ffb4393a76fae236eaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  it: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
