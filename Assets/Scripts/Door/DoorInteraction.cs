@@ -16,7 +16,6 @@ public class DoorInteraction : MonoBehaviour
     public float velocidadeRotacao = 1f;
     LayerMask layerMask;
     private bool aberta = false;
-    public int doorNum;
     private string pivotName;
 
     // Start is called before the first frame update
