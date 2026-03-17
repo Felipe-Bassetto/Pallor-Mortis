@@ -27,13 +27,14 @@ public class ItensController : MonoBehaviour
     public int addItem(GameObject item)
     {
         int qtdArr = arrItens.Count;
+        Debug.Log(qtdArr);
         if(qtdArr < 2)
         {
             arrItens.Add(item);
             test = item;
             return qtdArr;
         }
-        return 0;
+        return -1;
     }
 
     public void dropItem()
