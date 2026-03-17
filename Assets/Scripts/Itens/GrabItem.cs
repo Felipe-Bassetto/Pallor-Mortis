@@ -32,7 +32,7 @@ public class GrabItem : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
                 int maoAdicionada = it.addItem(gameObject);
-                if(maoAdicionada != -1)
+                if(maoAdicionada != -1) // Verifica se foi adicionado e coloca na mão caso sim
                 {
                     gameObject.transform.SetParent(it.gameObject.transform);
                     gameObject.transform.position = it.gameObject.transform.Find("LeftHand").transform.position;

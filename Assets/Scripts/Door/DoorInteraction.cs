@@ -18,9 +18,9 @@ public class DoorInteraction : MonoBehaviour
     private Quaternion rotacaoPortaDirAberta = Quaternion.Euler(0, 90, 0);
     private Quaternion rotacaoPortaEsqAberta = Quaternion.Euler(0, -90, 0);
     private Quaternion rotacaoPortaFechada = Quaternion.Euler(0, 0, 0);
-    LayerMask layerMask;
     private bool aberta = false;
     private string pivotName;
+    LayerMask layerMask;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class DoorInteraction : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;    
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0)) // Verificação se o player clicou na porta
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
@@ -51,18 +51,18 @@ public class DoorInteraction : MonoBehaviour
                 }
             }            
         }
-        if(aberta & (pivotName == gameObject.name))
+        if(aberta & (pivotName == gameObject.name)) // Abre a porta
         {
             doorPivotDir.transform.rotation = Quaternion.RotateTowards(doorPivotDir.transform.rotation,rotacaoPortaDirAberta,velocidadeRotacao * Time.unscaledDeltaTime);
-            if(isDouble)
+            if(isDouble) // Caso seja porta dupla, abre a segunda junto
             {
                 doorPivotEsq.transform.rotation = Quaternion.RotateTowards(doorPivotEsq.transform.rotation,rotacaoPortaEsqAberta,velocidadeRotacao * Time.unscaledDeltaTime);
             }
         }
-        else if(!aberta & (pivotName == gameObject.name))
+        else if(!aberta & (pivotName == gameObject.name)) // Fecha a porta
         {
             doorPivotDir.transform.rotation = Quaternion.RotateTowards(doorPivotDir.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
-            if(isDouble)
+            if(isDouble) // Caso seja porta dupla, fecha junto
             {
                 doorPivotEsq.transform.rotation = Quaternion.RotateTowards(doorPivotEsq.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
             }

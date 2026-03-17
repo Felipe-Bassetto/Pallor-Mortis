@@ -24,7 +24,7 @@ public class ItensController : MonoBehaviour
         }
     }
 
-    public int addItem(GameObject item)
+    public int addItem(GameObject item) // Adiciona item a mão
     {
         int qtdArr = arrItens.Count;
         Debug.Log(qtdArr);
@@ -37,7 +37,7 @@ public class ItensController : MonoBehaviour
         return -1;
     }
 
-    public void dropItem()
+    public void dropItem() // Solta o item da mão
     {
         int qtdArr = arrItens.Count;
         if(qtdArr > 0)
