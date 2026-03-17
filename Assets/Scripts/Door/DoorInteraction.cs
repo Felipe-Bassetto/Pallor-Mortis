@@ -10,11 +10,14 @@ public class DoorInteraction : MonoBehaviour
 
     [Header("Porta")]
     public bool trancada;
-    public GameObject doorPivot;
-    public bool isLeft;
-    private Quaternion rotacaoPortaAberta = Quaternion.Euler(0, 90, 0);
-    private Quaternion rotacaoPortaFechada = Quaternion.Euler(0, 0, 0);
+    public GameObject doorPivotDir;
+    public GameObject doorPivotEsq;
+    public bool isDouble;
     public float velocidadeRotacao = 1f;
+    
+    private Quaternion rotacaoPortaDirAberta = Quaternion.Euler(0, 90, 0);
+    private Quaternion rotacaoPortaEsqAberta = Quaternion.Euler(0, -90, 0);
+    private Quaternion rotacaoPortaFechada = Quaternion.Euler(0, 0, 0);
     LayerMask layerMask;
     private bool aberta = false;
     private string pivotName;
@@ -48,8 +51,22 @@ public class DoorInteraction : MonoBehaviour
                 }
             }            
         }
-
-        if(aberta & (pivotName == gameObject.name))doorPivot.transform.rotation = Quaternion.RotateTowards(doorPivot.transform.rotation,rotacaoPortaAberta,velocidadeRotacao * Time.unscaledDeltaTime);
-        else if(!aberta & (pivotName == gameObject.name))doorPivot.transform.rotation = Quaternion.RotateTowards(doorPivot.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
+        if(aberta & (pivotName == gameObject.name))
+        {
+            doorPivotDir.transform.rotation = Quaternion.RotateTowards(doorPivotDir.transform.rotation,rotacaoPortaDirAberta,velocidadeRotacao * Time.unscaledDeltaTime);
+            if(isDouble)
+            {
+                doorPivotEsq.transform.rotation = Quaternion.RotateTowards(doorPivotEsq.transform.rotation,rotacaoPortaEsqAberta,velocidadeRotacao * Time.unscaledDeltaTime);
+            }
+        }
+        else if(!aberta & (pivotName == gameObject.name))
+        {
+            doorPivotDir.transform.rotation = Quaternion.RotateTowards(doorPivotDir.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
+            if(isDouble)
+            {
+                doorPivotEsq.transform.rotation = Quaternion.RotateTowards(doorPivotEsq.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
+            }
+        }
+        
     }
 }
