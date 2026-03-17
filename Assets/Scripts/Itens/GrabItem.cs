@@ -10,8 +10,9 @@ public class GrabItem : MonoBehaviour
     [Header("Item")]
     LayerMask layerMask;
 
-    [Header("Objetos")]
-    public ItensController it;
+    [Header("Scripts")]
+    private ItensController it;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +31,13 @@ public class GrabItem : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
-                it.addItem(gameObject);
+                int maoAdicionada = it.addItem(gameObject);
+                if(maoAdicionada != 0)
+                {
+                    gameObject.transform.SetParent(it.gameObject.transform);
+                    gameObject.transform.position = it.gameObject.transform.Find("LeftHand").transform.position;
+                }
+                
             } 
         }
     }
