@@ -11,6 +11,7 @@ public class DoorInteraction : MonoBehaviour
     [Header("Porta")]
     public bool trancada;
     public GameObject doorPivot;
+    public bool isLeft;
     private Quaternion rotacaoPortaAberta = Quaternion.Euler(0, 90, 0);
     private Quaternion rotacaoPortaFechada = Quaternion.Euler(0, 0, 0);
     public float velocidadeRotacao = 1f;
