@@ -6,8 +6,7 @@ public class ItensController : MonoBehaviour
 {
     [Header("Itens")]
     public List<GameObject> arrItens = new List<GameObject>();
-
-    private GameObject test;
+    private GameObject itemActive;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +26,11 @@ public class ItensController : MonoBehaviour
     public int addItem(GameObject item) // Adiciona item a mão
     {
         int qtdArr = arrItens.Count;
-        Debug.Log(qtdArr);
+
         if(qtdArr < 2)
         {
             arrItens.Add(item);
-            test = item;
+            itemActive = item;
             return qtdArr;
         }
         return -1;
@@ -42,7 +41,8 @@ public class ItensController : MonoBehaviour
         int qtdArr = arrItens.Count;
         if(qtdArr > 0)
         {
-            arrItens.Remove(test);
+            arrItens.Remove(itemActive);
+            itemActive.transform.SetParent(null);
         }
     }
 }
