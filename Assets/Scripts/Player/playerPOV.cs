@@ -7,27 +7,32 @@ public class playerPOV : MonoBehaviour
 
     [Header("Configurações de Camera(POV)")]
     public float sens = 100f;
-    private float rotacaoX = 0f;
     public Transform corpoPlayer;
-    private bool CamLocked = true;
+    public float velocidade = 1f;
+
+    Camera cam;
+    private float rotacaoX = 0f;
+    private bool camMove = false;
+    private bool camLocked = true;
+    private Vector3 camLocation = new Vector3(0, 1, 0);
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
+        cam = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!CamLocked)
+        if(!camLocked)
         {
             CameraRotation();
         }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
+
+        if(camMove)cam.transform.position = Vector3.MoveTowards(cam.transform.position,camLocation,velocidade * Time.unscaledDeltaTime);
+        if(cam.transform.position == camLocation) CameraMovement(false);
     }
 
     void CameraRotation()
@@ -43,5 +48,16 @@ public class playerPOV : MonoBehaviour
         //* 3- Rotação de camera *//
         transform.localRotation = Quaternion.Euler(rotacaoX, 0f, 0f); 
         corpoPlayer.Rotate(Vector3.up * mouseX); 
+    }
+
+    public void CameraMovement(bool move)
+    {
+        camMove = move;
+    }
+    
+    public void CamLock(bool isLocked)
+    {
+        if(isLocked) Cursor.lockState = CursorLockMode.Locked;
+        else Cursor.lockState = CursorLockMode.None;
     }
 }
