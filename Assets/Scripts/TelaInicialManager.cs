@@ -9,6 +9,9 @@ public class TelaInicialManager : MonoBehaviour
     public GameObject btnOpcoes;
     public GameObject btnJogar;
     public GameObject btnSair;
+    public GameObject POV;
+
+    private Vector3 camLocation = new Vector3(0, 1, 0);
 
     // Start is called before the first frame update
     void Start()
@@ -36,5 +39,10 @@ public class TelaInicialManager : MonoBehaviour
         btnOpcoes.SetActive(true);
         btnJogar.SetActive(true);
         btnSair.SetActive(true);
+    }
+
+    public void Jogar()
+    {
+
     }
 }

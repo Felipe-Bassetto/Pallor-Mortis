@@ -9,6 +9,7 @@ public class playerPOV : MonoBehaviour
     public float sens = 100f;
     private float rotacaoX = 0f;
     public Transform corpoPlayer;
+    private bool CamLocked = true;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,14 @@ public class playerPOV : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CameraRotation();
+        if(!CamLocked)
+        {
+            CameraRotation();
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     void CameraRotation()
