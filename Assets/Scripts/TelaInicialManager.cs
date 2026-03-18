@@ -13,6 +13,7 @@ public class TelaInicialManager : MonoBehaviour
 
     [Header("Scripts")]
     public playerPOV POV;
+    public movement MOV;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class TelaInicialManager : MonoBehaviour
     {
         POV.CameraMovement(true);
         POV.CamLock(true);
+        MOV.PlayMovement(false);
         nameGame.SetActive(false);
         btnOpcoes.SetActive(false);
         btnJogar.SetActive(false);

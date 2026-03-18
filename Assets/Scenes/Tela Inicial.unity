@@ -3033,6 +3033,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &1693155471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1713732072066339201, guid: 7777e6f6713fc3b4cb073b4e0d015993,
+    type: 3}
+  m_PrefabInstance: {fileID: 878797544}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693155463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b53791733b6d8b47bfcc0a7a0fa1f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1803771017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,7 +3334,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3567,6 +3579,7 @@ MonoBehaviour:
   btnSair: {fileID: 964099705}
   nameGame: {fileID: 135593024}
   POV: {fileID: 1411022745}
+  MOV: {fileID: 1693155471}
 --- !u!4 &1950143405
 Transform:
   m_ObjectHideFlags: 0
