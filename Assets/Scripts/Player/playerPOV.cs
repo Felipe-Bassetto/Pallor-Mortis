@@ -9,17 +9,17 @@ public class playerPOV : MonoBehaviour
     public float sens = 100f;
     public Transform corpoPlayer;
     public float velocidade = 1f;
+    public bool camMove = false;
+    public bool camLocked = false;
 
     Camera cam;
     private float rotacaoX = 0f;
-    private bool camMove = false;
-    private bool camLocked = true;
     private Vector3 camLocation = new Vector3(0, 1, 0);
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
         cam = Camera.main;
     }
 

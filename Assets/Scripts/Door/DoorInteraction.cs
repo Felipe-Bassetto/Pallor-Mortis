@@ -53,10 +53,10 @@ public class DoorInteraction : MonoBehaviour
         }
         if(aberta & (pivotName == gameObject.name)) // Abre a porta
         {
-            doorPivotDir.transform.rotation = Quaternion.RotateTowards(doorPivotDir.transform.rotation,rotacaoPortaDirAberta,velocidadeRotacao * Time.unscaledDeltaTime);
+            doorPivotDir.transform.rotation = Quaternion.RotateTowards(doorPivotDir.transform.rotation,rotacaoPortaEsqAberta,velocidadeRotacao * Time.unscaledDeltaTime);
             if(isDouble) // Caso seja porta dupla, abre a segunda junto
             {
-                doorPivotEsq.transform.rotation = Quaternion.RotateTowards(doorPivotEsq.transform.rotation,rotacaoPortaEsqAberta,velocidadeRotacao * Time.unscaledDeltaTime);
+                doorPivotEsq.transform.rotation = Quaternion.RotateTowards(doorPivotEsq.transform.rotation,rotacaoPortaDirAberta,velocidadeRotacao * Time.unscaledDeltaTime);
             }
         }
         else if(!aberta & (pivotName == gameObject.name)) // Fecha a porta
