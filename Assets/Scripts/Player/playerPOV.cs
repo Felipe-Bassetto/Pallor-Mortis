@@ -9,8 +9,8 @@ public class playerPOV : MonoBehaviour
     public float sens = 100f;
     public Transform corpoPlayer;
     public float velocidade = 1f;
-    public bool camMove = false;
-    public bool camLocked = false;
+    public bool camMove;
+    public bool camLocked;
 
     Camera cam;
     private float rotacaoX = 0f;
@@ -19,7 +19,7 @@ public class playerPOV : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
         cam = Camera.main;
     }
 
@@ -57,7 +57,15 @@ public class playerPOV : MonoBehaviour
     
     public void CamLock(bool isLocked)
     {
-        if(isLocked) Cursor.lockState = CursorLockMode.Locked;
-        else Cursor.lockState = CursorLockMode.None;
+        if (isLocked)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            camLocked = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            camLocked = true;
+        }
     }
 }

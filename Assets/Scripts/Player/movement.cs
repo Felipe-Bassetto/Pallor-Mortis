@@ -21,17 +21,20 @@ public class movement : MonoBehaviour
 
     void OnMove (InputValue movementValue)
     {
-        Vector2 movementVector = movementValue.Get<Vector2>(); 
-        movementX = movementVector.x; 
-        movementY = movementVector.y; 
+        if (!playerLocked)
+        {
+            Vector2 movementVector = movementValue.Get<Vector2>();
+            movementX = movementVector.x;
+            movementY = movementVector.y;
+        }
     }
 
     void FixedUpdate()
     {
         if(!playerLocked)
         {
-            Vector3 movement = new Vector3 (movementX, 0.0f, movementY);
-            rb.velocity = movement * speed; 
+            Vector3 movement = transform.right * movementX + transform.forward * movementY;
+            rb.velocity = new Vector3(movement.x * speed, rb.velocity.y, movement.z * speed);
         }
     }
     
