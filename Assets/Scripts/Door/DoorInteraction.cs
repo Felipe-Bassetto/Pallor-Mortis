@@ -1,69 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorInteraction : MonoBehaviour
 {
     [Header("Porta")]
     public bool trancada;
-    public GameObject doorPivotDir;
-    public GameObject doorPivotEsq;
-    public bool isDouble;
-    public float velocidadeRotacao = 1f;
+    public Transform pivot;
+    public float velocidadeRotacao = 120f;
 
-    [Header("Valores de Rotação")]
-    public Quaternion rotacaoPortaDirAberta;
-    public Quaternion rotacaoPortaEsqAberta;
-    public Quaternion rotacaoPortaFechada;
+    [Header("Rotação")]
+    public Vector3 rotacaoAbertaOffset = new Vector3(0, 90, 0);
 
-    private bool aberta = false;
-    private string pivotName;
-    LayerMask layerMask;
+    private Quaternion rotacaoFechada;
+    private Quaternion rotacaoAberta;
 
-    // Start is called before the first frame update
+    public bool aberta;
+
     void Start()
     {
-        layerMask = LayerMask.GetMask("Door");
+        rotacaoFechada = pivot.rotation;
+        rotacaoAberta = rotacaoFechada * Quaternion.Euler(rotacaoAbertaOffset);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;    
-        if (Input.GetMouseButtonUp(0)) // Verificação se o player clicou na porta
+        // INTERAÇÃO
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
             {
-                pivotName = hit.collider.gameObject.name;
-                if(trancada)
+                if (hit.transform == pivot || hit.transform.IsChildOf(pivot))
                 {
-                    Debug.Log("Trancada, fala da personagem, pop up");
+                    if (trancada)
+                    {
+                        Debug.Log("Trancada");
+                        return;
+                    }
+
+                    aberta = !aberta;
                 }
-                else
-                {
-                    Debug.Log("Abre");
-                    if(aberta)aberta = false;
-                    else aberta = true;
-                }
-            }            
-        }
-        if(aberta & (pivotName == gameObject.name)) // Abre a porta
-        {
-            doorPivotDir.transform.rotation = Quaternion.RotateTowards(doorPivotDir.transform.rotation,rotacaoPortaEsqAberta,velocidadeRotacao * Time.unscaledDeltaTime);
-            if(isDouble) // Caso seja porta dupla, abre a segunda junto
-            {
-                doorPivotEsq.transform.rotation = Quaternion.RotateTowards(doorPivotEsq.transform.rotation,rotacaoPortaDirAberta,velocidadeRotacao * Time.unscaledDeltaTime);
             }
         }
-        else if(!aberta & (pivotName == gameObject.name)) // Fecha a porta
-        {
-            doorPivotDir.transform.rotation = Quaternion.RotateTowards(doorPivotDir.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
-            if(isDouble) // Caso seja porta dupla, fecha junto
-            {
-                doorPivotEsq.transform.rotation = Quaternion.RotateTowards(doorPivotEsq.transform.rotation,rotacaoPortaFechada,velocidadeRotacao * Time.unscaledDeltaTime);
-            }
-        }
-        
+
+        // ANIMAÇÃO
+        Quaternion alvo = aberta ? rotacaoAberta : rotacaoFechada;
+
+        pivot.rotation = Quaternion.RotateTowards(
+            pivot.rotation,
+            alvo,
+            velocidadeRotacao * Time.deltaTime
+        );
     }
 }
