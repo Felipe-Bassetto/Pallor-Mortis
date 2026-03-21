@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class movement : MonoBehaviour
 {
-    [Header("Configurações de Movimento")]
-    public float walk = 5f;
-
     [Header("Rigidbody")]
     private Rigidbody rb;
+    private float movementX;
+    private float movementY;
+    public float speed;
 
-    private bool playerLocked = false;
-    public GameObject Player;
+    public bool playerLocked;
 
     // Start is called before the first frame update
     void Start()
@@ -19,44 +19,19 @@ public class movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnMove (InputValue movementValue)
     {
-        
+        Vector2 movementVector = movementValue.Get<Vector2>(); 
+        movementX = movementVector.x; 
+        movementY = movementVector.y; 
     }
 
     void FixedUpdate()
     {
         if(!playerLocked)
         {
-            WASD();
-        }
-    }
-
-    void WASD()
-    {
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(Vector3.forward * walk * Time.deltaTime);
-            rb.AddForce(Vector3.forward * 10f);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(Vector3.back * walk * Time.deltaTime);
-            rb.AddForce(Vector3.back * 10f);
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(Vector3.left * walk * Time.deltaTime);
-            rb.AddForce(Vector3.left * 10f);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(Vector3.right * walk * Time.deltaTime);
-            rb.AddForce(Vector3.right * 10f);
+            Vector3 movement = new Vector3 (movementX, 0.0f, movementY);
+            rb.velocity = movement * speed; 
         }
     }
     
