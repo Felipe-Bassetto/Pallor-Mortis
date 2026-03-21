@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerPOV : MonoBehaviour
+public class PlayerPOV : MonoBehaviour
 {
 
     [Header("Configurações de Camera(POV)")]
     public float sens = 100f;
     public Transform corpoPlayer;
-    public float velocidade = 1f;
-    public bool camMove;
     public bool camLocked;
 
     Camera cam;
     private float rotacaoX = 0f;
-    private Vector3 camLocation = new Vector3(0, 1, 0);
+    
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +28,6 @@ public class playerPOV : MonoBehaviour
         {
             CameraRotation();
         }
-
-        if(camMove)cam.transform.position = Vector3.MoveTowards(cam.transform.position,camLocation,velocidade * Time.unscaledDeltaTime);
-        if(cam.transform.position == camLocation) CameraMovement(false);
     }
 
     void CameraRotation()
@@ -48,11 +43,6 @@ public class playerPOV : MonoBehaviour
         //* 3- Rotação de camera *//
         transform.localRotation = Quaternion.Euler(rotacaoX, 0f, 0f); 
         corpoPlayer.Rotate(Vector3.up * mouseX); 
-    }
-
-    public void CameraMovement(bool move)
-    {
-        camMove = move;
     }
     
     public void CamLock(bool isLocked)
