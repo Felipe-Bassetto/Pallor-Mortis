@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class DoorInteraction : MonoBehaviour
 {
-
-    [Header("Camera")]
-    private Camera cameraPrincipal;
-
     [Header("Porta")]
     public bool trancada;
     public GameObject doorPivotDir;
     public GameObject doorPivotEsq;
     public bool isDouble;
     public float velocidadeRotacao = 1f;
-    
-    private Quaternion rotacaoPortaDirAberta = Quaternion.Euler(0, 90, 0);
-    private Quaternion rotacaoPortaEsqAberta = Quaternion.Euler(0, -90, 0);
-    private Quaternion rotacaoPortaFechada = Quaternion.Euler(0, 0, 0);
+
+    [Header("Valores de Rotação")]
+    public Quaternion rotacaoPortaDirAberta;
+    public Quaternion rotacaoPortaEsqAberta;
+    public Quaternion rotacaoPortaFechada;
+
     private bool aberta = false;
     private string pivotName;
     LayerMask layerMask;
@@ -25,7 +23,6 @@ public class DoorInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cameraPrincipal = Camera.main;
         layerMask = LayerMask.GetMask("Door");
     }
 
