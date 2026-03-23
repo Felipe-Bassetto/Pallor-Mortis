@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17384285, g: 0.21736282, b: 0.29951355, a: 1}
+  m_IndirectSpecularColor: {r: 0.1738427, g: 0.21736239, b: 0.2995126, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3805,6 +3805,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3727145908297849384, guid: 257fe12e0bb50d1409b555f925d48edf,
         type: 3}
+      propertyPath: pivot
+      value: 
+      objectReference: {fileID: 7406800766246201133}
+    - target: {fileID: 3727145908297849384, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
+      propertyPath: rotacaoAbertaOffset.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3727145908297849384, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
       propertyPath: rotacaoPortaDirAberta.w
       value: 0.9238795
       objectReference: {fileID: 0}
@@ -3877,6 +3887,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2002891214}
   m_SourcePrefab: {fileID: 100100000, guid: 257fe12e0bb50d1409b555f925d48edf, type: 3}
+--- !u!4 &7406800766246201133 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5905396497770007198, guid: 257fe12e0bb50d1409b555f925d48edf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7406800766246201132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7521359468229233786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8706756288259608519, guid: 257fe12e0bb50d1409b555f925d48edf,
