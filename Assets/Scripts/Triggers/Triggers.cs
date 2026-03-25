@@ -6,17 +6,9 @@ public class Triggers : MonoBehaviour
 {
     [Header("Porta")]
     public DoorInteraction doorInt;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    [Header("Trigger")]
+    public int index;
 
     void OnTriggerExit(Collider other)
     {
