@@ -53,4 +53,9 @@ public class DoorInteraction : MonoBehaviour
             velocidadeRotacao * Time.deltaTime
         );
     }
+
+    public void AltState(bool tranc)
+    {
+        trancada = tranc;
+    }
 }
