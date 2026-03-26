@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     private float movementX;
     private float movementY;
     public float speed;
+    public float speedRunning;
 
     public bool playerLocked;
 
@@ -34,7 +35,14 @@ public class Movement : MonoBehaviour
         if(!playerLocked)
         {
             Vector3 movement = transform.right * movementX + transform.forward * movementY;
-            rb.velocity = new Vector3(movement.x * speed, rb.velocity.y, movement.z * speed);
+            if(Input.GetKey(KeyCode.LeftShift))
+            {
+                rb.velocity = new Vector3(movement.x * speedRunning, rb.velocity.y, movement.z * speedRunning);
+            }
+            else
+            {
+                rb.velocity = new Vector3(movement.x * speed, rb.velocity.y, movement.z * speed);
+            }
         }
     }
     
