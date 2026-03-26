@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3606cb0e7d86ccf4b8f98757d69d235b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portaIdent: 0
+  portaIdent: 3
   abre: 0
   pivot: {fileID: 142467452}
   rotacaoAbertaOffset: {x: 0, y: 90, z: 0}
@@ -2008,6 +2008,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538144880}
     m_Modifications:
+    - target: {fileID: 608044335111362380, guid: 0786cbe93b6b19440a6c5719992165b0,
+        type: 3}
+      propertyPath: trigger
+      value: 
+      objectReference: {fileID: 1242932123}
     - target: {fileID: 1392964449130756531, guid: 0786cbe93b6b19440a6c5719992165b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2061,6 +2066,11 @@ PrefabInstance:
     - target: {fileID: 2394274107197633409, guid: 0786cbe93b6b19440a6c5719992165b0,
         type: 3}
       propertyPath: m_Name
+      value: Chave
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394274107197633409, guid: 0786cbe93b6b19440a6c5719992165b0,
+        type: 3}
+      propertyPath: m_TagString
       value: Chave
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2255,7 +2265,7 @@ MonoBehaviour:
   velocidadeRotacao: 2
   mov: {fileID: 1637277600}
   pov: {fileID: 1729867829}
-  triggerPorta: {fileID: 1890108129}
+  triggerAc: {fileID: 1890108129}
   doorInt: {fileID: 473897930}
 --- !u!1 &4466356208129614275
 GameObject:
@@ -2300,6 +2310,11 @@ PrefabInstance:
       propertyPath: doorInt
       value: 
       objectReference: {fileID: 535036480}
+    - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
+        type: 3}
+      propertyPath: triggerAc
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
         type: 3}
       propertyPath: triggerPorta4

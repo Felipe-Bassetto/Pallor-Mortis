@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class TriggerActive : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("GameObjects")]
+    public GameObject trigger;
+
+    public void ActivateTrigger()
     {
-        
+        trigger.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

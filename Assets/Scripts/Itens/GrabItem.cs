@@ -13,6 +13,9 @@ public class GrabItem : MonoBehaviour
     [Header("Scripts")]
     private ItensController it;
 
+    [Header("GameObjects")]
+    public GameObject trigger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,11 @@ public class GrabItem : MonoBehaviour
                 {
                     gameObject.transform.SetParent(it.gameObject.transform);
                     gameObject.transform.position = it.gameObject.transform.Find("LeftHand").transform.position;
+
+                    if(gameObject.tag == "Chave")
+                    {
+                        trigger.SetActive(true);
+                    }
                 }
                 
             } 

@@ -18,6 +18,7 @@ public class ReadNote : MonoBehaviour
     LayerMask layerMask;
     public Movement mov;
     public PlayerPOV pov;
+    public GameObject triggerAc;
 
     [Header("Camera")]
     private Camera cameraPrincipal;
@@ -73,6 +74,10 @@ public class ReadNote : MonoBehaviour
         {
             gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.localPosition, positionInitial, velocidade * Time.unscaledDeltaTime);
             gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, rotationInitial, velocidadeRotacao * Time.unscaledDeltaTime);
+            if(triggerAc != null)
+            {
+                triggerAc.SetActive(true);
+            }
         }
     }
 }
