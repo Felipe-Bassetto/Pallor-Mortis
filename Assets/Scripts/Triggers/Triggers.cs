@@ -15,7 +15,10 @@ public class Triggers : MonoBehaviour
         // Destroy everything that leaves the trigger
         if(other.gameObject.tag == "Player")
         {
-            doorInt.AltState(false);
+            if (doorInt != null)
+            {
+                doorInt.AltState(false);
+            }
             Destroy(gameObject);
         }
     }

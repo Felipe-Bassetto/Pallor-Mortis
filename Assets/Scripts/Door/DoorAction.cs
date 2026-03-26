@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorAction : MonoBehaviour
 {
-    public enum Porta { Inicial, Porta2, Porta4 }
+    public enum Porta { Inicial, Porta2, Porta4, Porta5 }
 
     [Header("Porta")]
     public Porta portaIdent;
@@ -43,6 +43,7 @@ public class DoorAction : MonoBehaviour
                 }
                 break;
             case Porta.Porta4:
+            case Porta.Porta5:
                 Debug.Log("Porta4");
                 if(abre)
                 {

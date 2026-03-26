@@ -13,13 +13,11 @@ public class ReadNote : MonoBehaviour
     private bool noteMove = false;
     private bool noteBack = false;
     private Vector3 noteReading = new Vector3(0,0,0.5f);
-    private Quaternion noteRotation = Quaternion.Euler(-90, 0, 0);
 
     [Header("GameObjects")]
     LayerMask layerMask;
     public Movement mov;
     public PlayerPOV pov;
-    public GameObject triggerPorta4;
 
     [Header("Camera")]
     private Camera cameraPrincipal;
@@ -75,10 +73,6 @@ public class ReadNote : MonoBehaviour
         {
             gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.localPosition, positionInitial, velocidade * Time.unscaledDeltaTime);
             gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, rotationInitial, velocidadeRotacao * Time.unscaledDeltaTime);
-            if(triggerPorta4 != null)
-            {
-                triggerPorta4.SetActive(true);
-            }
         }
     }
 }
