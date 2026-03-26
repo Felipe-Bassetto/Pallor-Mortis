@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorAction : MonoBehaviour
 {
-    public enum Porta { Inicial, Porta4 }
+    public enum Porta { Inicial, Porta2, Porta4 }
 
     [Header("Porta")]
     public Porta portaIdent;
@@ -43,9 +43,15 @@ public class DoorAction : MonoBehaviour
                 }
                 break;
             case Porta.Porta4:
+                Debug.Log("Porta4");
                 if(abre)
                 {
+                    Debug.Log("abrindo");
                     pivot.rotation = Quaternion.RotateTowards(pivot.rotation,rotacaoAberta,velocidadeRotacao * Time.deltaTime);
+                    if(pivot.rotation == rotacaoAberta)
+                    {
+                        abre = false;
+                    }
                 }
                 break;
         }

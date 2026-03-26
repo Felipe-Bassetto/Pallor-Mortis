@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Triggers : MonoBehaviour
 {
+
     [Header("Porta")]
     public DoorInteraction doorInt;
     public DoorAction doorAct;
     
-    [Header("Trigger")]
-    public int index;
 
     void OnTriggerExit(Collider other)
     {
@@ -23,6 +22,15 @@ public class Triggers : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        doorAct.OpenDoor(true);
+        if(doorAct != null && other.tag == "Player")
+        {
+            if (doorAct.portaIdent == DoorAction.Porta.Porta4)
+            {
+                doorInt.AltState(false);
+                doorAct.OpenDoor(true);
+                Destroy(gameObject);
+            }   
+        }
+        
     }
 }

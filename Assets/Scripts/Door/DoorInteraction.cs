@@ -6,14 +6,17 @@ public class DoorInteraction : MonoBehaviour
     public bool trancada;
     public Transform pivot;
     public float velocidadeRotacao = 120f;
+    public bool aberta;
 
     [Header("Rotação")]
     public Vector3 rotacaoAbertaOffset = new Vector3(0, 90, 0);
+    private bool canRotate = false;
 
     private Quaternion rotacaoFechada;
     private Quaternion rotacaoAberta;
 
-    public bool aberta;
+    [Header("GameObject")]
+    public DoorAction doorAct;
 
     void Start()
     {
@@ -38,6 +41,7 @@ public class DoorInteraction : MonoBehaviour
                         Debug.Log("Trancada");
                         return;
                     }
+                    canRotate = true;
                     aberta = !aberta;
                 }
             }
@@ -45,8 +49,26 @@ public class DoorInteraction : MonoBehaviour
 
         // ANIMAÇÃO
         Quaternion alvo = aberta ? rotacaoAberta : rotacaoFechada;
-
-        pivot.rotation = Quaternion.RotateTowards(pivot.rotation,alvo,velocidadeRotacao * Time.deltaTime);
+        //if(doorAct == null)
+        //{
+        if (canRotate)
+        {
+            Debug.Log("rotacionando");
+            pivot.rotation = Quaternion.RotateTowards(pivot.rotation, alvo, velocidadeRotacao * Time.deltaTime);
+            if(pivot.rotation == alvo)
+            {
+                canRotate = false;
+            }
+        }
+        //}
+        //else
+        //{
+            //if (pivot.rotation != alvo && !doorAct.abre && pivot.rotation != Quaternion.Euler(doorAct.rotacaoAbertaOffset))
+            //{
+            //    Debug.Log("rotacionando");
+           //    pivot.rotation = Quaternion.RotateTowards(pivot.rotation, alvo, velocidadeRotacao * Time.deltaTime);
+            //}
+        //}
     }
 
     public void AltState(bool tranc)

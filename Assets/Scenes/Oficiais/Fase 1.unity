@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -609,6 +609,11 @@ PrefabInstance:
       objectReference: {fileID: 946397049}
     - target: {fileID: 615780740821550754, guid: c74d59e677c1d824fbc3280bcda08b94,
         type: 3}
+      propertyPath: doorAct
+      value: 
+      objectReference: {fileID: 1389840841}
+    - target: {fileID: 615780740821550754, guid: c74d59e677c1d824fbc3280bcda08b94,
+        type: 3}
       propertyPath: trancada
       value: 1
       objectReference: {fileID: 0}
@@ -770,7 +775,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7357742455146671066, guid: c74d59e677c1d824fbc3280bcda08b94,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1389840841}
   m_SourcePrefab: {fileID: 100100000, guid: c74d59e677c1d824fbc3280bcda08b94, type: 3}
 --- !u!4 &946397048 stripped
 Transform:
@@ -853,7 +862,7 @@ PrefabInstance:
     - target: {fileID: 3496981525306773235, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.24
+      value: 19.31
       objectReference: {fileID: 0}
     - target: {fileID: 3496981525306773235, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
@@ -969,8 +978,9 @@ MonoBehaviour:
   trancada: 1
   pivot: {fileID: 1296789145}
   velocidadeRotacao: 40
-  rotacaoAbertaOffset: {x: 0, y: 90, z: 0}
   aberta: 0
+  rotacaoAbertaOffset: {x: 0, y: 90, z: 0}
+  doorAct: {fileID: 0}
 --- !u!1 &1242932123
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1242932124
 Transform:
   m_ObjectHideFlags: 0
@@ -1016,9 +1026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a850dea92837d904e860675bdb7c0c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorInt: {fileID: 1315565165}
-  doorAct: {fileID: 0}
-  index: 0
+  doorInt: {fileID: 1389840840}
+  doorAct: {fileID: 1389840841}
 --- !u!65 &1242932126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1259,6 +1268,41 @@ Transform:
   - {fileID: 1242932124}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1389840837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7357742455146671066, guid: c74d59e677c1d824fbc3280bcda08b94,
+    type: 3}
+  m_PrefabInstance: {fileID: 946397047}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1389840840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 615780740821550754, guid: c74d59e677c1d824fbc3280bcda08b94,
+    type: 3}
+  m_PrefabInstance: {fileID: 946397047}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389840837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f295b47ebda8e7c478c2610a14877667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1389840841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389840837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3606cb0e7d86ccf4b8f98757d69d235b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portaIdent: 2
+  abre: 0
+  pivot: {fileID: 946397049}
+  rotacaoAbertaOffset: {x: 0, y: -45, z: 0}
+  velocidadeRotacao: 120
 --- !u!1 &1428238584
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1406,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorInt: {fileID: 1315565165}
   doorAct: {fileID: 0}
-  index: 0
 --- !u!1 &1637277585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7725732958355427752, guid: 7777e6f6713fc3b4cb073b4e0d015993,
@@ -1877,6 +1920,11 @@ PrefabInstance:
       propertyPath: doorInt
       value: 
       objectReference: {fileID: 535036480}
+    - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
+        type: 3}
+      propertyPath: triggerPorta4
+      value: 
+      objectReference: {fileID: 1242932123}
     - target: {fileID: 3940083126406965012, guid: c011e4f176bd2a24bb30373544cacbce,
         type: 3}
       propertyPath: m_Name
