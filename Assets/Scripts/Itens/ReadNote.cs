@@ -23,6 +23,9 @@ public class ReadNote : MonoBehaviour
     [Header("Camera")]
     private Camera cameraPrincipal;
 
+    [Header("Porta")]
+    public DoorInteraction doorInt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +57,9 @@ public class ReadNote : MonoBehaviour
             if(Input.GetKey(KeyCode.E)) // Voltar nota para posição original
             {
                 gameObject.transform.SetParent(null);
+                doorInt.AltState(false);
+                mov.PlayMovement(false);
+                pov.CamLock(true);
                 noteBack = true;
                 noteMove = false;
             }

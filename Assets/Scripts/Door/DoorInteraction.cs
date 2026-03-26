@@ -38,7 +38,6 @@ public class DoorInteraction : MonoBehaviour
                         Debug.Log("Trancada");
                         return;
                     }
-
                     aberta = !aberta;
                 }
             }
@@ -47,11 +46,7 @@ public class DoorInteraction : MonoBehaviour
         // ANIMAÇÃO
         Quaternion alvo = aberta ? rotacaoAberta : rotacaoFechada;
 
-        pivot.rotation = Quaternion.RotateTowards(
-            pivot.rotation,
-            alvo,
-            velocidadeRotacao * Time.deltaTime
-        );
+        pivot.rotation = Quaternion.RotateTowards(pivot.rotation,alvo,velocidadeRotacao * Time.deltaTime);
     }
 
     public void AltState(bool tranc)

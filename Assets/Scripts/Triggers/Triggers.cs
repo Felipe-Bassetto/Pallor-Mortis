@@ -6,6 +6,7 @@ public class Triggers : MonoBehaviour
 {
     [Header("Porta")]
     public DoorInteraction doorInt;
+    public DoorAction doorAct;
     
     [Header("Trigger")]
     public int index;
@@ -18,5 +19,10 @@ public class Triggers : MonoBehaviour
             doorInt.AltState(false);
             Destroy(gameObject);
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        doorAct.OpenDoor(true);
     }
 }
