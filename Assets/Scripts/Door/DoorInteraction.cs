@@ -60,19 +60,16 @@ public class DoorInteraction : MonoBehaviour
                 canRotate = false;
             }
         }
-        //}
-        //else
-        //{
-            //if (pivot.rotation != alvo && !doorAct.abre && pivot.rotation != Quaternion.Euler(doorAct.rotacaoAbertaOffset))
-            //{
-            //    Debug.Log("rotacionando");
-           //    pivot.rotation = Quaternion.RotateTowards(pivot.rotation, alvo, velocidadeRotacao * Time.deltaTime);
-            //}
-        //}
     }
 
     public void AltState(bool tranc)
     {
         trancada = tranc;
+    }
+
+    public void RotateDoor(bool close)
+    {
+        canRotate = true;
+        aberta = close;
     }
 }
