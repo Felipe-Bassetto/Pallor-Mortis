@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class LightManager : MonoBehaviour
 {
@@ -11,12 +12,23 @@ public class LightManager : MonoBehaviour
     {
         foreach (GameObject luz in arrLightsOn)
         {
-            luz.SetActive(true);
+            var variables = Variables.Object(luz);
+            bool canLightUp = variables.Get<bool>("CanLightUp");
+            if (canLightUp)
+            {
+                luz.SetActive(true);
+            }
+
         }
 
         foreach (GameObject luz in arrLightsOut)
         {
-            luz.SetActive(false);
+            var variables = Variables.Object(luz);
+            bool canLightUp = variables.Get<bool>("CanLightUp");
+            if (canLightUp)
+            {
+                luz.SetActive(false);
+            }
         }
     }
 }

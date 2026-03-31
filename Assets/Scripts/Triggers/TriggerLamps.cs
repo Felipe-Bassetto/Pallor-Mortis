@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class TriggerLamps : MonoBehaviour
 {
+    public GameObject[] arrLights;
+    public GameObject[] arrLightsInst;
+
     // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        foreach (GameObject luz in arrLightsInst)
+        {
+            luz.SetActive(false);
+            var variables = Variables.Object(luz);
+            variables.Set("CanLightUp", false);
+        }
+
+        StartCoroutine(BurnLights());
     }
 
-    // Update is called once per frame
-    void Update()
+    public IEnumerator BurnLights()
     {
-        
+        foreach (GameObject luz in arrLights)
+        {
+            luz.SetActive(false);
+            var variables = Variables.Object(luz);
+            variables.Set("CanLightUp", false);
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
