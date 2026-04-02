@@ -14,8 +14,6 @@ public class TriggerLamps : MonoBehaviour
         foreach (GameObject luz in arrLightsInst)
         {
             luz.SetActive(false);
-            var variables = Variables.Object(luz);
-            variables.Set("CanLightUp", false);
         }
 
         StartCoroutine(BurnLights());

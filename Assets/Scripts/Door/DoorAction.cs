@@ -44,10 +44,8 @@ public class DoorAction : MonoBehaviour
                 break;
             case Porta.Porta4:
             case Porta.Porta5:
-                Debug.Log("Porta4");
                 if(abre)
                 {
-                    Debug.Log("abrindo");
                     pivot.rotation = Quaternion.RotateTowards(pivot.rotation,rotacaoAberta,velocidadeRotacao * Time.deltaTime);
                     if(pivot.rotation == rotacaoAberta)
                     {
