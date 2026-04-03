@@ -6,7 +6,7 @@ public class ItensController : MonoBehaviour
 {
     [Header("Itens")]
     public List<GameObject> arrItens = new List<GameObject>();
-    private GameObject itemActive;
+    public int itemActive;
 
     // Start is called before the first frame update
     void Start()
@@ -21,28 +21,77 @@ public class ItensController : MonoBehaviour
         {
             dropItem();
         }
+
+        bool change = Input.GetKeyDown(KeyCode.E);
+        if(change)
+        {
+            changeItem();
+        }
     }
 
     public int addItem(GameObject item) // Adiciona item a mão
     {
-        int qtdArr = arrItens.Count;
-
-        if(qtdArr < 2)
+        int returnNum = -1;
+        
+        for(int i = 0; i < 2; i++)
         {
-            arrItens.Add(item);
-            itemActive = item;
-            return qtdArr;
+            if(arrItens[i] == null)
+            {
+                if(itemActive >= 0)
+                {
+                    arrItens[itemActive].SetActive(false);
+                }
+                arrItens[i] = item;
+                returnNum = i;
+                itemActive = returnNum;
+                break;
+            }
         }
-        return -1;
+        
+        return returnNum;
+
     }
 
     public void dropItem() // Solta o item da mão
     {
-        int qtdArr = arrItens.Count;
-        if(qtdArr > 0)
+        if(itemActive == -1) return;
+
+        arrItens[itemActive].transform.SetParent(null);
+        arrItens[itemActive] = null;
+        itemActive = -1;
+    }
+
+    public void changeItem()
+    {
+        for(int i = 0; i < 2; i++)
         {
-            arrItens.Remove(itemActive);
-            itemActive.transform.SetParent(null);
+            if(i == itemActive)continue;
+            else if(arrItens[i] != null)
+            {                
+                if(itemActive != -1)
+                {
+                    arrItens[itemActive].SetActive(false);
+                }
+                if(itemActive == 1)
+                {
+                    arrItens[itemActive].SetActive(false);
+                    itemActive = -1;
+                }
+                else
+                {
+                    arrItens[i].SetActive(true);
+                    itemActive = i;
+                }
+                break;                    
+            }
+            else
+            {
+                if(itemActive != -1)
+                {
+                    arrItens[itemActive].SetActive(false);
+                }
+                itemActive = -1;
+            }
         }
     }
 }

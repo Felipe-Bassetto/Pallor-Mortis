@@ -32,7 +32,6 @@ public class GrabItem : MonoBehaviour
         {
             Ray ray = cameraPrincipal.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit; 
-
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask) && gameObject.name == hit.collider.gameObject.name)
             {
                 int maoAdicionada = it.addItem(gameObject);
