@@ -7,6 +7,7 @@ public class DoorInteraction : MonoBehaviour
     public Transform pivot;
     public float velocidadeRotacao = 120f;
     public bool aberta;
+    public bool needKey;
 
     [Header("Rotação")]
     public Vector3 rotacaoAbertaOffset = new Vector3(0, 90, 0);
@@ -18,8 +19,12 @@ public class DoorInteraction : MonoBehaviour
     [Header("GameObject")]
     public DoorAction doorAct;
 
+    private ItensController ic;
+
     void Start()
     {
+        ic = FindObjectOfType<ItensController>();
+
         rotacaoFechada = pivot.rotation;
         rotacaoAberta = rotacaoFechada * Quaternion.Euler(rotacaoAbertaOffset);
     }
@@ -38,8 +43,14 @@ public class DoorInteraction : MonoBehaviour
                 {
                     if (trancada)
                     {
-                        Debug.Log("Trancada");
-                        return;
+                        bool key;
+                        if(ic.itemActive != -1) key = ic.arrItens[ic.itemActive].tag == "Chave";
+                        else key = false;
+                        if((needKey && !key) || !needKey)
+                        {
+                            Debug.Log("Trancada");
+                            return;
+                        }  
                     }
                     canRotate = true;
                     aberta = !aberta;

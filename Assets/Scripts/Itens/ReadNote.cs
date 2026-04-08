@@ -41,7 +41,7 @@ public class ReadNote : MonoBehaviour
             Ray ray = cameraPrincipal.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit; 
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask) && !noteMove)
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask) && !noteMove && gameObject.name == hit.collider.gameObject.name)
             {
                 positionInitial = gameObject.transform.position;
                 rotationInitial = gameObject.transform.rotation;
