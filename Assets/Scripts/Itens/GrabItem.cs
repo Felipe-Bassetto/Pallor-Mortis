@@ -17,6 +17,9 @@ public class GrabItem : MonoBehaviour
     [Header("GameObjects")]
     public GameObject trigger;
 
+    [Header("Sounds")]
+    public SoundManager sm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,10 +48,19 @@ public class GrabItem : MonoBehaviour
                     bool triggerActived = variables.Get<bool>("triggerActived");
 
 
-                    if(gameObject.tag == "Chave" && !triggerActived)
+                    if(gameObject.tag == "Chave")
                     {
-                        variables.Set("triggerActived", false);
-                        trigger.SetActive(true);
+                        sm.PlaySound(0);
+                        
+                        if(!triggerActived)
+                        {
+                            variables.Set("triggerActived", false);
+                            trigger.SetActive(true);
+                        }
+                    }
+                    else if(gameObject.tag == "Nota")
+                    {
+                        sm.PlaySound(1);
                     }
                 }
                 

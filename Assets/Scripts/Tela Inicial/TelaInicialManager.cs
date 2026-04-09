@@ -54,4 +54,9 @@ public class TelaInicialManager : MonoBehaviour
         btnJogar.SetActive(false);
         btnSair.SetActive(false);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
