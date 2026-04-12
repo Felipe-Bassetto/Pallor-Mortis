@@ -60,8 +60,7 @@ public class DoorInteraction : MonoBehaviour
 
         // ANIMAÇÃO
         Quaternion alvo = aberta ? rotacaoAberta : rotacaoFechada;
-        //if(doorAct == null)
-        //{
+
         if (canRotate)
         {
             Debug.Log("rotacionando");
