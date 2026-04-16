@@ -22,7 +22,7 @@ public class ItensController : MonoBehaviour
             dropItem();
         }
 
-        bool change = Input.GetKeyDown(KeyCode.E);
+        bool change = Input.GetKeyDown(KeyCode.Alpha1);
         if(change)
         {
             changeItem();
