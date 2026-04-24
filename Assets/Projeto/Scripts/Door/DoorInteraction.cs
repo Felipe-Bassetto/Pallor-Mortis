@@ -5,7 +5,7 @@ public class DoorInteraction : MonoBehaviour
     [Header("Porta")]
     public bool trancada;
     public Transform pivot;
-    public float velocidadeRotacao = 120f;
+    public float velocidadeRotacao = 60f;
     public bool aberta;
     public bool needKey;
 
