@@ -197,7 +197,6 @@ MonoBehaviour:
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
-  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 90, z: 0}
   doorAct: {fileID: 0}
 --- !u!23 &45947052
@@ -1613,6 +1612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814180579}
   - component: {fileID: 814180578}
+  - component: {fileID: 814180580}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1648,6 +1648,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &814180580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814180577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d73c421e0a04945b496d3730895e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &819330395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2130,7 @@ PrefabInstance:
     - target: {fileID: 3496981525306773235, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.94
+      value: -4.19
       objectReference: {fileID: 0}
     - target: {fileID: 3496981525306773235, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
@@ -2128,7 +2140,7 @@ PrefabInstance:
     - target: {fileID: 3496981525306773235, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.14
+      value: 3.69
       objectReference: {fileID: 0}
     - target: {fileID: 3496981525306773235, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
@@ -2260,7 +2272,6 @@ MonoBehaviour:
   velocidadeRotacao: 40
   aberta: 0
   needKey: 0
-  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 90, z: 0}
   doorAct: {fileID: 0}
 --- !u!1 &1151063316
@@ -3499,22 +3510,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
-  delay: 0
-  onTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1628358201}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  onTriggerEvents:
+  - delay: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 366486225}
+          m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 8470698800121051058}
+          m_TargetAssemblyTypeName: DoorInteraction, Assembly-CSharp
+          m_MethodName: AltState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1637277585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7725732958355427752, guid: 7777e6f6713fc3b4cb073b4e0d015993,
@@ -4622,9 +4646,11 @@ MonoBehaviour:
   velocidade: 3
   velocidadeRotacao: 2
   distanceClick: 0
+  triggerAc: {fileID: 1890108129}
+  arrLights: []
+  le: {fileID: 0}
   mov: {fileID: 1637277600}
   pov: {fileID: 1729867829}
-  triggerAc: {fileID: 1890108129}
   doorInt: {fileID: 0}
 --- !u!4 &1542426032714452302
 Transform:
@@ -5714,6 +5740,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
         type: 3}
+      propertyPath: le
+      value: 
+      objectReference: {fileID: 814180580}
+    - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
+        type: 3}
       propertyPath: mov
       value: 
       objectReference: {fileID: 1637277600}
@@ -5752,6 +5783,16 @@ PrefabInstance:
       propertyPath: velocidadeRotacao
       value: 4.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
+        type: 3}
+      propertyPath: arrLights.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
+        type: 3}
+      propertyPath: arrLights.Array.data[0]
+      value: 
+      objectReference: {fileID: 956532370}
     - target: {fileID: 3940083126406965012, guid: c011e4f176bd2a24bb30373544cacbce,
         type: 3}
       propertyPath: m_Name
@@ -6365,7 +6406,6 @@ MonoBehaviour:
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
-  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 75, z: 0}
   doorAct: {fileID: 0}
 --- !u!1 &6674383251982266750
@@ -6602,7 +6642,6 @@ MonoBehaviour:
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
-  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 75, z: 0}
   doorAct: {fileID: 0}
 --- !u!65 &7728323822683158350
@@ -6761,12 +6800,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f295b47ebda8e7c478c2610a14877667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trancada: 0
+  trancada: 1
   pivot: {fileID: 2127278579}
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
-  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 75, z: 0}
   doorAct: {fileID: 0}
 --- !u!65 &8470698800121051059
@@ -6848,7 +6886,6 @@ MonoBehaviour:
   velocidadeRotacao: 40
   aberta: 0
   needKey: 1
-  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: -90, z: 0}
   doorAct: {fileID: 0}
 --- !u!1 &8666217738514352506
@@ -6909,7 +6946,6 @@ MonoBehaviour:
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
-  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 75, z: 0}
   doorAct: {fileID: 0}
 --- !u!1 &8743468276063167338

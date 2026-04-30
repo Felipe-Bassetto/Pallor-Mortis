@@ -18,9 +18,13 @@ public class ReadNote : MonoBehaviour
 
     [Header("GameObjects")]
     LayerMask layerMask;
+    public GameObject triggerAc;
+    public GameObject[] arrLights;
+
+    [Header("Scripts")]
+    public LightEvents le;
     public Movement mov;
     public PlayerPOV pov;
-    public GameObject triggerAc;
 
     [Header("Camera")]
     private Camera cameraPrincipal;
@@ -67,6 +71,12 @@ public class ReadNote : MonoBehaviour
                 pov.CamLock(true);
                 noteBack = true;
                 noteMove = false;
+
+                if(arrLights != null)
+                {
+                    le.PiscarLampadas(arrLights);
+                    arrLights = null;
+                }
             }
 
             gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, noteReading, velocidade * Time.deltaTime);
