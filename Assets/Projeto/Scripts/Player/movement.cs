@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     public float speed;
     public float speedRunning;
 
-    public bool playerLocked;
+    public bool playerLocked = true;
 
     // Start is called before the first frame update
     void Start()
