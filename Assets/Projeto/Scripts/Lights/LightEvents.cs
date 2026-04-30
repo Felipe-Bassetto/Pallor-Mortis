@@ -4,26 +4,41 @@ using UnityEngine;
 
 public class LightEvents : MonoBehaviour
 {
-    public void PiscarLampadas(GameObject[] arrLights)
-    {
-        if(arrLights.Length != 0)
-        {
-            foreach (GameObject obj in arrLights)
-            {
-                StartCoroutine(Pisca(obj));
-            }
-        }
+    private bool canBlink = true;
+
+    public void PiscarLampadas(GameObject light, int qtd)
+    { 
+        StartCoroutine(Pisca(light, qtd));
     }
 
-    IEnumerator Pisca(GameObject obj)
+    public void PiscarLampadasTrigger(GameObject light)
     {
-        for (int i = 0; i < 4; i++)
+        StartCoroutine(Pisca(light, 0));
+    }
+
+    public void AlterStateCanBlink(bool blink)
+    {
+        canBlink = blink;
+    }
+
+    IEnumerator Pisca(GameObject obj, int qtd)
+    {
+        int counterBlinks = 0;
+        while (canBlink)
         {
+            if(qtd > 0)
+            {
+                counterBlinks++;
+                if (counterBlinks == qtd) canBlink = false;
+            }
+
             yield return new WaitForSeconds(0.125f);
             obj.SetActive(false);
             yield return new WaitForSeconds(0.125f);
             obj.SetActive(true);
         }
     }
+
+
 
 }

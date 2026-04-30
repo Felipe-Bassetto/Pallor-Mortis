@@ -19,7 +19,7 @@ public class ReadNote : MonoBehaviour
     [Header("GameObjects")]
     LayerMask layerMask;
     public GameObject triggerAc;
-    public GameObject[] arrLights;
+    public GameObject lightBlink;
 
     [Header("Scripts")]
     public LightEvents le;
@@ -31,6 +31,9 @@ public class ReadNote : MonoBehaviour
 
     [Header("Porta")]
     public DoorInteraction doorInt;
+
+    [Header("Luzes")]
+    [SerializeField] private int qtdLightsBlink;
 
     // Start is called before the first frame update
     void Start()
@@ -72,10 +75,10 @@ public class ReadNote : MonoBehaviour
                 noteBack = true;
                 noteMove = false;
 
-                if(arrLights != null)
+                if(lightBlink != null)
                 {
-                    le.PiscarLampadas(arrLights);
-                    arrLights = null;
+                    le.PiscarLampadas(lightBlink, qtdLightsBlink);
+                    lightBlink = null;
                 }
             }
 

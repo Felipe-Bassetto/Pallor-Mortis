@@ -13,6 +13,7 @@ public class GrabItem : MonoBehaviour
 
     [Header("Scripts")]
     private ItensController it;
+    [SerializeField] private LightEvents le;
 
     [Header("GameObjects")]
     public GameObject trigger;
@@ -56,6 +57,7 @@ public class GrabItem : MonoBehaviour
                         {
                             variables.Set("triggerActived", false);
                             trigger.SetActive(true);
+                            le.AlterStateCanBlink(false);
                         }
                     }
                     else if(gameObject.tag == "Nota")

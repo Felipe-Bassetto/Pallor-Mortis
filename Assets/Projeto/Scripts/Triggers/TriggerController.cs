@@ -13,6 +13,8 @@ public class TriggerController : MonoBehaviour
 {
     public string targetTag = "Player";
     public TriggerEvent[] onTriggerEvents;
+    public bool multTimes;
+
     bool triggered;
 
     void OnTriggerEnter(Collider other)
@@ -20,7 +22,7 @@ public class TriggerController : MonoBehaviour
         if (triggered) return;
         if (!other.CompareTag(targetTag)) return;
 
-        triggered = true;
+        if(!multTimes) triggered = true;
         StartCoroutine(InvokeDelayed());
     }
 
