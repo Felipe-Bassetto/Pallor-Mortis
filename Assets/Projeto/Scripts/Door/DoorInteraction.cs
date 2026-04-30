@@ -8,6 +8,8 @@ public class DoorInteraction : MonoBehaviour
     public float velocidadeRotacao = 60f;
     public bool aberta;
     public bool needKey;
+    
+    private float distanceClick = 2f;
 
     [Header("Rotação")]
     public Vector3 rotacaoAbertaOffset = new Vector3(0, 90, 0);
@@ -37,7 +39,7 @@ public class DoorInteraction : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, distanceClick))
             {
                 if (hit.transform == pivot || hit.transform.IsChildOf(pivot))
                 {

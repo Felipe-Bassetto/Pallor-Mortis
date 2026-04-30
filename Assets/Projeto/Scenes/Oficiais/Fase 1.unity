@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -197,6 +197,7 @@ MonoBehaviour:
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
+  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 90, z: 0}
   doorAct: {fileID: 0}
 --- !u!23 &45947052
@@ -2259,6 +2260,7 @@ MonoBehaviour:
   velocidadeRotacao: 40
   aberta: 0
   needKey: 0
+  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 90, z: 0}
   doorAct: {fileID: 0}
 --- !u!1 &1151063316
@@ -4377,7 +4379,7 @@ Transform:
   m_GameObject: {fileID: 4482725429247808081}
   serializedVersion: 2
   m_LocalRotation: {x: -0.50000006, y: -0.49999997, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: -0.008664363, z: 0.00051310705}
+  m_LocalPosition: {x: 0, y: -0.00791, z: 0.00051}
   m_LocalScale: {x: -0.09470954, y: -0.0399093, z: -1.4105622}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4619,6 +4621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 3
   velocidadeRotacao: 2
+  distanceClick: 0
   mov: {fileID: 1637277600}
   pov: {fileID: 1729867829}
   triggerAc: {fileID: 1890108129}
@@ -4717,7 +4720,7 @@ Transform:
   m_GameObject: {fileID: 8373268166380354375}
   serializedVersion: 2
   m_LocalRotation: {x: -0.50000006, y: -0.49999997, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: -0.008664363, z: 0.00051310705}
+  m_LocalPosition: {x: 0, y: -0.00811, z: 0.00051}
   m_LocalScale: {x: -0.09470954, y: -0.0399093, z: -1.4105622}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4732,7 +4735,7 @@ Transform:
   m_GameObject: {fileID: 3507658986086765684}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5010221, y: -0.49897587, z: 0.49897596, w: 0.501022}
-  m_LocalPosition: {x: -0.0024270026, y: -0.008670923, z: 0.0005131075}
+  m_LocalPosition: {x: -0.002, y: -0.00822, z: 0.00051}
   m_LocalScale: {x: -0.094711035, y: -0.039909292, z: -1.4098209}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5723,7 +5726,7 @@ PrefabInstance:
         type: 3}
       propertyPath: doorInt
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8666217738514352508}
     - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
         type: 3}
       propertyPath: triggerAc
@@ -5733,6 +5736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: velocidade
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
+        type: 3}
+      propertyPath: distanceClick
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
         type: 3}
@@ -6357,6 +6365,7 @@ MonoBehaviour:
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
+  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 75, z: 0}
   doorAct: {fileID: 0}
 --- !u!1 &6674383251982266750
@@ -6539,7 +6548,7 @@ Transform:
   m_GameObject: {fileID: 7206896629470958161}
   serializedVersion: 2
   m_LocalRotation: {x: -0.50000006, y: -0.49999997, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: -0.008664363, z: 0.00051310705}
+  m_LocalPosition: {x: 0, y: 0.0074, z: 0.00051}
   m_LocalScale: {x: -0.09470954, y: -0.0399093, z: -1.4105622}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6593,6 +6602,7 @@ MonoBehaviour:
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
+  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 75, z: 0}
   doorAct: {fileID: 0}
 --- !u!65 &7728323822683158350
@@ -6751,11 +6761,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f295b47ebda8e7c478c2610a14877667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trancada: 1
+  trancada: 0
   pivot: {fileID: 2127278579}
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
+  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 75, z: 0}
   doorAct: {fileID: 0}
 --- !u!65 &8470698800121051059
@@ -6837,6 +6848,7 @@ MonoBehaviour:
   velocidadeRotacao: 40
   aberta: 0
   needKey: 1
+  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: -90, z: 0}
   doorAct: {fileID: 0}
 --- !u!1 &8666217738514352506
@@ -6897,6 +6909,7 @@ MonoBehaviour:
   velocidadeRotacao: 60
   aberta: 0
   needKey: 0
+  distanceClick: 0
   rotacaoAbertaOffset: {x: 0, y: 75, z: 0}
   doorAct: {fileID: 0}
 --- !u!1 &8743468276063167338

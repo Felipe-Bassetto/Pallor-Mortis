@@ -7,9 +7,11 @@ public class ReadNote : MonoBehaviour
     [Header("Nota")]
     public float velocidade = 0.1f;
     public float velocidadeRotacao = 1f;
+    public float distanceClick;
 
     private Vector3 positionInitial;
     private Quaternion rotationInitial;
+    private Vector3 scaleInitial;
     private bool noteMove = false;
     private bool noteBack = false;
     private Vector3 noteReading = new Vector3(0,0,0.5f);
@@ -31,6 +33,10 @@ public class ReadNote : MonoBehaviour
     {
         cameraPrincipal = Camera.main;
         layerMask = LayerMask.GetMask("Note");
+
+        positionInitial = gameObject.transform.position;
+        rotationInitial = gameObject.transform.rotation;
+        scaleInitial = gameObject.transform.localScale;
     }
 
     // Update is called once per frame
@@ -41,12 +47,11 @@ public class ReadNote : MonoBehaviour
             Ray ray = cameraPrincipal.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit; 
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask) && !noteMove && gameObject.name == hit.collider.gameObject.name)
+            if (Physics.Raycast(ray, out hit, distanceClick, layerMask) && !noteMove && gameObject.name == hit.collider.gameObject.name)
             {
-                positionInitial = gameObject.transform.position;
-                rotationInitial = gameObject.transform.rotation;
                 gameObject.transform.SetParent(cameraPrincipal.transform);
                 noteMove = true;
+                noteBack = false;
                 mov.PlayMovement(true);
                 pov.CamLock(false);
             } 
@@ -64,16 +69,17 @@ public class ReadNote : MonoBehaviour
                 noteMove = false;
             }
 
-            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, noteReading, velocidade * Time.unscaledDeltaTime);
+            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, noteReading, velocidade * Time.deltaTime);
             Quaternion lookRot = Quaternion.LookRotation(cameraPrincipal.transform.position - gameObject.transform.position, Vector3.up);
 
-            gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation,lookRot,velocidadeRotacao * Time.unscaledDeltaTime);
+            gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation,lookRot,velocidadeRotacao * Time.deltaTime);
         }
 
         if(noteBack)
         {
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.localPosition, positionInitial, velocidade * Time.unscaledDeltaTime);
-            gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, rotationInitial, velocidadeRotacao * Time.unscaledDeltaTime);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.localPosition, positionInitial, velocidade * Time.deltaTime);
+            gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, rotationInitial, velocidadeRotacao * Time.deltaTime);
+            gameObject.transform.localScale = scaleInitial;
             if(triggerAc != null)
             {
                 triggerAc.SetActive(true);
