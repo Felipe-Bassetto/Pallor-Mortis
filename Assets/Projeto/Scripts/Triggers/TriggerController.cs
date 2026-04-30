@@ -1,12 +1,18 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+
+[System.Serializable]
+public class TriggerEvent
+{
+    public float delay = 0f;
+    public UnityEvent onTrigger;
+}
 
 public class TriggerController : MonoBehaviour
 {
     public string targetTag = "Player";
-    public float delay = 0f;
-    public UnityEvent onTrigger;
+    public TriggerEvent[] onTriggerEvents;
     bool triggered;
 
     void OnTriggerEnter(Collider other)
@@ -20,7 +26,13 @@ public class TriggerController : MonoBehaviour
 
     IEnumerator InvokeDelayed()
     {
-        yield return new WaitForSeconds(delay);
-        onTrigger.Invoke();
+        foreach (var triggerEvent in onTriggerEvents)
+        {
+            if (triggerEvent == null) continue;
+            if (triggerEvent.delay > 0f)
+                yield return new WaitForSeconds(triggerEvent.delay);
+
+            triggerEvent.onTrigger?.Invoke();
+        }
     }
 }
