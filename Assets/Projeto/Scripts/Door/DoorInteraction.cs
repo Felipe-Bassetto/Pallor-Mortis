@@ -5,11 +5,13 @@ public class DoorInteraction : MonoBehaviour
     [Header("Porta")]
     public bool trancada;
     public Transform pivot;
-    public float velocidadeRotacao = 60f;
+    public float velocidadeRotacaoPadrao = 60f;
+    public float velocidadeRotacaoEvent = 200f;
     public bool aberta;
     public bool needKey;
     
     private float distanceClick = 2f;
+    private float velocidadeRotacao;
 
     [Header("Rotação")]
     public Vector3 rotacaoAbertaOffset = new Vector3(0, 90, 0);
@@ -54,6 +56,7 @@ public class DoorInteraction : MonoBehaviour
                             return;
                         }  
                     }
+                    velocidadeRotacao = velocidadeRotacaoPadrao;
                     canRotate = true;
                     aberta = !aberta;
                 }
@@ -81,6 +84,7 @@ public class DoorInteraction : MonoBehaviour
 
     public void RotateDoor(bool close)
     {
+        velocidadeRotacao = velocidadeRotacaoEvent;
         canRotate = true;
         aberta = close;
     }
