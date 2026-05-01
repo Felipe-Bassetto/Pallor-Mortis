@@ -5,8 +5,10 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     [Header("Sounds")]
-    public AudioSource audioSource;
+    [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource loopSource;
     public AudioClip[] audios;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,12 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySound(int index)
     {
-        audioSource.PlayOneShot(audios[index]);
+        sfxSource.PlayOneShot(audios[index]);
+    }
+
+    public void PlayLoop(int index)
+    {
+        loopSource.clip = audios[index];
+        loopSource.Play();
     }
 }

@@ -24,6 +24,8 @@ public class LightEvents : MonoBehaviour
     IEnumerator Pisca(GameObject obj, int qtd)
     {
         int counterBlinks = 0;
+
+        Debug.Log("canBlink: " + canBlink);
         while (canBlink)
         {
             if(qtd > 0)
