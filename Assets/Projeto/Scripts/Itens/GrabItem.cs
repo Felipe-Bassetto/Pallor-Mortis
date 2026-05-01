@@ -14,6 +14,7 @@ public class GrabItem : MonoBehaviour
     [Header("Scripts")]
     private ItensController it;
     [SerializeField] private LightEvents le;
+    [SerializeField] private PlayerPOV POV;
 
     [Header("GameObjects")]
     public GameObject trigger;
@@ -58,6 +59,7 @@ public class GrabItem : MonoBehaviour
                             variables.Set("triggerActived", false);
                             trigger.SetActive(true);
                             le.AlterStateCanBlink(false);
+                            POV.ConfusionActive(false);
                         }
                     }
                     else if(gameObject.tag == "Nota")
