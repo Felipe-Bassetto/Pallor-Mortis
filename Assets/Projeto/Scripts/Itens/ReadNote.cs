@@ -69,11 +69,15 @@ public class ReadNote : MonoBehaviour
             if(Input.GetKey(KeyCode.E)) // Voltar nota para posição original
             {
                 gameObject.transform.SetParent(null);
-                doorInt.AltState(false);
                 mov.PlayMovement(false);
                 pov.CamLock(true);
                 noteBack = true;
                 noteMove = false;
+
+                if(doorInt != null)
+                {
+                    doorInt.AltState(false);
+                }
 
                 if(lightBlink != null)
                 {

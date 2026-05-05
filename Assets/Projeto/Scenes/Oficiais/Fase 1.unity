@@ -2738,8 +2738,20 @@ MonoBehaviour:
   portaIdent: 2
   abre: 0
   pivot: {fileID: 69221718}
-  rotacaoAbertaOffset: {x: 0, y: 45, z: 0}
+  rotacaoAbertaOffset: {x: 0, y: 15, z: 0}
   velocidadeRotacao: 45
+--- !u!114 &845404645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1827073845258367200, guid: f67b804fe6cef3548a3129ba5449d0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 845404640}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845404642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f295b47ebda8e7c478c2610a14877667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &883324770
 GameObject:
   m_ObjectHideFlags: 0
@@ -3575,6 +3587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1242932124}
   - component: {fileID: 1242932126}
+  - component: {fileID: 1242932127}
   m_Layer: 0
   m_Name: TriggerPorta4
   m_TagString: Untagged
@@ -3615,10 +3628,69 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3.5180902, y: 3.3342752, z: 2.386057}
   m_Center: {x: 0.09048128, y: 0.36236334, z: 0.1115942}
+--- !u!114 &1242932127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242932123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6002f7414042844b2465d070f40350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Player
+  onTriggerEvents:
+  - delay: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 845404643}
+          m_TargetAssemblyTypeName: DoorAction, Assembly-CSharp
+          m_MethodName: OpenDoor
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 845404645}
+          m_TargetAssemblyTypeName: DoorInteraction, Assembly-CSharp
+          m_MethodName: AltState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - delay: 1
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1242932127}
+          m_TargetAssemblyTypeName: TriggerController, Assembly-CSharp
+          m_MethodName: DeleteTrigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  multTimes: 0
 --- !u!1 &1253585289
 GameObject:
   m_ObjectHideFlags: 0
@@ -4464,6 +4536,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - delay: 1
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1628358202}
+          m_TargetAssemblyTypeName: TriggerController, Assembly-CSharp
+          m_MethodName: DeleteTrigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   multTimes: 0
 --- !u!1 &1637277585 stripped
 GameObject:
@@ -4865,7 +4953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1890108130
 Transform:
   m_ObjectHideFlags: 0
@@ -4899,7 +4987,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3.8948288, y: 3.3342752, z: 2.386057}
   m_Center: {x: 0.99080276, y: 0.36236334, z: 0.1115942}
@@ -6271,7 +6359,7 @@ Transform:
   m_GameObject: {fileID: 4466356208129614275}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -16.17, y: -3.51, z: -13.2}
+  m_LocalPosition: {x: -16.17, y: -3.51, z: -11.55}
   m_LocalScale: {x: 0.24789001, y: 0.28571364, z: 0.028778864}
   m_ConstrainProportionsScale: 0
   m_Children: []

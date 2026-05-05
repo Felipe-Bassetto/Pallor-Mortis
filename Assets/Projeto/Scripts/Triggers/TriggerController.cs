@@ -26,6 +26,11 @@ public class TriggerController : MonoBehaviour
         StartCoroutine(InvokeDelayed());
     }
 
+    public void DeleteTrigger()
+    {
+        Destroy(gameObject);
+    }
+
     IEnumerator InvokeDelayed()
     {
         foreach (var triggerEvent in onTriggerEvents)
