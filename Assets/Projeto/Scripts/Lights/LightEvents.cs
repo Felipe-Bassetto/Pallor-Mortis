@@ -21,6 +21,22 @@ public class LightEvents : MonoBehaviour
         canBlink = blink;
     }
 
+    public void ApagarLuzes(GameObject[] arrLuzes)
+    {
+        foreach(GameObject obj in arrLuzes)
+        {
+            obj.SetActive(false);
+        }
+    }
+
+    public void AcenderLuzes(GameObject[] arrLuzes)
+    {
+        foreach(GameObject obj in arrLuzes)
+        {
+            obj.SetActive(true);
+        }
+    }
+
     IEnumerator Pisca(GameObject obj, int qtd)
     {
         int counterBlinks = 0;

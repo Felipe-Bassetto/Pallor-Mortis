@@ -8,8 +8,11 @@ public class TriggerLamps : MonoBehaviour
     public GameObject[] arrLights;
     public GameObject[] arrLightsInst;
 
-    public GameObject lightBath;
-    public GameObject lightCorridor;
+    public GameObject[] lightsBath;
+    public GameObject[] lightsCorridor;
+
+    [Header("Scripts")]
+    [SerializeField] private LightEvents le;
 
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
@@ -39,13 +42,13 @@ public class TriggerLamps : MonoBehaviour
     {
         if(bath)
         {
-            lightBath.SetActive(true);
-            lightCorridor.SetActive(false);
+            le.AcenderLuzes(lightsBath);
+            le.ApagarLuzes(lightsCorridor);
         }
         else
         {
-            lightBath.SetActive(false);
-            lightCorridor.SetActive(true);
+            le.AcenderLuzes(lightsCorridor);
+            le.ApagarLuzes(lightsBath);
         }
     }
 }
