@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Chave
   - Nota
+  - Ground
   layers:
   - Default
   - TransparentFX
