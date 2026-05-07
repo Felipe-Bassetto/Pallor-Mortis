@@ -13,6 +13,7 @@ public class ItemEvents : MonoBehaviour
     [SerializeField] private LightEvents le;
     [SerializeField] private PlayerPOV POV;
     [SerializeField] private DoorInteraction door;
+    [SerializeField] private GerenciadorConfusao confusion;
 
     [Header("Audio")]
     [SerializeField] private AudioSource audio;
@@ -26,5 +27,6 @@ public class ItemEvents : MonoBehaviour
         le.ApagarLuzes(arrLuzes);
         audio.Stop();
         door.AltState(false);
+        confusion.DesativarEfeito();
     }
 }
