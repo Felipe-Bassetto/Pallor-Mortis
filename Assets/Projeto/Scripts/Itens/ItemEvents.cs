@@ -24,7 +24,6 @@ public class ItemEvents : MonoBehaviour
         variables.Set("triggerActived", true);
         le.AlterStateCanBlink(false);
         le.ApagarLuzes(arrLuzes);
-        POV.ConfusionActive(false);
         audio.Stop();
         door.AltState(false);
     }

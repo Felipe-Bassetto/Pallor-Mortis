@@ -24,11 +24,12 @@ public class GerenciadorConfusao : MonoBehaviour
 
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.T))
         {
             efeitoAtivo = !efeitoAtivo;
             Debug.Log("Teste de Confusão: " + (efeitoAtivo ? "LIGADO" : "DESLIGADO"));
-        }
+        }*/
 
         float pesoAlvo = efeitoAtivo ? 1f : 0f;
 

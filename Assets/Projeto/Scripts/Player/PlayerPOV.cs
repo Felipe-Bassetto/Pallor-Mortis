@@ -12,7 +12,6 @@ public class PlayerPOV : MonoBehaviour
 
     Camera cam;
     private float rotacaoX = 0f;
-    private bool confusion = false;
     
 
     // Start is called before the first frame update
@@ -27,11 +26,6 @@ public class PlayerPOV : MonoBehaviour
         if(!camLocked)
         {
             CameraRotation();
-        }
-
-        if (confusion)
-        {
-            ConfusionEffect();
         }
     }
 
@@ -62,15 +56,5 @@ public class PlayerPOV : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             camLocked = true;
         }
-    }
-
-    public void ConfusionEffect()
-    {
-
-    }
-
-    public void ConfusionActive(bool active)
-    {
-        confusion = active;
     }
 }
