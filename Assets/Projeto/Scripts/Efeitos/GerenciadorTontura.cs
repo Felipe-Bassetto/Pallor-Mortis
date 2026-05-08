@@ -1,25 +1,40 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class GerenciadorConfusao : MonoBehaviour
 {
     [Header("Referências de Volume")]
     public Volume volumeTontura; 
+    private Vignette vignetteComponent;
 
     [Header("Configurações da Transição")]
-    public float velocidadeTransicao = 0.5f;
+    public float velocidadeTransicao = 0.75f;
     
     [Header("Configurações da Tontura")]
+    [SerializeField] private float velocidadeVignette = 1.5f;
     public bool usarPulsação = true;
-    public float velocidadePulso = 1f;
-    public float intensidadeMinimaNoPulso = 0.7f;
+    public float velocidadePulso = 2f;
+    public float intensidadeMinimaNoPulso = 0.1f;
+    private float intensidadeAlvo = 0.1f;
 
     [Header("Teste (Aperte T no jogo)")]
     public bool efeitoAtivo = false;
 
+    [Header("TimerEfeito")]
+    [SerializeField] private float maxCount;
+
+    private float counterTimer = 0f;
+
     void Start()
     {
         if (volumeTontura != null) volumeTontura.weight = 0;
+
+        if (volumeTontura.profile.TryGet(out vignetteComponent))
+        {
+            intensidadeAlvo = 0.1f;
+            vignetteComponent.intensity.value = intensidadeAlvo;
+        }
     }
 
     void Update()
@@ -30,6 +45,21 @@ public class GerenciadorConfusao : MonoBehaviour
             efeitoAtivo = !efeitoAtivo;
             Debug.Log("Teste de Confusão: " + (efeitoAtivo ? "LIGADO" : "DESLIGADO"));
         }*/
+
+        if(counterTimer>= maxCount)
+        {
+            if(vignetteComponent.intensity.value >= 0.7f)Debug.Log("fim");
+            else
+            {
+                counterTimer = 0f;
+                intensidadeMinimaNoPulso += 0.1f;
+                intensidadeAlvo += 0.1f;
+            }
+            
+        }
+        else counterTimer += Time.deltaTime;
+
+        vignetteComponent.intensity.value = Mathf.Lerp(vignetteComponent.intensity.value,intensidadeAlvo,velocidadeVignette * Time.deltaTime);
 
         float pesoAlvo = efeitoAtivo ? 1f : 0f;
 
