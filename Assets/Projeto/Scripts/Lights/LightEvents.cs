@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LightEvents : MonoBehaviour
 {
+    [SerializeField] private GameObject[] arrControllers;
+
     private bool canBlink = true;
 
     public void PiscarLampadas(GameObject light, int qtd)
@@ -34,6 +36,14 @@ public class LightEvents : MonoBehaviour
         foreach(GameObject obj in arrLuzes)
         {
             obj.SetActive(true);
+        }
+    }
+
+    public void LigarDesligControllers(bool isOn)
+    {
+        foreach(GameObject obj in arrControllers)
+        {
+            obj.SetActive(isOn);
         }
     }
 

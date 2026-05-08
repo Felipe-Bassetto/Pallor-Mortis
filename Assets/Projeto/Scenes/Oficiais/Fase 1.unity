@@ -2503,6 +2503,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d73c421e0a04945b496d3730895e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrControllers:
+  - {fileID: 2012901998}
+  - {fileID: 1867482483}
+  - {fileID: 668481221}
+  - {fileID: 81021908}
 --- !u!1 &819330395
 GameObject:
   m_ObjectHideFlags: 0
@@ -6162,7 +6167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 3
   velocidadeRotacao: 2
-  distanceClick: 0
+  distanceClick: 1
   triggerAc: {fileID: 1890108129}
   lightBlink: {fileID: 0}
   le: {fileID: 0}

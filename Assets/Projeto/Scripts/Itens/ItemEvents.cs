@@ -25,6 +25,7 @@ public class ItemEvents : MonoBehaviour
         variables.Set("triggerActived", true);
         le.AlterStateCanBlink(false);
         le.ApagarLuzes(arrLuzes);
+        le.LigarDesligControllers(false);
         audio.Stop();
         door.AltState(false);
         confusion.DesativarEfeito();
