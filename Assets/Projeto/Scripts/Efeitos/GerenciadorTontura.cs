@@ -24,6 +24,7 @@ public class GerenciadorConfusao : MonoBehaviour
     [Header("TimerEfeito")]
     [SerializeField] private float maxCount;
 
+    private bool canCount = false;
     private float counterTimer = 0f;
 
     void Start()
@@ -39,25 +40,21 @@ public class GerenciadorConfusao : MonoBehaviour
 
     void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.T))
+        if(canCount)
         {
-            efeitoAtivo = !efeitoAtivo;
-            Debug.Log("Teste de Confusão: " + (efeitoAtivo ? "LIGADO" : "DESLIGADO"));
-        }*/
-
-        if(counterTimer>= maxCount)
-        {
-            if(vignetteComponent.intensity.value >= 0.7f)Debug.Log("fim");
-            else
+            if (counterTimer >= maxCount)
             {
-                counterTimer = 0f;
-                intensidadeMinimaNoPulso += 0.1f;
-                intensidadeAlvo += 0.1f;
+                if (vignetteComponent.intensity.value >= 0.7f) Debug.Log("fim");
+                else
+                {
+                    counterTimer = 0f;
+                    intensidadeMinimaNoPulso += 0.1f;
+                    intensidadeAlvo += 0.1f;
+                }
+
             }
-            
+            else counterTimer += Time.deltaTime;
         }
-        else counterTimer += Time.deltaTime;
 
         vignetteComponent.intensity.value = Mathf.Lerp(vignetteComponent.intensity.value,intensidadeAlvo,velocidadeVignette * Time.deltaTime);
 
@@ -76,7 +73,12 @@ public class GerenciadorConfusao : MonoBehaviour
     }
 
     [ContextMenu("Ativar Efeito")]
-    public void AtivarEfeito() => efeitoAtivo = true;
+    public void AtivarEfeito()
+    {
+        efeitoAtivo = true;
+        canCount = true;
+    }
+
 
     [ContextMenu("Desativar Efeito")]
     public void DesativarEfeito() => efeitoAtivo = false;

@@ -16,18 +16,23 @@ public class ItemEvents : MonoBehaviour
     [SerializeField] private GerenciadorConfusao confusion;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource audio;
+    public AudioSource audioSource;
 
     public void GrabKey()
     {
         var variables = Variables.Object(gameObject);
-        triggerPorta4.SetActive(true);
-        variables.Set("triggerActived", true);
-        le.AlterStateCanBlink(false);
+        variables.Set("triggerActived", true); // Marca trigger como já ativo
+
+        triggerPorta4.SetActive(true); // Ativa trigger da porta 4
+
+        le.AlterStateCanBlink(false); // Faz as luzes ficarem todas apagadas com excessão de uma
         le.ApagarLuzes(arrLuzes);
         le.LigarDesligControllers(false);
-        audio.Stop();
-        door.AltState(false);
-        confusion.DesativarEfeito();
+
+        audioSource.Stop(); // Para audio em loop das vozes
+
+        door.AltState(false); // Destranca a porta 3
+
+        confusion.DesativarEfeito(); // Desativa confusão
     }
 }

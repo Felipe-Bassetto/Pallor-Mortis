@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5819,7 +5819,7 @@ MonoBehaviour:
   POV: {fileID: 1729867829}
   door: {fileID: 2020435971}
   confusion: {fileID: 1729867833}
-  audio: {fileID: 763688943}
+  audioSource: {fileID: 763688943}
 --- !u!1 &2079997306
 GameObject:
   m_ObjectHideFlags: 0
