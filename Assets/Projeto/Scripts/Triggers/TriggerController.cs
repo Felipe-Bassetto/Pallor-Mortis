@@ -15,7 +15,7 @@ public class TriggerController : MonoBehaviour
     public TriggerEvent[] onTriggerEvents;
     public bool multTimes;
 
-    bool triggered;
+    bool triggered = false;
 
     void OnTriggerEnter(Collider other)
     {

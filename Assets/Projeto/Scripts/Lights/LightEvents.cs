@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LightEvents : MonoBehaviour
 {
+    [Header("Arrays")]
     [SerializeField] private GameObject[] arrControllers;
+    [SerializeField] private GameObject[] arrLights;
+    [SerializeField] private GameObject[] lightsBath;
+    [SerializeField] private GameObject[] lightsCorridor;
 
     private bool canBlink = true;
 
@@ -47,6 +52,25 @@ public class LightEvents : MonoBehaviour
         }
     }
 
+    public void LightController(bool bath)
+    {
+        if (bath)
+        {
+            AcenderLuzes(lightsBath);
+            ApagarLuzes(lightsCorridor);
+        }
+        else
+        {
+            AcenderLuzes(lightsCorridor);
+            ApagarLuzes(lightsBath);
+        }
+    }
+
+    public void StartBurn()
+    {
+        StartCoroutine(BurnLights());
+    }
+
     IEnumerator Pisca(GameObject obj, int qtd)
     {
         int counterBlinks = 0;
@@ -67,6 +91,16 @@ public class LightEvents : MonoBehaviour
         }
     }
 
-
+    IEnumerator BurnLights()
+    {
+        foreach (GameObject luz in arrLights)
+        {
+            luz.SetActive(false);
+            Debug.Log(luz.name);
+            var variables = Variables.Object(luz);
+            variables.Set("CanLightUp", false);
+            yield return new WaitForSeconds(1f);
+        }
+    }
 
 }

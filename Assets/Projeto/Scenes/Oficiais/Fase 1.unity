@@ -346,8 +346,8 @@ MonoBehaviour:
     onTrigger:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1890108133}
-          m_TargetAssemblyTypeName: TriggerLamps, Assembly-CSharp
+        - m_Target: {fileID: 814180580}
+          m_TargetAssemblyTypeName: LightEvents, Assembly-CSharp
           m_MethodName: LightController
           m_Mode: 6
           m_Arguments:
@@ -1750,8 +1750,8 @@ MonoBehaviour:
     onTrigger:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1890108133}
-          m_TargetAssemblyTypeName: TriggerLamps, Assembly-CSharp
+        - m_Target: {fileID: 814180580}
+          m_TargetAssemblyTypeName: LightEvents, Assembly-CSharp
           m_MethodName: LightController
           m_Mode: 6
           m_Arguments:
@@ -2508,6 +2508,24 @@ MonoBehaviour:
   - {fileID: 1867482483}
   - {fileID: 668481221}
   - {fileID: 81021908}
+  arrLights:
+  - {fileID: 319373197}
+  - {fileID: 261541083}
+  - {fileID: 1141691537}
+  - {fileID: 687415064}
+  - {fileID: 641587227}
+  - {fileID: 1323070790}
+  - {fileID: 1165245698}
+  lightsBath:
+  - {fileID: 641587227}
+  - {fileID: 1323070790}
+  - {fileID: 52380466}
+  - {fileID: 956532370}
+  lightsCorridor:
+  - {fileID: 261541083}
+  - {fileID: 1141691537}
+  - {fileID: 319373197}
+  - {fileID: 819330395}
 --- !u!1 &819330395
 GameObject:
   m_ObjectHideFlags: 0
@@ -5342,8 +5360,8 @@ MonoBehaviour:
     onTrigger:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1890108133}
-          m_TargetAssemblyTypeName: TriggerLamps, Assembly-CSharp
+        - m_Target: {fileID: 814180580}
+          m_TargetAssemblyTypeName: LightEvents, Assembly-CSharp
           m_MethodName: LightController
           m_Mode: 6
           m_Arguments:
@@ -5408,7 +5426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1876292524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5494,8 +5512,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.8948288, y: 3.3342752, z: 2.386057}
-  m_Center: {x: 0.99080276, y: 0.36236334, z: 0.1115942}
+  m_Size: {x: 3.8948288, y: 3.3342752, z: 2.7041152}
+  m_Center: {x: 0.99080276, y: 0.36236334, z: 0.27062333}
 --- !u!114 &1890108133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5505,38 +5523,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 1890108129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25c9c648b6de5084baaffbefc7618114, type: 3}
+  m_Script: {fileID: 11500000, guid: de6002f7414042844b2465d070f40350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrLights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 261541083}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 687415064}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1323070790}
-  - {fileID: 1468549917}
-  - {fileID: 0}
-  arrLightsInst:
-  - {fileID: 319373197}
-  - {fileID: 819330395}
-  - {fileID: 956532370}
-  - {fileID: 52380466}
-  lightsBath:
-  - {fileID: 641587227}
-  - {fileID: 1323070790}
-  - {fileID: 52380466}
-  - {fileID: 956532370}
-  lightsCorridor:
-  - {fileID: 261541083}
-  - {fileID: 1141691537}
-  - {fileID: 319373197}
-  - {fileID: 819330395}
-  le: {fileID: 814180580}
+  targetTag: Player
+  onTriggerEvents:
+  - delay: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 814180580}
+          m_TargetAssemblyTypeName: LightEvents, Assembly-CSharp
+          m_MethodName: StartBurn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1890108133}
+          m_TargetAssemblyTypeName: TriggerController, Assembly-CSharp
+          m_MethodName: DeleteTrigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  multTimes: 0
 --- !u!1 &1959432406
 GameObject:
   m_ObjectHideFlags: 0
@@ -5640,8 +5660,8 @@ MonoBehaviour:
     onTrigger:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1890108133}
-          m_TargetAssemblyTypeName: TriggerLamps, Assembly-CSharp
+        - m_Target: {fileID: 814180580}
+          m_TargetAssemblyTypeName: LightEvents, Assembly-CSharp
           m_MethodName: LightController
           m_Mode: 6
           m_Arguments:
@@ -6170,7 +6190,14 @@ MonoBehaviour:
   distanceClick: 1
   triggerAc: {fileID: 1890108129}
   lightBlink: {fileID: 0}
-  le: {fileID: 0}
+  arrLights:
+  - {fileID: 1165245698}
+  - {fileID: 1323070790}
+  - {fileID: 687415064}
+  - {fileID: 261541083}
+  - {fileID: 1141691537}
+  - {fileID: 641587227}
+  le: {fileID: 814180580}
   mov: {fileID: 1637277600}
   pov: {fileID: 1729867829}
   doorInt: {fileID: 0}
@@ -6751,7 +6778,7 @@ PrefabInstance:
     - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
         type: 3}
       propertyPath: arrLights.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
         type: 3}

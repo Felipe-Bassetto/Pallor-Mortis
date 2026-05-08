@@ -20,6 +20,7 @@ public class ReadNote : MonoBehaviour
     LayerMask layerMask;
     public GameObject triggerAc;
     public GameObject lightBlink;
+    [SerializeField] private GameObject[] arrLights;
 
     [Header("Scripts")]
     public LightEvents le;
@@ -100,6 +101,7 @@ public class ReadNote : MonoBehaviour
             if(triggerAc != null)
             {
                 triggerAc.SetActive(true);
+                le.AcenderLuzes(arrLights);
             }
         }
     }
