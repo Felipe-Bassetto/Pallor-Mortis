@@ -9,6 +9,8 @@ public class PlayerHide : MonoBehaviour
     public bool playerBack = false;
     public float velocidade;
 
+    private Collider collDoor;
+
     [Header("Scripts")]
     public DoorInteraction doorInt;
     public Movement mov;
@@ -16,11 +18,15 @@ public class PlayerHide : MonoBehaviour
     public StateController stateCon;
 
     private Vector3 initialPos;
-    private Quaternion initialRot;
 
     [Header("GameObject")]
     public GameObject player;
     public GameObject hidePoint;
+
+    private void Start()
+    {
+        collDoor = GetComponent<Collider>();
+    }
 
     void Update()
     {
@@ -34,6 +40,8 @@ public class PlayerHide : MonoBehaviour
 
     IEnumerator HideIn() 
     {
+        doorInt.RotateDoor(true);
+        collDoor.enabled = false;
         initialPos = player.transform.position;
         mov.PlayMovement(true);
         playerMove = true;
@@ -41,16 +49,20 @@ public class PlayerHide : MonoBehaviour
         doorInt.RotateDoor(false);
         stateCon.changeHidden(true);
         playerMove = false;
+        collDoor.enabled = true;
     }
 
     IEnumerator HideOut() 
     {
+        doorInt.RotateDoor(true);
+        collDoor.enabled = false;
         playerBack = true;
         yield return new WaitForSeconds(1);
         doorInt.RotateDoor(false);
         stateCon.changeHidden(false);
         playerBack = false;
         mov.PlayMovement(false);
+        collDoor.enabled = true;
     }
 
     void OnMouseDown()
