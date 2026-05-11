@@ -8,12 +8,15 @@ public class CamMenu : MonoBehaviour
     public bool camMove;
     public float velocidade;
 
+    [SerializeField] private GameObject camSpot;
+
     Camera cam;
-    private Vector3 camLocation = new Vector3(0, 1, 0);
+    private Vector3 camLocation;
 
     // Start is called before the first frame update
     void Start()
     {
+        camLocation = camSpot.transform.position;
         cam = Camera.main;
     }
 

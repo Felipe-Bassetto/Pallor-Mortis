@@ -14,6 +14,7 @@ public class DoorAction : MonoBehaviour
     public Vector3 rotacaoAbertaOffset = new Vector3(0, 45, 0);
     public float velocidadeRotacao = 120f;
 
+    private float distanceClick = 2f;
     private Quaternion rotacaoAberta;
     private Quaternion rotacaoFechada;
     LayerMask layerMask;
@@ -36,7 +37,7 @@ public class DoorAction : MonoBehaviour
                 RaycastHit hit;
                 if (Input.GetMouseButtonUp(0)) // Verificação se o player clicou na porta
                 {
-                    if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+                    if (Physics.Raycast(ray, out hit, distanceClick, layerMask))
                     {
                         StartCoroutine("ChangeScene");
                     }
