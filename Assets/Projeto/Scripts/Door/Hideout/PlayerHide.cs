@@ -10,6 +10,7 @@ public class PlayerHide : MonoBehaviour
     public float velocidade;
 
     private Collider collDoor;
+    private bool canViewCut;
 
     [Header("Scripts")]
     public DoorInteraction doorInt;
@@ -50,6 +51,8 @@ public class PlayerHide : MonoBehaviour
         stateCon.changeHidden(true);
         playerMove = false;
         collDoor.enabled = true;
+
+        if(canViewCut) StartCoroutine(StartCutscene());
     }
 
     IEnumerator HideOut() 
@@ -67,7 +70,7 @@ public class PlayerHide : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(stateCon.playerHidden)
+        if(stateCon.playerHidden && !canViewCut)
         {
             StartCoroutine(HideOut());
         }
@@ -75,8 +78,14 @@ public class PlayerHide : MonoBehaviour
         {
             StartCoroutine(HideIn());
         }
-        
     }
 
+    IEnumerator StartCutscene()
+    {
+        yield return new WaitForSeconds(1);
+        ChangeCutsceneBool(false);
+    }
+
+    public void ChangeCutsceneBool(bool canStart) => canViewCut = canStart;
 }
 
