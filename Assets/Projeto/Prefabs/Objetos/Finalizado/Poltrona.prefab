@@ -258,6 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3436092409194003603}
+  - component: {fileID: -4282819136501162908}
   m_Layer: 0
   m_Name: Poltrona
   m_TagString: Untagged
@@ -286,6 +287,27 @@ Transform:
   - {fileID: 2936045898020580228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &-4282819136501162908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5535669456086076478}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.911077, y: 13.76658, z: 15.927592}
+  m_Center: {x: -1.0968648, y: 0.25251836, z: -0.06881282}
 --- !u!1 &5724303233794094115
 GameObject:
   m_ObjectHideFlags: 0

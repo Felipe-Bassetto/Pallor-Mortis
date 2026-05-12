@@ -52,7 +52,8 @@ public class GrabItem : MonoBehaviour
                         
                         if(!triggerActived)
                         {
-                            ie.GrabKey();                      
+                            ie.GrabKey();  
+                            sm.PlaySound(3);
                         }
                     }
                     else if(gameObject.tag == "Nota")

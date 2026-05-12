@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5145589994099391483}
   - component: {fileID: 5383358419810924835}
   - component: {fileID: 7381194616007982256}
+  - component: {fileID: 7752560362855050036}
   m_Layer: 0
   m_Name: Cadeira
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7752560362855050036
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495790258297911247}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2596337, y: 0.20701051, z: 0.03963013}
+  m_Center: {x: -0.023392253, y: -0.00008186933, z: -0.0027568853}

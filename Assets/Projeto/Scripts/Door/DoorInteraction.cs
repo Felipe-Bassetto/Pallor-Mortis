@@ -12,6 +12,7 @@ public class DoorInteraction : MonoBehaviour
     
     private float distanceClick = 2f;
     private float velocidadeRotacao;
+    private bool canClick = true;
 
     [Header("Rotação")]
     public Vector3 rotacaoAbertaOffset = new Vector3(0, 90, 0);
@@ -25,9 +26,13 @@ public class DoorInteraction : MonoBehaviour
 
     private ItensController ic;
 
+    [Header("Scripts")]
+    [SerializeField] private SoundManager sm;
+
     void Start()
     {
         ic = FindObjectOfType<ItensController>();
+        sm = FindObjectOfType<SoundManager>();
 
         rotacaoFechada = pivot.rotation;
         rotacaoAberta = rotacaoFechada * Quaternion.Euler(rotacaoAbertaOffset);
@@ -35,30 +40,34 @@ public class DoorInteraction : MonoBehaviour
 
     void Update()
     {
-        // INTERAÇÃO
-        if (Input.GetMouseButtonDown(0))
+        if (canClick)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, distanceClick))
+            // INTERAÇÃO
+            if (Input.GetMouseButtonDown(0))
             {
-                if (hit.transform == pivot || hit.transform.IsChildOf(pivot))
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, distanceClick))
                 {
-                    if (trancada)
+                    if (hit.transform == pivot || hit.transform.IsChildOf(pivot))
                     {
-                        bool key;
-                        if(ic.itemActive != -1) key = ic.arrItens[ic.itemActive].tag == "Chave";
-                        else key = false;
-                        if((needKey && !key) || !needKey)
+                        if (trancada)
                         {
-                            Debug.Log("Trancada");
-                            return;
-                        }  
+                            bool key;
+                            if (ic.itemActive != -1) key = ic.arrItens[ic.itemActive].tag == "Chave";
+                            else key = false;
+                            if ((needKey && !key) || !needKey)
+                            {
+                                sm.PlaySound(2);
+                                return;
+                            }
+                            else if (key) sm.PlaySound(3);
+                        }
+                        velocidadeRotacao = velocidadeRotacaoPadrao;
+                        canRotate = true;
+                        aberta = !aberta;
                     }
-                    velocidadeRotacao = velocidadeRotacaoPadrao;
-                    canRotate = true;
-                    aberta = !aberta;
                 }
             }
         }
@@ -88,4 +97,6 @@ public class DoorInteraction : MonoBehaviour
         canRotate = true;
         aberta = close;
     }
+
+    public void ChangeCanClick(bool phClick) => canClick = !phClick;
 }

@@ -26,6 +26,9 @@ public class ReadNote : MonoBehaviour
     public LightEvents le;
     public Movement mov;
     public PlayerPOV pov;
+    public PlayerHide ph;
+
+    [SerializeField] private SoundManager sm;
 
     [Header("Camera")]
     private Camera cameraPrincipal;
@@ -35,6 +38,9 @@ public class ReadNote : MonoBehaviour
 
     [Header("Luzes")]
     [SerializeField] private int qtdLightsBlink;
+
+    [Header("prefab")]
+    [SerializeField] private GameObject sombra;
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +84,7 @@ public class ReadNote : MonoBehaviour
                 if(doorInt != null)
                 {
                     doorInt.AltState(false);
+                    sm.PlaySound(3);
                 }
 
                 if(lightBlink != null)
@@ -102,6 +109,8 @@ public class ReadNote : MonoBehaviour
             {
                 triggerAc.SetActive(true);
                 le.AcenderLuzes(arrLights);
+                Instantiate(sombra, new Vector3(7.5f,1f,-7f), Quaternion.identity);
+                ph.ChangeCutsceneBool(true);
             }
         }
     }

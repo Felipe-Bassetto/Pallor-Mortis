@@ -23,6 +23,7 @@ public class PlayerHide : MonoBehaviour
     [Header("GameObject")]
     public GameObject player;
     public GameObject hidePoint;
+    [SerializeField] private GameObject triggerMirror;
 
     private void Start()
     {
@@ -33,7 +34,6 @@ public class PlayerHide : MonoBehaviour
     {
         if (playerMove)
         {
-            Debug.Log("Escondendo");
             player.transform.position = Vector3.MoveTowards(player.transform.position, hidePoint.transform.position, velocidade * Time.unscaledDeltaTime);
         }
         if (playerBack) player.transform.position = Vector3.MoveTowards(player.transform.position, initialPos, velocidade * Time.unscaledDeltaTime);
@@ -74,7 +74,7 @@ public class PlayerHide : MonoBehaviour
         {
             StartCoroutine(HideOut());
         }
-        else
+        else if(!stateCon.playerHidden)
         {
             StartCoroutine(HideIn());
         }
@@ -82,10 +82,16 @@ public class PlayerHide : MonoBehaviour
 
     IEnumerator StartCutscene()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3f);
         ChangeCutsceneBool(false);
+        triggerMirror.SetActive(true);
     }
 
-    public void ChangeCutsceneBool(bool canStart) => canViewCut = canStart;
+    public void ChangeCutsceneBool(bool canStart)
+    {
+        canViewCut = canStart;
+        doorInt.ChangeCanClick(canStart);
+    }
+
 }
 
