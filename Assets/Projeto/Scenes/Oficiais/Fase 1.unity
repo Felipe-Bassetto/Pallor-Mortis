@@ -3009,8 +3009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raioPerambulacao: 20
-  raioVisao: 10
-  anguloVisao: 75
+  raioVisao: 8.5
+  anguloVisao: 70
   layerPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -3117,7 +3117,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 4.5
-  m_Acceleration: 10
+  m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 70
   m_StoppingDistance: 0
