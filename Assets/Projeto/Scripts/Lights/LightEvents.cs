@@ -13,6 +13,9 @@ public class LightEvents : MonoBehaviour
 
     private bool canBlink = true;
 
+    [Header("Scripts")]
+    [SerializeField] private SoundManager sm;
+
     public void PiscarLampadas(GameObject light, int qtd)
     { 
         StartCoroutine(Pisca(light, qtd));
@@ -96,9 +99,9 @@ public class LightEvents : MonoBehaviour
         foreach (GameObject luz in arrLights)
         {
             luz.SetActive(false);
-            Debug.Log(luz.name);
             var variables = Variables.Object(luz);
             variables.Set("CanLightUp", false);
+            sm.PlaySound(5);
             yield return new WaitForSeconds(1f);
         }
     }

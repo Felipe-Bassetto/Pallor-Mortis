@@ -68,6 +68,16 @@ public class ReadNote : MonoBehaviour
                 noteBack = false;
                 mov.PlayMovement(true);
                 pov.CamLock(false);
+
+                switch (hit.collider.gameObject.tag)
+                {
+                    case "Nota":
+                        sm.PlaySound(7);
+                        break;
+                    case "Carteirinha":
+                        sm.PlaySound(8);
+                        break;
+                }
             } 
         }
 
@@ -111,6 +121,7 @@ public class ReadNote : MonoBehaviour
                 le.AcenderLuzes(arrLights);
                 Instantiate(sombra, new Vector3(7.5f,1f,-7f), Quaternion.identity);
                 ph.ChangeCutsceneBool(true);
+                
             }
         }
     }

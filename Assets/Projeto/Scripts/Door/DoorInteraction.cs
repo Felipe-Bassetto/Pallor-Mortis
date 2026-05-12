@@ -62,10 +62,12 @@ public class DoorInteraction : MonoBehaviour
                                 sm.PlaySound(2);
                                 return;
                             }
-                            else if (key) sm.PlaySound(3);
                         }
                         velocidadeRotacao = velocidadeRotacaoPadrao;
                         canRotate = true;
+
+                        if(aberta) sm.PlaySound(3);
+
                         aberta = !aberta;
                     }
                 }

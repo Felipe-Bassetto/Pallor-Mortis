@@ -1605,6 +1605,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b52f006620803f34a9a2f392c6fb230d, type: 3}
   - {fileID: 8300000, guid: adc2dc7196da0674f8e19ff33f7e91a4, type: 3}
   - {fileID: 8300000, guid: a27b054f89bfa6b469253d44c654dc75, type: 3}
+  - {fileID: 8300000, guid: 310be2677384dad43b804730c47a0256, type: 3}
+  - {fileID: 8300000, guid: 10a6ce51eff16ff42918198ff972e028, type: 3}
+  - {fileID: 8300000, guid: 915179cd70f5bed43b71e102a9bfebc7, type: 3}
+  - {fileID: 8300000, guid: cda41d005396d7e4f89088f8f8cda6a6, type: 3}
+  - {fileID: 8300000, guid: 913372817639142408386f3266c1d182, type: 3}
 --- !u!1 &371819849
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,7 +3695,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 9
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
@@ -3727,6 +3732,18 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 366486228}
+          m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
@@ -4186,6 +4203,7 @@ MonoBehaviour:
   - {fileID: 1141691537}
   - {fileID: 319373197}
   - {fileID: 819330395}
+  sm: {fileID: 0}
 --- !u!1 &819330395
 GameObject:
   m_ObjectHideFlags: 0
@@ -6520,6 +6538,18 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 366486228}
+          m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -11268,7 +11298,7 @@ GameObject:
   - component: {fileID: 1483969402918854711}
   m_Layer: 7
   m_Name: Carteirinha
-  m_TagString: Untagged
+  m_TagString: Carteirinha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11363,6 +11393,11 @@ PrefabInstance:
       propertyPath: le
       value: 
       objectReference: {fileID: 814180580}
+    - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
+        type: 3}
+      propertyPath: sm
+      value: 
+      objectReference: {fileID: 366486228}
     - target: {fileID: 2291854729582782176, guid: c011e4f176bd2a24bb30373544cacbce,
         type: 3}
       propertyPath: mov
