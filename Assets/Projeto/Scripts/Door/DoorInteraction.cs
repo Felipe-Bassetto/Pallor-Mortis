@@ -55,7 +55,7 @@ public class DoorInteraction : MonoBehaviour
                         if (trancada)
                         {
                             bool key;
-                            if (ic.itemActive != -1) key = ic.arrItens[ic.itemActive].tag == "Chave";
+                            if (ic.itemActive != -1 ) key = ic.arrItens[ic.itemActive].tag == "Chave";
                             else key = false;
                             if ((needKey && !key) || !needKey)
                             {
@@ -66,10 +66,12 @@ public class DoorInteraction : MonoBehaviour
                         velocidadeRotacao = velocidadeRotacaoPadrao;
                         canRotate = true;
 
-                        if(!aberta) sm.PlaySound(14);
+                        if (!aberta)
+                        {
+                            sm.PlaySound(14);
+                            aberta = !aberta;
+                        }
                         else sm.PlaySound(12);
-
-                        aberta = !aberta;
                     }
                 }
             }

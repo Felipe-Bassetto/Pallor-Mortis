@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f295b47ebda8e7c478c2610a14877667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trancada: 0
+  trancada: 1
   pivot: {fileID: 604143545}
   velocidadeRotacaoPadrao: 60
   velocidadeRotacaoEvent: 60
@@ -1881,6 +1881,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768453338457375391, guid: 7777e6f6713fc3b4cb073b4e0d015993,
+        type: 3}
+      propertyPath: itemActive
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7052207504347025046, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
@@ -5094,7 +5099,7 @@ GameObject:
   - component: {fileID: 3764998102676608811}
   - component: {fileID: 912735505683704231}
   - component: {fileID: 7811135822483419778}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: Porta Entrada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5441,7 +5446,7 @@ GameObject:
   - component: {fileID: 3506970723161282861}
   - component: {fileID: 7761804090450489364}
   - component: {fileID: 8055297121491013548}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: "Ma\xE7aneta.001"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -24,7 +24,7 @@ public class DoorAction : MonoBehaviour
     {
         rotacaoFechada = pivot.rotation;
         rotacaoAberta = rotacaoFechada * Quaternion.Euler(rotacaoAbertaOffset);
-        layerMask = LayerMask.GetMask("Door");
+        layerMask = LayerMask.GetMask("DoorInit");
     }
 
     // Update is called once per frame
