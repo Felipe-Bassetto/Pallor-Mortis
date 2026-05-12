@@ -19,9 +19,14 @@ public class EnemyManager : MonoBehaviour
     public Transform player; // Se deixado vazio no Prefab, o script buscará na cena
     private bool consegueVerPlayer;
 
+    [Header("Scripts")]
+    [SerializeField] private GameManager gm;
+
     void Start()
     {
         agente = GetComponent<NavMeshAgent>();
+
+        gm = FindObjectOfType<GameManager>();
 
         // BUSCA AUTOMÁTICA DO PLAYER (Solução para o Prefab)
         if (player == null)
@@ -131,5 +136,12 @@ public class EnemyManager : MonoBehaviour
     {
         anguloEmGraus += transform.eulerAngles.y;
         return new Vector3(Mathf.Sin(anguloEmGraus * Mathf.Deg2Rad), 0, Mathf.Cos(anguloEmGraus * Mathf.Deg2Rad));
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            gm.Restart();
+        }
     }
 }

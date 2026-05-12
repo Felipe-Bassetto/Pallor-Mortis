@@ -66,7 +66,7 @@ public class DoorInteraction : MonoBehaviour
                         velocidadeRotacao = velocidadeRotacaoPadrao;
                         canRotate = true;
 
-                        if(!aberta) sm.PlaySound(3);
+                        if(!aberta) sm.PlaySound(14);
                         else sm.PlaySound(12);
 
                         aberta = !aberta;

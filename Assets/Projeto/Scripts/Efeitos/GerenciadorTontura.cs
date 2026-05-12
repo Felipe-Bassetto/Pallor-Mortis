@@ -27,6 +27,9 @@ public class GerenciadorConfusao : MonoBehaviour
     private bool canCount = false;
     private float counterTimer = 0f;
 
+    [Header("Scripts")]
+    [SerializeField] private GameManager gm;
+
     void Start()
     {
         if (volumeTontura != null) volumeTontura.weight = 0;
@@ -44,7 +47,7 @@ public class GerenciadorConfusao : MonoBehaviour
         {
             if (counterTimer >= maxCount)
             {
-                if (vignetteComponent.intensity.value >= 0.7f) Debug.Log("fim");
+                if (vignetteComponent.intensity.value >= 0.7f) gm.Restart();
                 else
                 {
                     counterTimer = 0f;
