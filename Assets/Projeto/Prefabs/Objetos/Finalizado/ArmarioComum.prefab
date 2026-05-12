@@ -258,7 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2443311519172220633}
-  - component: {fileID: 3048658875204665281}
+  - component: {fileID: 5651462984181173765}
   m_Layer: 0
   m_Name: ArmarioComum
   m_TagString: Untagged
@@ -284,7 +284,7 @@ Transform:
   - {fileID: 2396808250226407506}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3048658875204665281
+--- !u!65 &5651462984181173765
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -303,5 +303,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.3824396, y: 13.707179, z: 6.741074}
+  m_Center: {x: 1.9134793, y: 7.613871, z: 0.00025200844}
