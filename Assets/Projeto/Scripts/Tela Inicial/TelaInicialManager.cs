@@ -83,8 +83,8 @@ public class TelaInicialManager : MonoBehaviour
     {
         int line = 0;
         bool textShowing = true;
-
-        sm.PlaySound(6);
+        yield return new WaitForSeconds(1f);
+        sm.PlaySound(5);
         while (textShowing)
         {
             memoriesUI.text = memories[line].Fala;
@@ -102,5 +102,7 @@ public class TelaInicialManager : MonoBehaviour
             if (memories.Count == line) textShowing = false;
         }
         memoriesObj.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        sm.PlaySound(4);
     }
 }

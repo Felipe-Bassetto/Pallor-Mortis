@@ -18,6 +18,8 @@ public class PlayerHide : MonoBehaviour
     public PlayerPOV pov;
     public StateController stateCon;
 
+    [SerializeField] private SoundManager sm;
+
     private Vector3 initialPos;
 
     [Header("GameObject")]
@@ -82,6 +84,7 @@ public class PlayerHide : MonoBehaviour
 
     IEnumerator StartCutscene()
     {
+        sm.PlaySound(11);
         yield return new WaitForSeconds(3f);
         ChangeCutsceneBool(false);
         triggerMirror.SetActive(true);

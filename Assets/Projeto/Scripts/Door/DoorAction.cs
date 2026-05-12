@@ -59,7 +59,7 @@ public class DoorAction : MonoBehaviour
 
     IEnumerator ChangeScene()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.75f);
         SceneManager.LoadScene("Fase 1");
     }
 
