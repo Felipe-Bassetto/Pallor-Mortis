@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17384285, g: 0.21736282, b: 0.29951355, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -507,7 +507,6 @@ GameObject:
   - component: {fileID: 163548799}
   - component: {fileID: 163548798}
   - component: {fileID: 163548797}
-  - component: {fileID: 163548796}
   m_Layer: 3
   m_Name: Porta Entrada
   m_TagString: Untagged
@@ -531,23 +530,6 @@ Transform:
   - {fileID: 1015026639}
   m_Father: {fileID: 604143545}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &163548796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163548794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3606cb0e7d86ccf4b8f98757d69d235b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portaIdent: 0
-  abre: 0
-  pivot: {fileID: 604143545}
-  rotacaoAbertaOffset: {x: 0, y: 45, z: 0}
-  velocidadeRotacao: 120
 --- !u!114 &163548797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f295b47ebda8e7c478c2610a14877667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trancada: 1
+  trancada: 0
   pivot: {fileID: 604143545}
   velocidadeRotacaoPadrao: 60
   velocidadeRotacaoEvent: 60
@@ -1118,7 +1100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -2841,7 +2823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ela consome como uma ansiedade g\xE9lida e um pesar no peito."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
