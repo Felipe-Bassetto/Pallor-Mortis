@@ -4,26 +4,41 @@ using System.Collections;
 
 public class EnemyManager : MonoBehaviour
 {
-    [Header("ConfiguraÁıes de Movimento")]
+    [Header("Configura√ß√µes de Movimento")]
     public float raioPerambulacao = 10f;
     private NavMeshAgent agente;
 
-    [Header("ConfiguraÁ„o de Vis„o (FOV)")]
+    [Header("Configura√ß√£o de Vis√£o (FOV)")]
     public float raioVisao = 10f;
     [Range(0, 360)]
     public float anguloVisao = 45f;
     public LayerMask layerPlayer;      
     public LayerMask layerObstaculos;  
 
-    [Header("ReferÍncias")]
-    public Transform player;
+    [Header("Refer√™ncias")]
+    public Transform player; // Se deixado vazio no Prefab, o script buscar√° na cena
     private bool consegueVerPlayer;
 
     void Start()
     {
         agente = GetComponent<NavMeshAgent>();
+
+        // BUSCA AUTOM√ÅTICA DO PLAYER (Solu√ß√£o para o Prefab)
+        if (player == null)
+        {
+            // Procura na cena o objeto marcado com a etiqueta "Player" [3]
+            GameObject jogadorEncontrado = GameObject.FindWithTag("Player");
+            if (jogadorEncontrado != null)
+            {
+                player = jogadorEncontrado.transform;
+            }
+            else
+            {
+                Debug.LogError("Inimigo n√£o encontrou o Player! Certifique-se de que o Player tem a Tag 'Player'.");
+            }
+        }
         
-        // Inicia a verificaÁ„o de vis„o 5 vezes por segundo para poupar processamento
+        // Inicia a verifica√ß√£o de vis√£o 5 vezes por segundo para poupar processamento [4]
         StartCoroutine(RotinaVisao());
     }
 
@@ -39,21 +54,21 @@ public class EnemyManager : MonoBehaviour
 
     private void VerificarCampoDeVisao()
     {
-        // Physics.OverlapSphere retorna um ARRAY (lista) de colisores
+        // Detecta colisores da camada Player no raio de vis√£o [5]
         Collider[] alvosNoRaio = Physics.OverlapSphere(transform.position, raioVisao, layerPlayer);
 
-        // Verificamos se a lista n„o est· vazia antes de acessar o primeiro item 
         if (alvosNoRaio.Length > 0)
         {
-            // AGORA SIM: Pegamos o transform do PRIMEIRO objeto da lista 
+            // Pega o transform do primeiro item encontrado na lista [4]
             Transform alvo = alvosNoRaio[0].transform; 
             Vector3 direcaoParaAlvo = (alvo.position - transform.position).normalized;
 
+            // Verifica se o alvo est√° dentro do cone de vis√£o
             if (Vector3.Angle(transform.forward, direcaoParaAlvo) < anguloVisao / 2)
             {
                 float distanciaAteAlvo = Vector3.Distance(transform.position, alvo.position);
 
-                // Raycast para garantir que n„o h· paredes no caminho
+                // Raycast para garantir que n√£o existam obst√°culos entre o inimigo e o player [5]
                 if (!Physics.Raycast(transform.position, direcaoParaAlvo, distanciaAteAlvo, layerObstaculos))
                 {
                     consegueVerPlayer = true;
@@ -66,15 +81,17 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
-        // SÛ executa se o player existir e o inimigo estiver no ch„o azul (NavMesh)
+        // S√≥ executa se o player foi encontrado e o inimigo est√° no NavMesh [3]
         if (player == null || !agente.isOnNavMesh) return;
 
         if (consegueVerPlayer)
         {
+            // Persegue o jogador
             agente.SetDestination(player.position);
         }
         else
         {
+            // Patrulha aleat√≥ria se n√£o encontrar o jogador [6]
             if (!agente.pathPending && agente.remainingDistance <= agente.stoppingDistance)
             {
                 agente.SetDestination(ObterPontoAleatorio(transform.position, raioPerambulacao));
@@ -86,6 +103,7 @@ public class EnemyManager : MonoBehaviour
     {
         Vector3 direcaoAleatoria = Random.insideUnitSphere * raio + centro;
         NavMeshHit hit;
+        // Garante que o ponto sorteado esteja dentro da malha de navega√ß√£o (NavMesh) [5]
         if (NavMesh.SamplePosition(direcaoAleatoria, out hit, raio, 1)) return hit.position;
         return centro;
     }
@@ -102,7 +120,7 @@ public class EnemyManager : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + direcaoA * raioVisao);
         Gizmos.DrawLine(transform.position, transform.position + direcaoB * raioVisao);
 
-        if (consegueVerPlayer)
+        if (consegueVerPlayer && player != null)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, player.position);

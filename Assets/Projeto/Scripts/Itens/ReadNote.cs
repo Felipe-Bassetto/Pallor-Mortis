@@ -83,7 +83,7 @@ public class ReadNote : MonoBehaviour
 
         if(noteMove) // Mantem a nota na tela para ser lida
         {
-            if(Input.GetKey(KeyCode.E)) // Voltar nota para posição original
+            if(Input.GetKey(KeyCode.E)) // Voltar nota para posiï¿½ï¿½o original
             {
                 gameObject.transform.SetParent(null);
                 mov.PlayMovement(false);
@@ -121,7 +121,7 @@ public class ReadNote : MonoBehaviour
                 le.AcenderLuzes(arrLights);
                 Instantiate(sombra, new Vector3(7.5f,1f,-7f), Quaternion.identity);
                 ph.ChangeCutsceneBool(true);
-                
+                triggerAc = null;
             }
         }
     }
