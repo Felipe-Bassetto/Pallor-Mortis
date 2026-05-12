@@ -69,9 +69,9 @@ public class DoorInteraction : MonoBehaviour
                         if (!aberta)
                         {
                             sm.PlaySound(14);
-                            aberta = !aberta;
                         }
                         else sm.PlaySound(12);
+                        aberta = !aberta;
                     }
                 }
             }
