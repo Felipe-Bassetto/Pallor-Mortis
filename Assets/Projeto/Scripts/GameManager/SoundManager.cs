@@ -32,4 +32,9 @@ public class SoundManager : MonoBehaviour
         loopSource.clip = audios[index];
         loopSource.Play();
     }
+
+    public void PararLoop()
+    {
+        loopSource.Stop();
+    }
 }

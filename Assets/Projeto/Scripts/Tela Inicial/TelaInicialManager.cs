@@ -19,6 +19,7 @@ public class TelaInicialManager : MonoBehaviour
     [SerializeField] private Movement MOV;
     [SerializeField] private CamMenu CamMenu;
     [SerializeField] private GameDatabase db;
+    [SerializeField] private SoundManager sm;
 
     private List<Memories> memories;
 
@@ -73,7 +74,7 @@ public class TelaInicialManager : MonoBehaviour
         btnJogar.SetActive(false);
         btnSair.SetActive(false);
         StartCoroutine(MessageTyping());
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(29f);
         MOV.PlayMovement(false);
         POV.CamLock(true);
     }
@@ -82,13 +83,24 @@ public class TelaInicialManager : MonoBehaviour
     {
         int line = 0;
         bool textShowing = true;
+
+        sm.PlaySound(6);
         while (textShowing)
         {
             memoriesUI.text = memories[line].Fala;
-            yield return new WaitForSeconds(1f);
+            if (line == 0) yield return new WaitForSeconds(3.9f);
+            else if (line == 1) yield return new WaitForSeconds(2.6f);
+            else if (line == 2) yield return new WaitForSeconds(2.8f);
+            else if (line == 3) yield return new WaitForSeconds(2.5f);
+            else if (line == 4) yield return new WaitForSeconds(2f);
+            else if (line == 5) yield return new WaitForSeconds(3.5f);
+            else if (line == 6) yield return new WaitForSeconds(3.5f);
+            else if (line == 7) yield return new WaitForSeconds(5f);
+
             line++;
 
-            if (memories.Count == line + 1) textShowing = false;
+            if (memories.Count == line) textShowing = false;
         }
+        memoriesObj.SetActive(false);
     }
 }
