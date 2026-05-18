@@ -84,5 +84,9 @@ public class GerenciadorConfusao : MonoBehaviour
 
 
     [ContextMenu("Desativar Efeito")]
-    public void DesativarEfeito() => efeitoAtivo = false;
+    public void DesativarEfeito() 
+    {
+        efeitoAtivo = false;
+        canCount = false;
+    }
 }
