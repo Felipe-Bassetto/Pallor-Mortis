@@ -11236,7 +11236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1cda1eedbc6344ba5b71cb0de86bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sens: 185
+  sens: 100
   corpoPlayer: {fileID: 1637277599}
   camLocked: 0
 --- !u!114 &1729867833
