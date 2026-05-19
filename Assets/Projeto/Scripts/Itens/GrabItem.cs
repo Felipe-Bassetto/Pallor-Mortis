@@ -14,6 +14,7 @@ public class GrabItem : MonoBehaviour
     [Header("Scripts")]
     private ItensController it;
     [SerializeField] private ItemEvents ie;
+    [SerializeField] private GerenciadorConfusao gc;
 
     [Header("Sounds")]
     public SoundManager sm;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13072,6 +13072,7 @@ GameObject:
   - component: {fileID: 2072630549248485097}
   - component: {fileID: 8172834104237104509}
   - component: {fileID: 1422666399022936382}
+  - component: {fileID: 8172834104237104510}
   m_Layer: 0
   m_Name: Porta Banheiro
   m_TagString: Untagged
@@ -14230,6 +14231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ie: {fileID: 7097235675548373778}
+  gc: {fileID: 0}
   sm: {fileID: 366486228}
 --- !u!114 &7097235675548373778
 MonoBehaviour:
@@ -14449,6 +14451,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3185249949777252127}
   m_Mesh: {fileID: 6416302070336371891, guid: d3e111feee2748c499c8c2bc7e8c713d, type: 3}
+--- !u!65 &8172834104237104510
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185249949777252127}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.020000001, z: 0.00063255115}
+  m_Center: {x: 0, y: 0, z: -0.000032604526}
 --- !u!1001 &8182219404209061869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14647,6 +14670,7 @@ GameObject:
   - component: {fileID: 4919796122075230849}
   - component: {fileID: 6823829505620045109}
   - component: {fileID: 5822929157036318125}
+  - component: {fileID: 8486517374275326655}
   m_Layer: 0
   m_Name: Porta Banheiro
   m_TagString: Untagged
@@ -14654,6 +14678,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8486517374275326655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486517374275326654}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.020000001, z: 0.00063255115}
+  m_Center: {x: 0, y: 0, z: -0.000032604526}
 --- !u!1 &8553438237585703922
 GameObject:
   m_ObjectHideFlags: 0

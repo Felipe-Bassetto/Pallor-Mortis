@@ -39,6 +39,7 @@ public class PlayerHide : MonoBehaviour
             player.transform.position = Vector3.MoveTowards(player.transform.position, hidePoint.transform.position, velocidade * Time.unscaledDeltaTime);
         }
         if (playerBack) player.transform.position = Vector3.MoveTowards(player.transform.position, initialPos, velocidade * Time.unscaledDeltaTime);
+
     }
 
     IEnumerator HideIn() 
@@ -67,6 +68,7 @@ public class PlayerHide : MonoBehaviour
         stateCon.changeHidden(false);
         playerBack = false;
         mov.PlayMovement(false);
+        yield return new WaitForSeconds(1);
         collDoor.enabled = true;
     }
 
