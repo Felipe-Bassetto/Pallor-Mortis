@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2085284524463679265
 Transform:
@@ -50,7 +50,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1189566787000382062
 Transform:
@@ -151,10 +151,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trancada: 0
-  doorPivotDir: {fileID: 4282842911861829603}
-  doorPivotEsq: {fileID: 7918144243160003241}
-  isDouble: 1
-  velocidadeRotacao: 100
+  pivot: {fileID: 0}
+  velocidadeRotacaoPadrao: 60
+  velocidadeRotacaoEvent: 200
+  aberta: 0
+  needKey: 0
+  rotacaoAbertaOffset: {x: 0, y: 90, z: 0}
+  doorAct: {fileID: 0}
+  sm: {fileID: 0}
 --- !u!1 &5742980804624586680
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +177,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4254011984010892768
 Transform:
@@ -253,10 +257,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trancada: 0
-  doorPivotDir: {fileID: 4282842911861829603}
-  doorPivotEsq: {fileID: 7918144243160003241}
-  isDouble: 1
-  velocidadeRotacao: 100
+  pivot: {fileID: 0}
+  velocidadeRotacaoPadrao: 60
+  velocidadeRotacaoEvent: 200
+  aberta: 0
+  needKey: 0
+  rotacaoAbertaOffset: {x: 0, y: 90, z: 0}
+  doorAct: {fileID: 0}
+  sm: {fileID: 0}
 --- !u!65 &3791994488273989032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -294,7 +302,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4564421805459950138
 Transform:
@@ -377,7 +385,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8200555520715323652
 Transform:

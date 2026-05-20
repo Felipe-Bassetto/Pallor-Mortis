@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5667741000000838218
 Transform:
@@ -120,5 +120,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 3
   velocidadeRotacao: 2
+  distanceClick: 0
+  triggerAc: {fileID: 0}
+  lightBlink: {fileID: 0}
+  arrLights: []
+  le: {fileID: 0}
   mov: {fileID: 0}
   pov: {fileID: 0}
+  ph: {fileID: 0}
+  sm: {fileID: 0}
+  doorInt: {fileID: 0}
+  qtdLightsBlink: 0
+  sombra: {fileID: 0}
