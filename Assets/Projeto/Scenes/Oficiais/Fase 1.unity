@@ -14,17 +14,17 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
+  m_Fog: 1
+  m_FogColor: {r: 0.23529413, g: 0.23529413, b: 0.23529413, a: 1}
+  m_FogMode: 1
+  m_FogDensity: 0.25
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.10466359, g: 0.120090194, b: 0.1509434, a: 1}
+  m_LinearFogEnd: 18
+  m_AmbientSkyColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.028301895, g: 0.028301895, b: 0.028301895, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -297,9 +297,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -1218,9 +1218,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -1535,9 +1535,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -3366,9 +3366,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -3859,9 +3859,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -4111,6 +4111,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PivotPorta3
       objectReference: {fileID: 0}
+    - target: {fileID: 496716576588294153, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1547921002935196582, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4176,6 +4181,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta3
       objectReference: {fileID: 0}
+    - target: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4317530182215910612, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4195,6 +4205,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Porta3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411697304659489244, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734801255769902591, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592605001177369115, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8460421214223984466, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
@@ -5198,9 +5223,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.5
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -5358,6 +5383,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PivotPorta4
       objectReference: {fileID: 0}
+    - target: {fileID: 496716576588294153, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1547921002935196582, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5418,6 +5448,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta4
       objectReference: {fileID: 0}
+    - target: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4317530182215910612, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5437,6 +5472,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Porta4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411697304659489244, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734801255769902591, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592605001177369115, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6190,9 +6240,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -6952,9 +7002,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -8433,9 +8483,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -9493,9 +9543,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
-  m_Range: 10
-  m_SpotAngle: 140.85556
+  m_Intensity: 4
+  m_Range: 6
+  m_SpotAngle: 179
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -10127,6 +10177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PivotPorta2
       objectReference: {fileID: 0}
+    - target: {fileID: 496716576588294153, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1547921002935196582, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10187,6 +10242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta2
       objectReference: {fileID: 0}
+    - target: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4317530182215910612, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10206,6 +10266,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Porta2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411697304659489244, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734801255769902591, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592605001177369115, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11672,6 +11747,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PivotPorta5
       objectReference: {fileID: 0}
+    - target: {fileID: 496716576588294153, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1547921002935196582, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11727,6 +11807,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta5
       objectReference: {fileID: 0}
+    - target: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4317530182215910612, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11747,6 +11832,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta5
       objectReference: {fileID: 0}
+    - target: {fileID: 4411697304659489244, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734801255769902591, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5098409001199522763, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11756,6 +11851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592605001177369115, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8227182073180126153, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
@@ -14231,10 +14331,35 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.498
       objectReference: {fileID: 0}
+    - target: {fileID: 1995010695224536501, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791912599831840968, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4753633301592456308, guid: 257fe12e0bb50d1409b555f925d48edf,
         type: 3}
       propertyPath: m_Name
       value: PortaEntrada
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753633301592456308, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100373307893015794, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665950947231698703, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8130842454350237383, guid: 257fe12e0bb50d1409b555f925d48edf,
         type: 3}
@@ -15081,6 +15206,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PivotPorta1
       objectReference: {fileID: 0}
+    - target: {fileID: 496716576588294153, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1547921002935196582, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15136,6 +15266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta1
       objectReference: {fileID: 0}
+    - target: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4317530182215910612, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -15155,6 +15290,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Porta1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411697304659489244, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734801255769902591, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592605001177369115, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
