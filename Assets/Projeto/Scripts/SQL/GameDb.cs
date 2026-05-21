@@ -13,7 +13,7 @@ public class GameDatabase : MonoBehaviour
         string dbPath = Path.Combine(Application.persistentDataPath, "savegame.db");
         if(!File.Exists(dbPath))
         {
-            string origemDb = Application.dataPath + "/Projeto/Banco/savegame.db";
+            string origemDb = Application.dataPath + "/StreamingAssets/savegame.db";
             string destinoDb = dbPath;
             File.Copy(origemDb, destinoDb);
         }
