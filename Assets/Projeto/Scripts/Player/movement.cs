@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
     {
         if(!playerLocked)
         {
-            Vector3 movement = transform.right * movementX + transform.forward * movementY;
+            Vector3 movement = (transform.right * movementX * -1) + (transform.forward * movementY * -1);
             if(Input.GetKey(KeyCode.LeftShift))
             {
                 rb.velocity = new Vector3(movement.x * speedRunning, rb.velocity.y, movement.z * speedRunning);

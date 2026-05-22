@@ -40,7 +40,7 @@ public class PlayerPOV : MonoBehaviour
         rotacaoX = Mathf.Clamp(rotacaoX, -90f, 90f); 
 
         //* 3- Rotação de camera *//
-        transform.localRotation = Quaternion.Euler(rotacaoX, 0f, 0f); 
+        transform.localRotation = Quaternion.Euler(rotacaoX, 180f, 0f); 
         corpoPlayer.Rotate(Vector3.up * mouseX); 
     }
     
