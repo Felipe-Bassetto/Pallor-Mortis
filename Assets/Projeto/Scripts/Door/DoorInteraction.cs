@@ -82,7 +82,6 @@ public class DoorInteraction : MonoBehaviour
 
         if (canRotate)
         {
-            Debug.Log("rotacionando");
             pivot.rotation = Quaternion.RotateTowards(pivot.rotation, alvo, velocidadeRotacao * Time.deltaTime);
             if(pivot.rotation == alvo)
             {

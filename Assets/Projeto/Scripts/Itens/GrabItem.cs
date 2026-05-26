@@ -19,6 +19,9 @@ public class GrabItem : MonoBehaviour
     [Header("Sounds")]
     public SoundManager sm;
 
+    [Header("Variables")]
+    private bool triggerActived;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,12 +43,11 @@ public class GrabItem : MonoBehaviour
                 if(maoAdicionada != -1) // Verifica se foi adicionado e coloca na mão caso sim
                 {
                     gameObject.transform.SetParent(it.gameObject.transform);
-                    gameObject.transform.position = it.gameObject.transform.Find("LeftHand").transform.position;
+                    gameObject.transform.position = it.gameObject.transform.Find("Hand").transform.position;
 
                     var variables = Variables.Object(gameObject);
 
-                    bool triggerActived = variables.Get<bool>("triggerActived");
-
+                    if (variables.IsDefined("triggerActived")) triggerActived = variables.Get<bool>("triggerActived");
 
                     if(gameObject.tag == "Chave")
                     {

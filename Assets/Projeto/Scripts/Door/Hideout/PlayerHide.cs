@@ -11,9 +11,11 @@ public class PlayerHide : MonoBehaviour
 
     private Collider collDoor;
     private bool canViewCut;
+    private Rigidbody rbPlayer;
 
     [Header("Scripts")]
     public DoorInteraction doorInt;
+    public DoorInteraction doorInt2;
     public Movement mov;
     public PlayerPOV pov;
     public StateController stateCon;
@@ -30,6 +32,7 @@ public class PlayerHide : MonoBehaviour
     private void Start()
     {
         collDoor = GetComponent<Collider>();
+        rbPlayer = player.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -44,32 +47,54 @@ public class PlayerHide : MonoBehaviour
 
     IEnumerator HideIn() 
     {
+        rbPlayer.isKinematic = true;
+
         doorInt.RotateDoor(true);
+        if(doorInt2 != null) doorInt2.RotateDoor(true);
+
         collDoor.enabled = false;
         initialPos = player.transform.position;
         mov.PlayMovement(true);
         playerMove = true;
+
         yield return new WaitForSeconds(1);
+
         doorInt.RotateDoor(false);
+        if (doorInt2 != null) doorInt2.RotateDoor(false);
+
         stateCon.changeHidden(true);
         playerMove = false;
         collDoor.enabled = true;
 
         if(canViewCut) StartCoroutine(StartCutscene());
+
+        rbPlayer.isKinematic = false;
     }
 
     IEnumerator HideOut() 
     {
+        rbPlayer.isKinematic = true;
+
         doorInt.RotateDoor(true);
+        if (doorInt2 != null) doorInt2.RotateDoor(true);
+
         collDoor.enabled = false;
         playerBack = true;
-        yield return new WaitForSeconds(1);
+
+        yield return new WaitForSeconds(1); // espera 1 segundo
+
         doorInt.RotateDoor(false);
+        if (doorInt2 != null) doorInt2.RotateDoor(false);
+
         stateCon.changeHidden(false);
         playerBack = false;
         mov.PlayMovement(false);
-        yield return new WaitForSeconds(1);
+
+        yield return new WaitForSeconds(1); // espera 1 segundo
+
         collDoor.enabled = true;
+
+        rbPlayer.isKinematic = false;
     }
 
     void OnMouseDown()
