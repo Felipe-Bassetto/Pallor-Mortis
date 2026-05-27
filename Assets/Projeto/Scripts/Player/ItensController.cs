@@ -14,6 +14,9 @@ public class ItensController : MonoBehaviour
     [Header("Camera")]
     private Camera cameraPrincipal;
 
+    [Header("Scripts")]
+    [SerializeField] private Crafting craft;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,9 +79,11 @@ public class ItensController : MonoBehaviour
     {
         if(itemActive == -1) return;
 
-        if (prefabDrop == null)
+        GameObject objActive = arrItens[itemActive];
+
+        if (prefabDrop == null) // Verifica se ja está mostrando a previsualização do local
         {
-            GrabItem grab = arrItens[itemActive].GetComponentInChildren<GrabItem>();
+            GrabItem grab = objActive.GetComponentInChildren<GrabItem>();
 
             prefabDrop = Instantiate(grab.prefabDrop);
         }
@@ -86,18 +91,24 @@ public class ItensController : MonoBehaviour
         Ray ray = cameraPrincipal.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) prefabDrop.transform.position = hit.point;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) prefabDrop.transform.position = hit.point; // Mostra o local aonde é possivel soltar o item
 
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) // Solta o item
         {
-            arrItens[itemActive].transform.SetParent(null);
-            arrItens[itemActive].transform.position = hit.point;
-            arrItens[itemActive] = null;
-            itemActive = -1;
+            objActive.transform.SetParent(null);
+            objActive.transform.position = prefabDrop.transform.position;
+
+            if (hit.collider.tag == "Crafting") craft.AddItem(objActive); // Caso seja mesa de craft, adiciona o item ao script
+
+            objActive = null;
+            
 
             Destroy(prefabDrop);
             prefabDrop = null;
+
+            arrItens[itemActive] = null;
+            itemActive = -1;
         }
     }
 

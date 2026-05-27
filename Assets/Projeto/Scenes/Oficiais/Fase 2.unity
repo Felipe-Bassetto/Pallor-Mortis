@@ -1121,6 +1121,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.6986027
       objectReference: {fileID: 0}
+    - target: {fileID: 3391721144522501614, guid: 7777e6f6713fc3b4cb073b4e0d015993,
+        type: 3}
+      propertyPath: craft
+      value: 
+      objectReference: {fileID: 1316732560}
     - target: {fileID: 3409395416998764771, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
       propertyPath: m_Height
@@ -3047,7 +3052,7 @@ GameObject:
   - component: {fileID: 979492761}
   m_Layer: 0
   m_Name: Fita Pivot
-  m_TagString: Untagged
+  m_TagString: Fita
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3061,7 +3066,7 @@ Transform:
   m_GameObject: {fileID: 979492760}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 292.8587, y: 246.99936, z: -38.29809}
+  m_LocalPosition: {x: 292.8587, y: 245.45135, z: -38.29809}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3600,7 +3605,7 @@ PrefabInstance:
     - target: {fileID: 1827073845258367200, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
       propertyPath: trancada
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1827073845258367200, guid: f67b804fe6cef3548a3129ba5449d0d8,
         type: 3}
@@ -3793,7 +3798,7 @@ GameObject:
   - component: {fileID: 1316732560}
   m_Layer: 0
   m_Name: Crafting
-  m_TagString: Untagged
+  m_TagString: Crafting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3847,6 +3852,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listObjects: []
+  prafabCartao: {fileID: 9270262817626089, guid: 11ce4cef523935342895734ead4ea3b1,
+    type: 3}
 --- !u!1 &1364054457
 GameObject:
   m_ObjectHideFlags: 0
@@ -8122,7 +8129,7 @@ GameObject:
   - component: {fileID: 3122004725396584986}
   m_Layer: 12
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Crafting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8266,7 +8273,7 @@ GameObject:
   - component: {fileID: 7174950526457453411}
   m_Layer: 12
   m_Name: "Mesa do Cart\xE3o"
-  m_TagString: Untagged
+  m_TagString: Crafting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

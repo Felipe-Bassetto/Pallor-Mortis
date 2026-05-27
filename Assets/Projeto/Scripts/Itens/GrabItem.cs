@@ -75,7 +75,7 @@ public class GrabItem : MonoBehaviour
                         sm.PlaySound(1);
                     }
 
-                    if(craft != null) craft.RemoveItem(gameObject);
+                    if(craft != null) craft.RemoveItem(itemPivot);
                 }
                 
             } 

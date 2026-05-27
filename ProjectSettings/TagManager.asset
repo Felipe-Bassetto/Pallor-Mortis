@@ -11,6 +11,7 @@ TagManager:
   - Retrato
   - Fita
   - "Parte Cart\xE3o"
+  - Crafting
   layers:
   - Default
   - TransparentFX
