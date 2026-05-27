@@ -8,18 +8,36 @@ public class ItensController : MonoBehaviour
     public List<GameObject> arrItens = new List<GameObject>();
     public int itemActive;
 
+    private GameObject prefabDrop;
+    private LayerMask layerMask;
+
+    [Header("Camera")]
+    private Camera cameraPrincipal;
+
     // Start is called before the first frame update
     void Start()
     {
+        cameraPrincipal = Camera.main;
+
+        layerMask = LayerMask.GetMask("Dropable");
     }
 
     // Update is called once per frame
     void Update()
     {
-        bool drop = Input.GetKeyDown(KeyCode.Q);
-        if(drop)
+
+        bool keyQHolding = Input.GetKey(KeyCode.Q) && itemActive != -1;
+        bool keyQReleased = Input.GetKeyUp(KeyCode.Q);
+
+        if (keyQHolding)
         {
             dropItem();
+        }
+
+        if (keyQReleased && prefabDrop != null)
+        {
+            Destroy(prefabDrop);
+            prefabDrop = null;
         }
 
         bool change = Input.GetKeyDown(KeyCode.Alpha1);
@@ -27,6 +45,8 @@ public class ItensController : MonoBehaviour
         {
             changeItem();
         }
+
+
     }
 
     public int addItem(GameObject item) // Adiciona item a mão
@@ -56,9 +76,29 @@ public class ItensController : MonoBehaviour
     {
         if(itemActive == -1) return;
 
-        arrItens[itemActive].transform.SetParent(null);
-        arrItens[itemActive] = null;
-        itemActive = -1;
+        if (prefabDrop == null)
+        {
+            GrabItem grab = arrItens[itemActive].GetComponentInChildren<GrabItem>();
+
+            prefabDrop = Instantiate(grab.prefabDrop);
+        }
+
+        Ray ray = cameraPrincipal.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) prefabDrop.transform.position = hit.point;
+
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            arrItens[itemActive].transform.SetParent(null);
+            arrItens[itemActive].transform.position = hit.point;
+            arrItens[itemActive] = null;
+            itemActive = -1;
+
+            Destroy(prefabDrop);
+            prefabDrop = null;
+        }
     }
 
     public void changeItem()

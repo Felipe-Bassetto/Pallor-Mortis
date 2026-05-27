@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - Carteirinha
   - Retrato
+  - Fita
+  - "Parte Cart\xE3o"
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Obstaculo
   - Memorias
   - DoorInit
-  - 
+  - Dropable
   - 
   - 
   - 

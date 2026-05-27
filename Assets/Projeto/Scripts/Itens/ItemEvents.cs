@@ -23,7 +23,7 @@ public class ItemEvents : MonoBehaviour
         var variables = Variables.Object(gameObject);
         variables.Set("triggerActived", true); // Marca trigger como já ativo
 
-        triggerPorta4.SetActive(true); // Ativa trigger da porta 4
+        if(triggerPorta4 != null) triggerPorta4.SetActive(true); // Ativa trigger da porta 4
 
         le.AlterStateCanBlink(false); // Faz as luzes ficarem todas apagadas com excessão de uma
         le.ApagarLuzes(arrLuzes);
