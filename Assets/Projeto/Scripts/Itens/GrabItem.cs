@@ -35,6 +35,8 @@ public class GrabItem : MonoBehaviour
         cameraPrincipal = Camera.main;
         layerMask = LayerMask.GetMask("Item");
         it = FindFirstObjectByType<ItensController>();
+
+        sm = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -57,20 +59,20 @@ public class GrabItem : MonoBehaviour
                     if (variables.IsDefined("triggerActived"))
                     {
                         triggerActived = variables.Get<bool>("triggerActived");
-                        triggerActived = true;
                     }
+                    else triggerActived = true;
 
-                    if(gameObject.tag == "Chave")
+                    if (gameObject.tag == "Chave")
                     {
                         sm.PlaySound(0);
-                        
-                        if(!triggerActived)
+
+                        if (!triggerActived)
                         {
-                            ie.GrabKey();  
+                            ie.GrabKey();
                             sm.PlaySound(3);
                         }
                     }
-                    else if(gameObject.tag == "Nota")
+                    else if (gameObject.tag == "Nota")
                     {
                         sm.PlaySound(1);
                     }

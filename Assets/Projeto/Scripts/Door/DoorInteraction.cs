@@ -55,11 +55,17 @@ public class DoorInteraction : MonoBehaviour
                         if (trancada)
                         {
                             bool key;
-                            if (ic.itemActive != -1 ) key = ic.arrItens[ic.itemActive].tag == "Chave";
+                            if (ic.itemActive != -1)
+                            {
+                                key = ic.arrItens[ic.itemActive].GetComponentInChildren<Transform>().tag == "Chave";
+                                ic.DestroyKey();
+                            }
                             else key = false;
+
                             if ((needKey && !key) || !needKey)
                             {
                                 sm.PlaySound(2);
+                                AltState(false);
                                 return;
                             }
                         }

@@ -12,6 +12,8 @@ TagManager:
   - Fita
   - "Parte Cart\xE3o"
   - Crafting
+  - Canivete
+  - Ursinho
   layers:
   - Default
   - TransparentFX

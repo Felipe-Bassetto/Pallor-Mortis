@@ -9,14 +9,53 @@ public class ItemEvents : MonoBehaviour
     public GameObject triggerPorta4;
     public GameObject[] arrLuzes;
 
+    [SerializeField] private GameObject prefabChave2;
+    [SerializeField] private GameObject prefabUrsinhoCortado;
+
     [Header("Scripts")]
     [SerializeField] private LightEvents le;
     [SerializeField] private PlayerPOV POV;
     [SerializeField] private DoorInteraction door;
     [SerializeField] private GerenciadorConfusao confusion;
+    [SerializeField] private ItensController ic;
 
     [Header("Audio")]
     public AudioSource audioSource;
+
+    [Header("Camera")]
+    private Camera cameraPrincipal;
+
+    private void Start()
+    {
+        cameraPrincipal = Camera.main;
+
+        ic = FindObjectOfType<ItensController>();
+    }
+
+    public void Update()
+    {
+        bool click = Input.GetMouseButtonDown(0);
+        if (click)
+        {
+            if (ic.itemActive != -1)
+            {
+                GameObject go = ic.arrItens[ic.itemActive];
+
+                Ray ray = cameraPrincipal.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity) && go.tag == "Canivete")
+                {
+                    if (hit.collider.tag == "Ursinho")
+                    {
+                        Instantiate(prefabChave2, hit.transform.position, Quaternion.identity);
+                        Instantiate(prefabUrsinhoCortado, hit.transform.position, Quaternion.identity);
+                        Destroy(hit.collider.gameObject);
+                    }
+                }
+            }
+        }
+    }
 
     public void GrabKey()
     {

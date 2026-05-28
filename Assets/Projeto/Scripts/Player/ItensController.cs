@@ -48,8 +48,6 @@ public class ItensController : MonoBehaviour
         {
             changeItem();
         }
-
-
     }
 
     public int addItem(GameObject item) // Adiciona item a mão
@@ -144,5 +142,15 @@ public class ItensController : MonoBehaviour
                 itemActive = -1;
             }
         }
+    }
+
+    public void DestroyKey()
+    {
+        GameObject objActive = arrItens[itemActive];
+
+        Destroy(objActive);
+
+        arrItens[itemActive] = null;
+        itemActive = -1;
     }
 }
