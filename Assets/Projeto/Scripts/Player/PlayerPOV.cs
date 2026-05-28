@@ -57,4 +57,9 @@ public class PlayerPOV : MonoBehaviour
             camLocked = true;
         }
     }
+
+    public void Cutscene(bool playing)
+    {
+        camLocked = playing;
+    }
 }
