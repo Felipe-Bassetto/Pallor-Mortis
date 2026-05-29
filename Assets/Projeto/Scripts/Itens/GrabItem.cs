@@ -37,6 +37,8 @@ public class GrabItem : MonoBehaviour
         it = FindFirstObjectByType<ItensController>();
 
         sm = FindObjectOfType<SoundManager>();
+
+        craft = FindObjectOfType<Crafting>();
     }
 
     // Update is called once per frame

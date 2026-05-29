@@ -22,12 +22,9 @@ public class Movement : MonoBehaviour
 
     void OnMove (InputValue movementValue)
     {
-        if (!playerLocked)
-        {
-            Vector2 movementVector = movementValue.Get<Vector2>();
-            movementX = movementVector.x;
-            movementY = movementVector.y;
-        }
+        Vector2 movementVector = movementValue.Get<Vector2>();
+        movementX = movementVector.x;
+        movementY = movementVector.y;
     }
 
     void FixedUpdate()

@@ -14,7 +14,8 @@ public class SoundManager : MonoBehaviour
     [Header("Variaveis")]
     private bool diminuirVolume;
     private bool aumentaVolume;
-    private AudioSource audioSourceAlterar;
+    private AudioSource audioSourceAumentar;
+    private AudioSource audioSourceDiminuir;
 
     [SerializeField] private float speedGradual;
 
@@ -28,21 +29,23 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (audioSourceAlterar != null)
+        if(audioSourceAumentar != null)
         {
-            if (aumentaVolume) audioSourceAlterar.volume += speedGradual * Time.deltaTime;
+            if (aumentaVolume) audioSourceAumentar.volume += speedGradual * Time.deltaTime;
 
-            if (audioSourceAlterar.volume >= 1)
+            if (audioSourceAumentar.volume >= 1f)
             {
-                audioSourceAlterar.volume = 1;
+                audioSourceAumentar.volume = 1;
                 aumentaVolume = false;
             }
+        }
+        if(audioSourceDiminuir != null)
+        {
+            if (diminuirVolume) audioSourceDiminuir.volume -= speedGradual * Time.deltaTime;
 
-            if (diminuirVolume) audioSourceAlterar.volume -= speedGradual * Time.deltaTime;
-
-            if (audioSourceAlterar.volume <= 0)
+            if (audioSourceDiminuir.volume <= 0f)
             {
-                audioSourceAlterar.volume = 0;
+                audioSourceDiminuir.volume = 0;
                 diminuirVolume = false;
             }
         }
@@ -73,12 +76,12 @@ public class SoundManager : MonoBehaviour
     public void AumentarVolumeGradual(int source)
     {
         aumentaVolume = true;
-        audioSourceAlterar = sources[source];
+        audioSourceAumentar = sources[source];
     }
 
     public void DiminuirVolumeGradual(int source)
     {
         diminuirVolume = true;
-        audioSourceAlterar = sources[source];
+        audioSourceDiminuir = sources[source];
     }
 }

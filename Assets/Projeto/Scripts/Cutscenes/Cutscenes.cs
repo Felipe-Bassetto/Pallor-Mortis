@@ -8,6 +8,7 @@ public class Cutscenes : MonoBehaviour
     [SerializeField] private PlayerPOV pov;
     [SerializeField] private Movement mov;
     [SerializeField] private SoundManager sm;
+    [SerializeField] private Memorias memories;
 
     [Header("Camera")]
     private Camera cam;
@@ -25,6 +26,7 @@ public class Cutscenes : MonoBehaviour
 
     private bool camRotationCutscene;
     private bool playerMovingCutscene;
+    private bool memoriaBailarinaAtiva = false;
     private Quaternion lookDirection;
 
     [Header("Componentes")]
@@ -49,7 +51,15 @@ public class Cutscenes : MonoBehaviour
         if(playerMovingCutscene) player.position = Vector3.MoveTowards(player.position, pontoFinal.position, speedMoving * Time.deltaTime);
 
         if (cam.transform.rotation == lookDirection) camRotationCutscene = false;
-        if (player.position == pontoFinal.position) playerMovingCutscene = false;
+        if (player.position == pontoFinal.position) 
+        {
+            playerMovingCutscene = false;
+            if(!memoriaBailarinaAtiva)
+            {
+                memories.MemoriaBailarina();
+                memoriaBailarinaAtiva = true;
+            }
+        }
     }
 
     public void Bailarina()
@@ -65,10 +75,15 @@ public class Cutscenes : MonoBehaviour
 
     IEnumerator CutBailarina()
     {
+        playerMovingCutscene = true;
+        yield return new WaitForSeconds(2f);
+        sm.PlayOST(0);
+        sm.AumentarVolumeGradual(3);
+
         speedRotation = 0.5f;
         lookDirection = Quaternion.LookRotation(pontoDireita.position - cam.transform.position);
         camRotationCutscene = true;
-        playerMovingCutscene = true;
+        
 
         yield return new WaitForSeconds(2f);
 
