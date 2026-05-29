@@ -14,7 +14,6 @@ public class ItemEvents : MonoBehaviour
 
     [Header("Scripts")]
     [SerializeField] private LightEvents le;
-    [SerializeField] private PlayerPOV POV;
     [SerializeField] private DoorInteraction door;
     [SerializeField] private GerenciadorConfusao confusion;
     [SerializeField] private ItensController ic;
@@ -44,13 +43,18 @@ public class ItemEvents : MonoBehaviour
                 Ray ray = cameraPrincipal.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
 
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity) && go.tag == "Canivete")
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity) )
                 {
-                    if (hit.collider.tag == "Ursinho")
+                    if (hit.collider.tag == "Ursinho" && go.tag == "Canivete")
                     {
                         Instantiate(prefabChave2, hit.transform.position, Quaternion.identity);
                         Instantiate(prefabUrsinhoCortado, hit.transform.position, Quaternion.identity);
                         Destroy(hit.collider.gameObject);
+                    }
+
+                    if(hit.collider.tag == "Sensor Cartão"  && go.tag == "Cartão")
+                    {
+                        door.AltState(false);
                     }
                 }
             }

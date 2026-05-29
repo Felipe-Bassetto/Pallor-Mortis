@@ -19,6 +19,9 @@ public class DoorAction : MonoBehaviour
     private Quaternion rotacaoFechada;
     LayerMask layerMask;
 
+    [Header("Cena")]
+    [SerializeField] private string novaCena;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +63,7 @@ public class DoorAction : MonoBehaviour
     IEnumerator ChangeScene()
     {
         yield return new WaitForSeconds(0.75f);
-        SceneManager.LoadScene("Fase 1");
+        SceneManager.LoadScene(novaCena);
     }
 
     public void OpenDoor(bool action)

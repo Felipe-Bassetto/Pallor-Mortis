@@ -14,6 +14,8 @@ TagManager:
   - Crafting
   - Canivete
   - Ursinho
+  - "Sensor Cart\xE3o"
+  - "Cart\xE3o"
   layers:
   - Default
   - TransparentFX
@@ -28,8 +30,8 @@ TagManager:
   - Memorias
   - DoorInit
   - Dropable
-  - 
-  - 
+  - Sombra
+  - ParedeEspecial
   - 
   - 
   - 
