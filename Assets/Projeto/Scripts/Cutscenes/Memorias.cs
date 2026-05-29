@@ -11,6 +11,8 @@ public class Memorias : MonoBehaviour
     [Header("GameObjects")]
     [SerializeField] private GameObject memoriaObj;
     [SerializeField] private RawImage imageMemorie;
+    [SerializeField] private GameObject prefabCartao;
+    [SerializeField] private GameObject caixa;
 
     [Header("Cores")]
     [SerializeField] private Color preto;
@@ -73,14 +75,13 @@ public class Memorias : MonoBehaviour
         yield return new WaitForSeconds(5f); // tempo com imagem ativa
 
         fadeOut = true;
+        sm.PlayOST(1);
+        sm.AumentarVolumeGradual(3);
 
         yield return new WaitForSeconds(2.5f);
 
         imageMemorie.texture = arrTexturas[3];
         fadeIn = true;
-
-        sm.PlayOST(1);
-        sm.AumentarVolumeGradual(3);
 
         yield return new WaitForSeconds(5f); // tempo com imagem ativa
 
@@ -98,9 +99,15 @@ public class Memorias : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
 
         imageMemorie.texture = arrTexturas[5];
+
+        yield return new WaitForSeconds(5f);
+
         desativar = true;
 
         sm.DiminuirVolumeGradual(3);
+
+        Instantiate(prefabCartao, caixa.transform.position, Quaternion.identity);
+        Destroy(caixa);
 
         yield return new WaitForSeconds(3f);
 
@@ -108,6 +115,6 @@ public class Memorias : MonoBehaviour
 
         pov.Cutscene(false);
         mov.PlayMovement(false);
-        rb.isKinematic = false;
+        rb.isKinematic = false;        
     }
 }
