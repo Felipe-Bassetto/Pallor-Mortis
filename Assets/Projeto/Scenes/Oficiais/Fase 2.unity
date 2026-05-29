@@ -1657,7 +1657,6 @@ MonoBehaviour:
   prefabUrsinhoCortado: {fileID: 3532394785061167900, guid: aa7817f6a61cd244ba0f858ed90e56f9,
     type: 3}
   le: {fileID: 0}
-  POV: {fileID: 0}
   door: {fileID: 7532120060051739049}
   confusion: {fileID: 0}
   ic: {fileID: 3391721144421731439}
