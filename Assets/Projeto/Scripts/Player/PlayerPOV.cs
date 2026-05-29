@@ -37,7 +37,7 @@ public class PlayerPOV : MonoBehaviour
 
         //* 2- Movimentação para cima/baixo e trava de segurança(para não rolar um mortal com a camera) *//
         rotacaoX -= mouseY;
-        rotacaoX = Mathf.Clamp(rotacaoX, -90f, 90f); 
+        rotacaoX = Mathf.Clamp(rotacaoX, -70f, 70f); 
 
         //* 3- Rotação de camera *//
         transform.localRotation = Quaternion.Euler(rotacaoX, 180f, 0f); 

@@ -13595,21 +13595,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4025224745163235427}
   m_Mesh: {fileID: 5939611444484006311, guid: 398d9d39d1389d846b3fc75865088dc5, type: 3}
---- !u!4 &2437202989915260886
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8801483096695305390}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.009721142, y: 0.9999528, z: -0.00000008273097, w: 0.00000019552068}
-  m_LocalPosition: {x: -0.16037427, y: 0.002684174, z: 2.0608459}
-  m_LocalScale: {x: 280.79797, y: 280.79797, z: 280.79797}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4872247690882307349}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2464402117555042095
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14027,21 +14012,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3240521730860004531
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8147432364680605097}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -0.1779135, z: -3.7398446}
-  m_LocalScale: {x: 294.67175, y: 294.67175, z: 294.67175}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4872247690882307349}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3254752775419422619
 Transform:
   m_ObjectHideFlags: 0
@@ -15154,16 +15124,12 @@ Transform:
   m_GameObject: {fileID: 5248492201325989807}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.221, z: 7.72}
+  m_LocalPosition: {x: 2.44, y: 0.221, z: -3.82}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4552407116541461899}
-  - {fileID: 3240521730860004531}
-  - {fileID: 8748510336895638829}
   - {fileID: 1742259198571030735}
-  - {fileID: 8340636318471315070}
-  - {fileID: 2437202989915260886}
   - {fileID: 8972587200916360799}
   - {fileID: 8749234627356199739}
   - {fileID: 5797574479629233314}
@@ -16308,22 +16274,6 @@ Transform:
   - {fileID: 8385561203953866924}
   m_Father: {fileID: 5445569331167896073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7119508507560928540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8748510336895638829}
-  m_Layer: 8
-  m_Name: CABELOLADO
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!224 &7128957635061523335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16783,22 +16733,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8147432364680605097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3240521730860004531}
-  m_Layer: 8
-  m_Name: CABELOFRENTE
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!23 &8150864831184385815
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17066,21 +17000,6 @@ Transform:
   - {fileID: 1412962662}
   - {fileID: 808816005}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &8340636318471315070
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9033680543147801808}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454313, w: 0.7071068}
-  m_LocalPosition: {x: 0.29056004, y: 0.09380876, z: -3.5557482}
-  m_LocalScale: {x: 276.3219, y: 276.3219, z: 276.3219}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4872247690882307349}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &8342235726761082414
 Transform:
@@ -17389,21 +17308,6 @@ Transform:
   - {fileID: 7029157602445370995}
   m_Father: {fileID: 7428835819820132818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &8748510336895638829
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7119508507560928540}
-  serializedVersion: 2
-  m_LocalRotation: {x: 6.088853e-15, y: 1, z: -0.00000008146035, w: 0.0000000754979}
-  m_LocalPosition: {x: -0.22209366, y: -0.048678126, z: 0}
-  m_LocalScale: {x: 290.5003, y: 290.5003, z: 290.5003}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4872247690882307349}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &8749234627356199739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17526,22 +17430,6 @@ Transform:
   - {fileID: 8052448882168497530}
   m_Father: {fileID: 9206571247529644901}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8801483096695305390
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2437202989915260886}
-  m_Layer: 8
-  m_Name: LADO
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!23 &8816084312100168543
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17731,22 +17619,6 @@ GameObject:
   - component: {fileID: 7326661522837733474}
   m_Layer: 8
   m_Name: Bone_L.005
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &9033680543147801808
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8340636318471315070}
-  m_Layer: 8
-  m_Name: FRENTE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
