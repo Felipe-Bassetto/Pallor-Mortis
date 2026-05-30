@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         memorie.SetActive(false);
         sm.PlaySound(13);
     }
+    
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

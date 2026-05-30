@@ -10,7 +10,7 @@ public class PlayerHide : MonoBehaviour
     public float velocidade;
 
     private Collider collDoor;
-    private bool canViewCut;
+    public bool canViewCut;
     private Rigidbody rbPlayer;
 
     [Header("Scripts")]
@@ -22,7 +22,7 @@ public class PlayerHide : MonoBehaviour
 
     [SerializeField] private SoundManager sm;
 
-    private Vector3 initialPos;
+    public Vector3 initialPos;
 
     [Header("GameObject")]
     public GameObject player;
@@ -99,7 +99,7 @@ public class PlayerHide : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(stateCon.playerHidden && !canViewCut)
+        if(stateCon.playerHidden)
         {
             StartCoroutine(HideOut());
         }

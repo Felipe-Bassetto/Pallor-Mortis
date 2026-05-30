@@ -2873,7 +2873,7 @@ Transform:
   m_GameObject: {fileID: 466201410}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5975, z: -2.09}
+  m_LocalPosition: {x: 0, y: -1.7816666, z: -2.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5577,6 +5577,8 @@ MonoBehaviour:
   rotacaoAbertaOffset: {x: 0, y: 40, z: 0}
   velocidadeRotacao: 45
   novaCena: 
+  canChangeScene: 1
+  di: {fileID: 0}
 --- !u!114 &845404645 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1827073845258367200, guid: f67b804fe6cef3548a3129ba5449d0d8,
@@ -6466,7 +6468,7 @@ Transform:
   m_GameObject: {fileID: 1110276125}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.57, y: -0.2090251, z: -13.55}
+  m_LocalPosition: {x: -27.57, y: -1.77, z: -13.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7849,6 +7851,7 @@ MonoBehaviour:
   pontoDireita: {fileID: 0}
   pontoEsquerda: {fileID: 0}
   caixinha: {fileID: 0}
+  mirror: {fileID: 1525759391}
   pontoFinal: {fileID: 466201411}
   speedRotation: 0.5
   speedMoving: 0.5
@@ -8153,7 +8156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1349760091
 Transform:
   m_ObjectHideFlags: 0
@@ -8200,7 +8203,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-  - delay: 1
+  - delay: 30
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -8236,8 +8239,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.806138, y: 3.3342752, z: 2.845467}
-  m_Center: {x: 0.4464574, y: 0.36236334, z: 0.006341219}
+  m_Size: {x: 2.806138, y: 3.3342752, z: 2.388074}
+  m_Center: {x: 0.4464574, y: 0.36236334, z: 0.2350378}
 --- !u!1 &1356699212 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3801099395513119805, guid: 7d9d51990e42d48478d91d03f75ae625,
@@ -10875,6 +10878,7 @@ MonoBehaviour:
   sm: {fileID: 366486228}
   pov: {fileID: 8386088870235191514}
   mov: {fileID: 5874131855014688319}
+  gerenciador: {fileID: 770236320887238094}
   rb: {fileID: 7648629374001511307}
 --- !u!1001 &1671354985
 PrefabInstance:
@@ -11799,7 +11803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1917626235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13256,7 +13260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14465,7 +14469,7 @@ GameObject:
   - component: {fileID: 2866335789384434015}
   - component: {fileID: 2398827652935101088}
   - component: {fileID: 3976467044218372469}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: "Ma\xE7aneta.001"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17194,7 +17198,8 @@ GameObject:
   - component: {fileID: 2464402117555042095}
   - component: {fileID: 8553438237585703924}
   - component: {fileID: 8553438237585703923}
-  m_Layer: 3
+  - component: {fileID: 8553438237585703925}
+  m_Layer: 11
   m_Name: Porta Saida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17243,6 +17248,26 @@ MonoBehaviour:
   rotacaoAbertaOffset: {x: 0, y: -90, z: 0}
   doorAct: {fileID: 0}
   sm: {fileID: 0}
+--- !u!114 &8553438237585703925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8553438237585703922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3606cb0e7d86ccf4b8f98757d69d235b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portaIdent: 0
+  abre: 0
+  pivot: {fileID: 5905396498271260308}
+  rotacaoAbertaOffset: {x: 0, y: 45, z: 0}
+  velocidadeRotacao: 120
+  novaCena: Fase 2
+  canChangeScene: 1
+  di: {fileID: 8553438237585703924}
 --- !u!4 &8656960515927951920
 Transform:
   m_ObjectHideFlags: 0
@@ -17482,12 +17507,14 @@ MonoBehaviour:
   playerMove: 0
   playerBack: 0
   velocidade: 2
+  canViewCut: 0
   doorInt: {fileID: 8816084312100168545}
   doorInt2: {fileID: 0}
   mov: {fileID: 5874131855014688319}
   pov: {fileID: 8386088870235191514}
   stateCon: {fileID: 7243447097456225033}
   sm: {fileID: 366486228}
+  initialPos: {x: 0, y: 0, z: 0}
   player: {fileID: 5248492201325989807}
   hidePoint: {fileID: 1110276125}
   triggerMirror: {fileID: 1349760090}

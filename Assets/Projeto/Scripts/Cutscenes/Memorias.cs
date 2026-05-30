@@ -29,6 +29,7 @@ public class Memorias : MonoBehaviour
     [SerializeField] private SoundManager sm;
     [SerializeField] private PlayerPOV pov;
     [SerializeField] private Movement mov;
+    [SerializeField] private GerenciadorMemorias gerenciador;
 
     [Header("Componentes")]
     [SerializeField] private Rigidbody rb;
@@ -59,7 +60,7 @@ public class Memorias : MonoBehaviour
 
     public void MemoriaMirror()
     {
-        memoriaObj.SetActive(true);
+        gerenciador.AtivarMemorias();
         StartCoroutine(MemoriesMirror());
     }
 
@@ -127,10 +128,15 @@ public class Memorias : MonoBehaviour
     IEnumerator MemoriesMirror()
     {
         imageMemorie.texture = arrTexturas[0];
+
         fadeIn = true;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
 
         desativar = true;
+
+        yield return new WaitForSeconds(1f);
+
+        gerenciador.DesativarMemorias();
 
         sm.DiminuirVolumeGradual(3);
 
@@ -139,5 +145,7 @@ public class Memorias : MonoBehaviour
         pov.Cutscene(false);
         mov.PlayMovement(false);
         rb.isKinematic = false;
+
+        
     }
 }
