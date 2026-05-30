@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.23529413, g: 0.23529413, b: 0.23529413, a: 1}
+  m_FogColor: {r: 0.20754719, g: 0.2065682, b: 0.2065682, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.25
   m_LinearFogStart: 0
@@ -7262,6 +7262,9 @@ MonoBehaviour:
   textoDesteObjeto: Pressione "MB1" para interagir
   textoHUD: {fileID: 0}
   distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1231809486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7851,7 +7854,6 @@ MonoBehaviour:
   pontoDireita: {fileID: 0}
   pontoEsquerda: {fileID: 0}
   caixinha: {fileID: 0}
-  mirror: {fileID: 1525759391}
   pontoFinal: {fileID: 466201411}
   speedRotation: 0.5
   speedMoving: 0.5
@@ -11549,6 +11551,9 @@ MonoBehaviour:
   textoDesteObjeto: Pressione "MB1" para interagir
   textoHUD: {fileID: 0}
   distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1874777654
 GameObject:
   m_ObjectHideFlags: 0
@@ -15425,6 +15430,9 @@ MonoBehaviour:
   textoDesteObjeto: Pressione "MB1" para interagir
   textoHUD: {fileID: 0}
   distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!222 &5100948359064135373
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17410,6 +17418,9 @@ MonoBehaviour:
   textoDesteObjeto: 
   textoHUD: {fileID: 107053832}
   distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &8789532761244027901
 Transform:
   m_ObjectHideFlags: 0
