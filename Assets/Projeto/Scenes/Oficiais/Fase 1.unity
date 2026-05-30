@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7857,6 +7857,8 @@ MonoBehaviour:
   pontoFinal: {fileID: 466201411}
   speedRotation: 0.5
   speedMoving: 0.5
+  memoriaBailarinaAtiva: 0
+  memoriaEspelhoAtiva: 1
   rb: {fileID: 7648629374001511307}
   player: {fileID: 4872247690882307349}
 --- !u!1001 &1295803698
@@ -10860,6 +10862,8 @@ MonoBehaviour:
   mov: {fileID: 5874131855014688319}
   gerenciador: {fileID: 770236320887238094}
   rb: {fileID: 7648629374001511307}
+  luz1: {fileID: 0}
+  luz2: {fileID: 0}
 --- !u!1001 &1671354985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15514,6 +15518,7 @@ GameObject:
   - component: {fileID: 2156823699940108727}
   - component: {fileID: 1614448634193147244}
   - component: {fileID: 8774904088895949251}
+  - component: {fileID: 8774904088895949252}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -17421,6 +17426,27 @@ MonoBehaviour:
   layersInterativas:
     serializedVersion: 2
     m_Bits: 0
+--- !u!95 &8774904088895949252
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248492201325989807}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a9aaf8e62ebfce4cacf3f64bf6dd313, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &8789532761244027901
 Transform:
   m_ObjectHideFlags: 0
