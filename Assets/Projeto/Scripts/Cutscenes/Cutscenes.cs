@@ -27,7 +27,7 @@ public class Cutscenes : MonoBehaviour
     private bool camRotationCutscene;
     private bool playerMovingCutscene;
     private bool memoriaBailarinaAtiva = false;
-    private bool memoriaEspelhoAtiva = false;
+    private bool memoriaEspelhoAtiva = true;
     private Quaternion lookDirection;
 
     [Header("Componentes")]
@@ -72,7 +72,7 @@ public class Cutscenes : MonoBehaviour
     public void Bailarina()
     {
         pov.Cutscene(true);
-        mov.PlayMovement(true);
+        mov.PlayMovement(false);
         rb.isKinematic = true;
 
         sm.DiminuirVolumeGradual(2);

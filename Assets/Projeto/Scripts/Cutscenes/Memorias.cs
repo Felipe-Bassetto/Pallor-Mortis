@@ -102,8 +102,11 @@ public class Memorias : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
 
         imageMemorie.texture = arrTexturas[5];
+        fadeIn = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6f);
+
+        fadeOut = true;
 
         desativar = true;
 
@@ -112,7 +115,7 @@ public class Memorias : MonoBehaviour
         Instantiate(prefabCartao, caixa.transform.position, Quaternion.identity);
         Destroy(caixa);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
 
         sm.AumentarVolumeGradual(2);
 
