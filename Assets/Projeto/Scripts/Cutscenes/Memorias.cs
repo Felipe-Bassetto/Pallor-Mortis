@@ -13,6 +13,7 @@ public class Memorias : MonoBehaviour
     [SerializeField] private RawImage imageMemorie;
     [SerializeField] private GameObject prefabCartao;
     [SerializeField] private GameObject caixa;
+    [SerializeField] private GameObject pontoC;
 
     [Header("Cores")]
     [SerializeField] private Color preto;
@@ -87,6 +88,7 @@ public class Memorias : MonoBehaviour
         yield return new WaitForSeconds(5f); // tempo com imagem ativa
 
         fadeOut = true;
+        yield return new WaitForSeconds(0.8f);
         sm.PlaySound(15);
         yield return new WaitForSeconds(2.7f);
 
@@ -112,7 +114,8 @@ public class Memorias : MonoBehaviour
         imageMemorie.texture = arrTexturas[5];
         fadeIn = true;
 
-        yield return new WaitForSeconds(6.5f);
+        sm.PlaySound(16);
+        yield return new WaitForSeconds(9f);
 
         fadeOut = true;
 
@@ -120,8 +123,7 @@ public class Memorias : MonoBehaviour
 
         sm.DiminuirVolumeGradual(3);
 
-        Instantiate(prefabCartao, caixa.transform.position, Quaternion.identity);
-        Destroy(caixa);
+        Instantiate(prefabCartao, pontoC.transform.position, Quaternion.identity);
 
         yield return new WaitForSeconds(1.5f);
 
