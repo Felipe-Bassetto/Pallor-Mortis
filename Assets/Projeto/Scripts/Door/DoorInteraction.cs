@@ -15,7 +15,7 @@ public class DoorInteraction : MonoBehaviour
     private float velocidadeRotacao;
     private bool canClick = true;
 
-    [Header("Rotação")]
+    [Header("Rotaï¿½ï¿½o")]
     public Vector3 rotacaoAbertaOffset = new Vector3(0, 90, 0);
     private bool canRotate = false;
 
@@ -43,7 +43,7 @@ public class DoorInteraction : MonoBehaviour
     {
         if (canClick)
         {
-            // INTERAÇÃO
+            // INTERAï¿½ï¿½O
             if (Input.GetMouseButtonDown(0))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -66,9 +66,9 @@ public class DoorInteraction : MonoBehaviour
                             if ((needKey && !key) || !needKey)
                             {
                                 sm.PlaySound(2);
-                                AltState(false);
                                 return;
                             }
+                            else AltState(false);
                         }
                         velocidadeRotacao = velocidadeRotacaoPadrao;
                         canRotate = true;
@@ -84,7 +84,7 @@ public class DoorInteraction : MonoBehaviour
             }
         }
 
-        // ANIMAÇÃO
+        // ANIMAï¿½ï¿½O
         Quaternion alvo = aberta ? rotacaoAberta : rotacaoFechada;
 
         if (canRotate)

@@ -1118,7 +1118,7 @@ Transform:
   m_GameObject: {fileID: 183224018}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 5.5, z: 0}
+  m_LocalPosition: {x: 0, y: 5.5, z: 1.45}
   m_LocalScale: {x: 3.47226, y: 1, z: 4.8096533}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1606,6 +1606,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 392245526}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &401098048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1552853674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &401098054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401098048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione "MB1" para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 6
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &403850850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,6 +2067,30 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &469804109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719848357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &469804115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469804109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione "MB1" para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 6
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &482655045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +2252,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &554954319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1164960956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &554954325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554954319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione "MB1" para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 6
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!64 &601120407
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3139,7 +3211,7 @@ Transform:
   m_GameObject: {fileID: 979492760}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 292.8587, y: 245.45135, z: -38.29809}
+  m_LocalPosition: {x: 292.8587, y: 245.384, z: -38.29809}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3727,7 +3799,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 554954325}
   m_SourcePrefab: {fileID: 100100000, guid: f67b804fe6cef3548a3129ba5449d0d8, type: 3}
 --- !u!1 &1187841189
 GameObject:
@@ -4975,7 +5051,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 401098054}
   m_SourcePrefab: {fileID: 100100000, guid: f67b804fe6cef3548a3129ba5449d0d8, type: 3}
 --- !u!1001 &1580835698
 PrefabInstance:
@@ -5137,9 +5217,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDesteObjeto: Pressione "Mb1" para interagir
-  textoHUD: {fileID: 2102153722}
-  distanciaLimite: 3
+  textoDesteObjeto: Pressione "MB1" para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 6
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1625063193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5718,7 +5801,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 469804115}
   m_SourcePrefab: {fileID: 100100000, guid: f67b804fe6cef3548a3129ba5449d0d8, type: 3}
 --- !u!1001 &1732119829
 PrefabInstance:
@@ -7066,7 +7153,7 @@ Transform:
   m_GameObject: {fileID: 8418360394442270255}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.059, z: 0}
+  m_LocalPosition: {x: 0, y: -0.010009766, z: 0}
   m_LocalScale: {x: 0.64826, y: 0.10719929, z: 0.23413}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7814,7 +7901,7 @@ Transform:
   m_GameObject: {fileID: 2394274106147340054}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.275, z: 0}
+  m_LocalPosition: {x: 0, y: -0.24733505, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8293,6 +8380,7 @@ GameObject:
   - component: {fileID: 3626115062038671012}
   - component: {fileID: 5420639691657882650}
   - component: {fileID: 4661442031414292673}
+  - component: {fileID: 5420639691657882651}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -8379,6 +8467,7 @@ GameObject:
   - component: {fileID: 379254550032711085}
   - component: {fileID: 4683017476689152571}
   - component: {fileID: 608044334066801627}
+  - component: {fileID: 4683017476689152572}
   m_Layer: 6
   m_Name: Fita
   m_TagString: Fita
@@ -8399,6 +8488,7 @@ GameObject:
   - component: {fileID: 379254548105699280}
   - component: {fileID: 4683017475806996550}
   - component: {fileID: 608044334923741606}
+  - component: {fileID: 4683017475806996551}
   m_Layer: 6
   m_Name: "Cart\xE3o parte 1"
   m_TagString: "Parte Cart\xE3o"
@@ -8600,7 +8690,7 @@ Transform:
   m_GameObject: {fileID: 8096470285540188878}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 2.2710528, y: 4.6122007, z: 0}
+  m_LocalPosition: {x: 2.2710528, y: 4.55, z: 0}
   m_LocalScale: {x: 273.8889, y: 436.3307, z: 11.86358}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9613,7 +9703,7 @@ Transform:
   m_GameObject: {fileID: 5306054164498835116}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 294.53067, y: 245.51, z: -37.953094}
+  m_LocalPosition: {x: 294.53067, y: 244.95465, z: -37.953094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9849,6 +9939,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4683017475806996551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2394274106330520939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione MB1 para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!135 &4683017476689152571
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9870,6 +9978,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4683017476689152572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2394274106147340054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione "MB1" para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!23 &4708523968239493597
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10427,6 +10553,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ad5dfeafa1c7d45468a18f110e903deb, type: 3}
   - {fileID: 8300000, guid: ad5dfeafa1c7d45468a18f110e903deb, type: 3}
   velocityThreshold: 0.1
+--- !u!114 &5420639691657882651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2162021903198702082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: 
+  textoHUD: {fileID: 2102153722}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 328
 --- !u!4 &5438187230671427643
 Transform:
   m_ObjectHideFlags: 0
@@ -11391,7 +11535,7 @@ PrefabInstance:
     - target: {fileID: 5374002350797442222, guid: aaea318f12919174489beb41d1d7c0f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.480335
+      value: 12.890648
       objectReference: {fileID: 0}
     - target: {fileID: 5374002350797442222, guid: aaea318f12919174489beb41d1d7c0f0,
         type: 3}
@@ -12296,6 +12440,7 @@ GameObject:
   - component: {fileID: 5378458304086262337}
   - component: {fileID: 7177809741312649695}
   - component: {fileID: 3311503916494971715}
+  - component: {fileID: 8418360394442270256}
   m_Layer: 6
   m_Name: Canivete
   m_TagString: Canivete
@@ -12303,6 +12448,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8418360394442270256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418360394442270255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione "MB1" para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &8431011549196238349
 GameObject:
   m_ObjectHideFlags: 0
