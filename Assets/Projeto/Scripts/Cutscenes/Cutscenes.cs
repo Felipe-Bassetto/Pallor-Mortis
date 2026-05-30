@@ -18,6 +18,7 @@ public class Cutscenes : MonoBehaviour
     [SerializeField] private Transform pontoDireita;
     [SerializeField] private Transform pontoEsquerda;
     [SerializeField] private Transform caixinha;
+    [SerializeField] private Transform mirror;
     [SerializeField] private Transform pontoFinal;
 
     [Header("Variaveis Gerais")]
@@ -26,7 +27,7 @@ public class Cutscenes : MonoBehaviour
 
     private bool camRotationCutscene;
     private bool playerMovingCutscene;
-    private bool memoriaBailarinaAtiva = false;
+    private bool memoriaBailarinaAtiva = true;
     private bool memoriaEspelhoAtiva = false;
     private Quaternion lookDirection;
 
@@ -123,6 +124,10 @@ public class Cutscenes : MonoBehaviour
     IEnumerator CutMirror()
     {
         playerMovingCutscene = true;
+
+        lookDirection = Quaternion.LookRotation(mirror.position - cam.transform.position);
+        camRotationCutscene = true;
+
         yield return new WaitForSeconds(1f);
 
         sm.PlayOST(0);
