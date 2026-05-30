@@ -22,6 +22,11 @@ public class DoorAction : MonoBehaviour
     [Header("Cena")]
     [SerializeField] private string novaCena;
 
+    public bool canChangeScene = true;
+
+    [Header("Scripts")]
+    [SerializeField] private DoorInteraction di;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +43,14 @@ public class DoorAction : MonoBehaviour
             case Porta.Inicial:
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
-                if (Input.GetMouseButtonUp(0)) // Verificação se o player clicou na porta
+
+                if(di != null) canChangeScene = !di.trancada;
+
+                if (Input.GetMouseButtonUp(0) && canChangeScene) // Verificação se o player clicou na porta
                 {
                     if (Physics.Raycast(ray, out hit, distanceClick, layerMask))
                     {
+                        Debug.Log("trocou");
                         StartCoroutine("ChangeScene");
                     }
                 }

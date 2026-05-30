@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Projeto/Scenes/Oficiais/Fase 1.unity
     guid: 6e7303c0dcd07d241965d34a12d2caf2
+  - enabled: 1
+    path: Assets/Projeto/Scenes/Oficiais/Fase 2.unity
+    guid: 092559704088e2a469779ed21a972b1e
   m_configObjects: {}

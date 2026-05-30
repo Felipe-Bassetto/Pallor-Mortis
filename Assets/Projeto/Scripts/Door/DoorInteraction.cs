@@ -66,9 +66,9 @@ public class DoorInteraction : MonoBehaviour
                             if ((needKey && !key) || !needKey)
                             {
                                 sm.PlaySound(2);
-                                AltState(false);
                                 return;
                             }
+                            else AltState(false);
                         }
                         velocidadeRotacao = velocidadeRotacaoPadrao;
                         canRotate = true;
