@@ -57,6 +57,12 @@ public class Memorias : MonoBehaviour
         StartCoroutine(MemoriesBailarina());
     }
 
+    public void MemoriaMirror()
+    {
+        memoriaObj.SetActive(true);
+        StartCoroutine(MemoriesMirror());
+    }
+
     IEnumerator MemoriesBailarina()
     {
         imageMemorie.texture = arrTexturas[1];
@@ -70,13 +76,10 @@ public class Memorias : MonoBehaviour
 
         imageMemorie.texture = arrTexturas[2];
         fadeIn = true;
-        sm.DiminuirVolumeGradual(3);
 
         yield return new WaitForSeconds(5f); // tempo com imagem ativa
 
         fadeOut = true;
-        sm.PlayOST(1);
-        sm.AumentarVolumeGradual(3);
 
         yield return new WaitForSeconds(2.5f);
 
@@ -116,5 +119,22 @@ public class Memorias : MonoBehaviour
         pov.Cutscene(false);
         mov.PlayMovement(false);
         rb.isKinematic = false;        
+    }
+
+    IEnumerator MemoriesMirror()
+    {
+        imageMemorie.texture = arrTexturas[0];
+        fadeIn = true;
+        yield return new WaitForSeconds(5f);
+
+        desativar = true;
+
+        sm.DiminuirVolumeGradual(3);
+
+        sm.AumentarVolumeGradual(2);
+
+        pov.Cutscene(false);
+        mov.PlayMovement(false);
+        rb.isKinematic = false;
     }
 }
