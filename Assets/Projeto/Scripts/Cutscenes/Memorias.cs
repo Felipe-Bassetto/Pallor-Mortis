@@ -34,6 +34,10 @@ public class Memorias : MonoBehaviour
     [Header("Componentes")]
     [SerializeField] private Rigidbody rb;
 
+    [Header("Luzes")]
+    [SerializeField] private GameObject luz1;
+    [SerializeField] private GameObject luz2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,16 +77,18 @@ public class Memorias : MonoBehaviour
         velocidadeFade = 5;
         fadeOut = true;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.7f);
 
         imageMemorie.texture = arrTexturas[2];
         fadeIn = true;
+        luz1.SetActive(false);
+        luz2.SetActive(true);
 
         yield return new WaitForSeconds(5f); // tempo com imagem ativa
 
         fadeOut = true;
-
-        yield return new WaitForSeconds(2.5f);
+        sm.PlaySound(15);
+        yield return new WaitForSeconds(2.7f);
 
         imageMemorie.texture = arrTexturas[3];
         fadeIn = true;
@@ -91,21 +97,22 @@ public class Memorias : MonoBehaviour
 
         fadeOut = true;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.7f);
 
         imageMemorie.texture = arrTexturas[4];
         fadeIn = true;
 
-        yield return new WaitForSeconds(5f); // tempo com imagem ativa
+        yield return new WaitForSeconds(4.5f); // tempo com imagem ativa
 
         fadeOut = true;
-
-        yield return new WaitForSeconds(2.5f);
+        
+        yield return new WaitForSeconds(3f);
+        
 
         imageMemorie.texture = arrTexturas[5];
         fadeIn = true;
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(6.5f);
 
         fadeOut = true;
 

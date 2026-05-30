@@ -26,8 +26,8 @@ public class Cutscenes : MonoBehaviour
 
     private bool camRotationCutscene;
     private bool playerMovingCutscene;
-    private bool memoriaBailarinaAtiva = false;
-    private bool memoriaEspelhoAtiva = true;
+    [SerializeField] private bool memoriaBailarinaAtiva = false;
+    [SerializeField] private bool memoriaEspelhoAtiva = true;
     private Quaternion lookDirection;
 
     [Header("Componentes")]
