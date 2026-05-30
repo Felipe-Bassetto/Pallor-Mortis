@@ -27,6 +27,7 @@ public class Cutscenes : MonoBehaviour
     private bool camRotationCutscene;
     private bool playerMovingCutscene;
     private bool memoriaBailarinaAtiva = false;
+    private bool memoriaEspelhoAtiva = false;
     private Quaternion lookDirection;
 
     [Header("Componentes")]
@@ -59,6 +60,12 @@ public class Cutscenes : MonoBehaviour
                 memories.MemoriaBailarina();
                 memoriaBailarinaAtiva = true;
             }
+
+            if (!memoriaEspelhoAtiva)
+            {
+                memories.MemoriaMirror();
+                memoriaEspelhoAtiva = true;
+            }
         }
     }
 
@@ -71,6 +78,17 @@ public class Cutscenes : MonoBehaviour
         sm.DiminuirVolumeGradual(2);
 
         StartCoroutine(CutBailarina());
+    }
+
+    public void Espelho()
+    {
+        pov.Cutscene(true);
+        mov.PlayMovement(true);
+        rb.isKinematic = true;
+
+        sm.DiminuirVolumeGradual(2);
+
+        StartCoroutine(CutMirror());
     }
 
     IEnumerator CutBailarina()
@@ -100,6 +118,14 @@ public class Cutscenes : MonoBehaviour
 
         lookDirection = Quaternion.LookRotation(caixinha.position - cam.transform.position);
         camRotationCutscene = true;
+    }
 
+    IEnumerator CutMirror()
+    {
+        playerMovingCutscene = true;
+        yield return new WaitForSeconds(1f);
+
+        sm.PlayOST(0);
+        sm.AumentarVolumeGradual(3);
     }
 }
