@@ -536,7 +536,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b8b3bbeae35e12046b69aba11bbc990b, type: 3}
   - {fileID: 8300000, guid: 3fb674692cddd7c46965b98006a12e6b, type: 3}
   musicas:
-  - {fileID: 8300000, guid: bd1e2d8f8d356ce4e8dd79a23923f288, type: 3}
+  - {fileID: 8300000, guid: 4e269fb1c6358d44d9b7a64869b7cf10, type: 3}
   - {fileID: 8300000, guid: a844213c1861ce9489571a7fc7430416, type: 3}
   speedGradual: 0.2
 --- !u!82 &98872221
@@ -2434,10 +2434,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
-  m_Range: 11
+  m_Intensity: 6
+  m_Range: 15
   m_SpotAngle: 179
-  m_InnerSpotAngle: 0
+  m_InnerSpotAngle: 150
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -3383,7 +3383,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5.7, y: 1, z: 1}
+    m_Scale: {x: 5.7, y: 1.67, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -10816,7 +10816,7 @@ MonoBehaviour:
   caixinha: {fileID: 1355557877}
   pontoFinal: {fileID: 1227757879}
   speedRotation: 0.5
-  speedMoving: 0.275
+  speedMoving: 0.27
   memoriaBailarinaAtiva: 0
   memoriaEspelhoAtiva: 1
   rb: {fileID: 4391584999452589606}
@@ -13198,7 +13198,7 @@ Transform:
   m_GameObject: {fileID: 2096744332}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -13.51, y: 177.57, z: 136.77}
+  m_LocalPosition: {x: -16.43, y: 177.57, z: 136.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13258,7 +13258,7 @@ Light:
   m_Intensity: 4
   m_Range: 11
   m_SpotAngle: 179
-  m_InnerSpotAngle: 90
+  m_InnerSpotAngle: 100
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
