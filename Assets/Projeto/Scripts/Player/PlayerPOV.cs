@@ -11,8 +11,7 @@ public class PlayerPOV : MonoBehaviour
     public bool camLocked;
 
     Camera cam;
-    private float rotacaoX = 0f;
-    
+    private float rotacaoX = 0f;    
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +39,7 @@ public class PlayerPOV : MonoBehaviour
         rotacaoX = Mathf.Clamp(rotacaoX, -70f, 70f); 
 
         //* 3- Rotação de camera *//
-        transform.localRotation = Quaternion.Euler(rotacaoX, 180f, 0f); 
+        transform.localRotation = Quaternion.Euler(rotacaoX, 0f, 0f); 
         corpoPlayer.Rotate(Vector3.up * mouseX); 
     }
     
