@@ -78,7 +78,6 @@ public class LightEvents : MonoBehaviour
     {
         int counterBlinks = 0;
 
-        Debug.Log("canBlink: " + canBlink);
         while (canBlink)
         {
             if(qtd > 0)

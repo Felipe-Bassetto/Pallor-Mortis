@@ -52,19 +52,23 @@ public class Cutscenes : MonoBehaviour
         if(playerMovingCutscene) player.position = Vector3.MoveTowards(player.position, pontoFinal.position, speedMoving * Time.deltaTime);
 
         if (cam.transform.rotation == lookDirection) camRotationCutscene = false;
-        if (player.position == pontoFinal.position) 
-        {
-            playerMovingCutscene = false;
-            if(!memoriaBailarinaAtiva)
-            {
-                memories.MemoriaBailarina();
-                memoriaBailarinaAtiva = true;
-            }
 
-            if (!memoriaEspelhoAtiva)
+        if (pontoFinal != null)
+        {
+            if (player.position == pontoFinal.position)
             {
-                memories.MemoriaMirror();
-                memoriaEspelhoAtiva = true;
+                playerMovingCutscene = false;
+                if (!memoriaBailarinaAtiva)
+                {
+                    memories.MemoriaBailarina();
+                    memoriaBailarinaAtiva = true;
+                }
+
+                if (!memoriaEspelhoAtiva)
+                {
+                    memories.MemoriaMirror();
+                    memoriaEspelhoAtiva = true;
+                }
             }
         }
     }

@@ -42,6 +42,9 @@ public class ReadNote : MonoBehaviour
     [Header("prefab")]
     [SerializeField] private GameObject sombra;
 
+    [Header("Scripts")]
+    [SerializeField] private Cutscenes cutscene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -123,6 +126,8 @@ public class ReadNote : MonoBehaviour
                 ph.ChangeCutsceneBool(true);
                 triggerAc = null;
             }
+
+            if (cutscene != null) ;
         }
     }
 }
