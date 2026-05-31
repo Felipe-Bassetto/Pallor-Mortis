@@ -7244,7 +7244,7 @@ MonoBehaviour:
   velocidadeRotacao: 4.5
   velocidadeInspec: 5
   distanceClick: 3
-  mov: {fileID: 0}
+  mov: {fileID: 8774904088895949253}
   pov: {fileID: 8386088870235191514}
   sm: {fileID: 366486228}
 --- !u!114 &1224188687
