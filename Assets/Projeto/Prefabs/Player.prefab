@@ -1328,7 +1328,7 @@ MonoBehaviour:
   distanciaLimite: 3
   layersInterativas:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 328
 --- !u!114 &4996071619466103752
 MonoBehaviour:
   m_ObjectHideFlags: 0

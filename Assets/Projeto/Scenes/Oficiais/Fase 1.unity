@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17279431, g: 0.21592702, b: 0.29786664, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2103,7 +2103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -3967,11 +3967,21 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 513640487}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2020435972}
   m_SourcePrefab: {fileID: 100100000, guid: f67b804fe6cef3548a3129ba5449d0d8, type: 3}
 --- !u!4 &702185614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1547921002935196582, guid: f67b804fe6cef3548a3129ba5449d0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 702185613}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &702185615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
     type: 3}
   m_PrefabInstance: {fileID: 702185613}
   m_PrefabAsset: {fileID: 0}
@@ -5230,6 +5240,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 845404643}
+    - targetCorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 845404646}
   m_SourcePrefab: {fileID: 100100000, guid: f67b804fe6cef3548a3129ba5449d0d8, type: 3}
 --- !u!4 &845404641 stripped
 Transform:
@@ -5275,6 +5289,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f295b47ebda8e7c478c2610a14877667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &845404646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845404642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione MB1 para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &866757288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9632,7 +9664,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1151063317}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1519527968}
   m_SourcePrefab: {fileID: 100100000, guid: f67b804fe6cef3548a3129ba5449d0d8, type: 3}
 --- !u!4 &1519527965 stripped
 Transform:
@@ -9646,12 +9682,36 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1519527964}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1519527967}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f295b47ebda8e7c478c2610a14877667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1519527967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1519527964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1519527968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519527967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione MB1 para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1520471920
 GameObject:
   m_ObjectHideFlags: 0
@@ -11052,7 +11112,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1719496936}
   m_SourcePrefab: {fileID: 100100000, guid: f67b804fe6cef3548a3129ba5449d0d8, type: 3}
 --- !u!4 &1719496934 stripped
 Transform:
@@ -11060,6 +11124,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1719496933}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1719496935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719496933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1719496936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719496935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione MB1 para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1735717610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11388,7 +11476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDesteObjeto: Pressione "MB1" para interagir
+  textoDesteObjeto: Pressione E para interagir
   textoHUD: {fileID: 0}
   distanciaLimite: 3
   layersInterativas:
@@ -12105,12 +12193,30 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 702185613}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 702185615}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f295b47ebda8e7c478c2610a14877667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2020435972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702185615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione MB1 para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2079997306
 GameObject:
   m_ObjectHideFlags: 0
@@ -13293,6 +13399,7 @@ GameObject:
   - component: {fileID: 5898561496023674826}
   - component: {fileID: 1371046847259892544}
   - component: {fileID: 8433720032077023074}
+  - component: {fileID: 8433720032077023075}
   m_Layer: 6
   m_Name: Chave
   m_TagString: Chave
@@ -13827,7 +13934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDesteObjeto: Pressione "MB1" para interagir
+  textoDesteObjeto: Pressione E para interagir
   textoHUD: {fileID: 0}
   distanciaLimite: 3
   layersInterativas:
@@ -14570,8 +14677,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8182219404209061871}
   m_SourcePrefab: {fileID: 100100000, guid: f67b804fe6cef3548a3129ba5449d0d8, type: 3}
+--- !u!1 &8182219404209061870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3248211795990975840, guid: f67b804fe6cef3548a3129ba5449d0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8182219404209061869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8182219404209061871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8182219404209061870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione MB1 para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &8209579259823348721
 Transform:
   m_ObjectHideFlags: 0
@@ -14675,7 +14810,7 @@ PrefabInstance:
     - target: {fileID: 7930574489430475929, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.125
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 7930574489430475929, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
@@ -14685,7 +14820,7 @@ PrefabInstance:
     - target: {fileID: 7930574489430475929, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.707
+      value: 7.71
       objectReference: {fileID: 0}
     - target: {fileID: 7930574489430475929, guid: 7777e6f6713fc3b4cb073b4e0d015993,
         type: 3}
@@ -14770,6 +14905,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 4.798277
   m_Center: {x: 3.6117613, y: 0.0000004305544, z: 0.0000006607328}
+--- !u!114 &8433720032077023075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4200367311558775987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDesteObjeto: Pressione E para interagir
+  textoHUD: {fileID: 0}
+  distanciaLimite: 3
+  layersInterativas:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &8486517374275326654
 GameObject:
   m_ObjectHideFlags: 0
