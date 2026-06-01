@@ -68,10 +68,10 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.13
+    m_Value: 0.2
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.8
   rounded:
     m_OverrideState: 0
     m_Value: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
     m_Value: 0
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 15
+    m_Value: 16
   gaussianMaxRadius:
     m_OverrideState: 0
     m_Value: 1
@@ -132,13 +132,13 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   focusDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 10
   aperture:
     m_OverrideState: 0
     m_Value: 5.6
   focalLength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 50
   bladeCount:
     m_OverrideState: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   bladeRotation:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
 --- !u!114 &-888932571026668792
 MonoBehaviour:
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.1
