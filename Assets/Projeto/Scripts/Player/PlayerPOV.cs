@@ -61,4 +61,10 @@ public class PlayerPOV : MonoBehaviour
     {
         camLocked = playing;
     }
+
+    public void CamAgaixada(bool agaixada)
+    {
+        if (agaixada) cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, 3f, cam.transform.localPosition.z);
+        else cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, 9f, cam.transform.localPosition.z);
+    }
 }

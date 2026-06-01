@@ -22,6 +22,9 @@ public class Movement : MonoBehaviour
     public Collider collider;
     public Collider colliderAgachada;
 
+    [Header("Scripts")]
+    [SerializeField] private PlayerPOV pov;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,21 +44,24 @@ public class Movement : MonoBehaviour
     {
         if(!playerLocked)
         {
-            Vector3 movement = (transform.right * movementX * -1) + (transform.forward * movementY * -1);
+            Vector3 movement = (transform.right * movementX) + (transform.forward * movementY);
             if(Input.GetKey(KeyCode.LeftShift))
             {
                 rb.velocity = new Vector3(movement.x * speedRunning, rb.velocity.y, movement.z * speedRunning);
                 anim.SetBool("Agaixada", false);
+                pov.CamAgaixada(false);
             }
             else if(Input.GetKey(KeyCode.LeftControl))
             {
                 rb.velocity = new Vector3(movement.x * speedCrouched, rb.velocity.y, movement.z * speed);
                 anim.SetBool("Agaixada", true);
+                pov.CamAgaixada(true);
             }
             else
             {
                 rb.velocity = new Vector3(movement.x * speed, rb.velocity.y, movement.z * speed);
                 anim.SetBool("Agaixada", false);
+                pov.CamAgaixada(false);
             }
         }
     }
