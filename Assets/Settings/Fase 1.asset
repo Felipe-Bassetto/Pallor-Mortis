@@ -93,10 +93,10 @@ MonoBehaviour:
     m_Value: 0
   contrast:
     m_OverrideState: 1
-    m_Value: 77
+    m_Value: 100
   colorFilter:
     m_OverrideState: 0
-    m_Value: {r: 0.8490566, g: 0.13216448, b: 0.16797332, a: 1}
+    m_Value: {r: 0.9339623, g: 0.7004717, b: 0.7119548, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
     m_Value: 1
