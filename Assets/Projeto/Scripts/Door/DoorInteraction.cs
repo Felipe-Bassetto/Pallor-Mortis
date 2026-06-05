@@ -10,12 +10,12 @@ public class DoorInteraction : MonoBehaviour
     public float velocidadeRotacaoEvent = 200f;
     public bool aberta;
     public bool needKey;
-    
+
     private float distanceClick = 2f;
     private float velocidadeRotacao;
     private bool canClick = true;
 
-    [Header("Rota��o")]
+    [Header("Rotação")]
     public Vector3 rotacaoAbertaOffset = new Vector3(0, 90, 0);
     private bool canRotate = false;
 
@@ -30,6 +30,10 @@ public class DoorInteraction : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private SoundManager sm;
 
+    [Header("Evento")]
+    [SerializeField] private GameObject objetoDesativar;
+    private bool eventoExecutado = false;
+
     void Start()
     {
         ic = FindObjectOfType<ItensController>();
@@ -43,7 +47,7 @@ public class DoorInteraction : MonoBehaviour
     {
         if (canClick)
         {
-            // INTERA��O
+            // INTERAÇÃO
             if (Input.GetMouseButtonDown(0))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -70,6 +74,7 @@ public class DoorInteraction : MonoBehaviour
                             }
                             else AltState(false);
                         }
+
                         velocidadeRotacao = velocidadeRotacaoPadrao;
                         canRotate = true;
 
@@ -78,19 +83,27 @@ public class DoorInteraction : MonoBehaviour
                             sm.PlaySound(14);
                         }
                         else sm.PlaySound(12);
+
                         aberta = !aberta;
+
+                        if (aberta && !eventoExecutado && objetoDesativar != null)
+                        {
+                            Destroy(objetoDesativar);
+                            eventoExecutado = true;
+                        }
                     }
                 }
             }
         }
 
-        // ANIMA��O
+        // ANIMAÇÃO
         Quaternion alvo = aberta ? rotacaoAberta : rotacaoFechada;
 
         if (canRotate)
         {
             pivot.rotation = Quaternion.RotateTowards(pivot.rotation, alvo, velocidadeRotacao * Time.deltaTime);
-            if(pivot.rotation == alvo)
+
+            if (pivot.rotation == alvo)
             {
                 canRotate = false;
             }

@@ -14,13 +14,14 @@ public class ReadNote : MonoBehaviour
     private Vector3 scaleInitial;
     private bool noteMove = false;
     private bool noteBack = false;
-    private Vector3 noteReading = new Vector3(0,0,0.5f);
+    private Vector3 noteReading = new Vector3(0, 0, 2f);
 
     [Header("GameObjects")]
     LayerMask layerMask;
     public GameObject triggerAc;
     public GameObject lightBlink;
     [SerializeField] private GameObject[] arrLights;
+    [SerializeField] private DoorInteraction portaFechar;
 
     [Header("Scripts")]
     public LightEvents le;
@@ -45,7 +46,6 @@ public class ReadNote : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private Cutscenes cutscene;
 
-    // Start is called before the first frame update
     void Start()
     {
         cameraPrincipal = Camera.main;
@@ -56,13 +56,12 @@ public class ReadNote : MonoBehaviour
         scaleInitial = gameObject.transform.localScale;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Verifica click na nota
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = cameraPrincipal.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit; 
+            RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, distanceClick, layerMask) && !noteMove && gameObject.name == hit.collider.gameObject.name)
             {
@@ -72,21 +71,27 @@ public class ReadNote : MonoBehaviour
                 mov.PlayMovement(true);
                 pov.CamLock(false);
 
+                if (portaFechar != null)
+                {
+                    portaFechar.RotateDoor(false);
+                }
+
                 switch (hit.collider.gameObject.tag)
                 {
                     case "Nota":
                         sm.PlaySound(7);
                         break;
+
                     case "Carteirinha":
                         sm.PlaySound(8);
                         break;
                 }
-            } 
+            }
         }
 
-        if(noteMove) // Mantem a nota na tela para ser lida
+        if (noteMove)
         {
-            if(Input.GetKey(KeyCode.E)) // Voltar nota para posi��o original
+            if (Input.GetKey(KeyCode.E))
             {
                 gameObject.transform.SetParent(null);
                 mov.PlayMovement(false);
@@ -94,35 +99,53 @@ public class ReadNote : MonoBehaviour
                 noteBack = true;
                 noteMove = false;
 
-                if(doorInt != null)
+                if (doorInt != null)
                 {
                     doorInt.AltState(false);
                     sm.PlaySound(3);
                 }
 
-                if(lightBlink != null)
+                if (lightBlink != null)
                 {
                     le.PiscarLampadas(lightBlink, qtdLightsBlink);
                     lightBlink = null;
                 }
             }
 
-            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, noteReading, velocidade * Time.deltaTime);
-            Quaternion lookRot = Quaternion.LookRotation(cameraPrincipal.transform.position - gameObject.transform.position, Vector3.up);
+            gameObject.transform.localPosition = Vector3.MoveTowards(
+                gameObject.transform.localPosition,
+                noteReading,
+                velocidade * Time.deltaTime);
 
-            gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation,lookRot,velocidadeRotacao * Time.deltaTime);
+            Quaternion lookRot = Quaternion.LookRotation(
+                cameraPrincipal.transform.position - gameObject.transform.position,
+                Vector3.up);
+
+            gameObject.transform.rotation = Quaternion.Slerp(
+                gameObject.transform.rotation,
+                lookRot,
+                velocidadeRotacao * Time.deltaTime);
         }
 
-        if(noteBack)
+        if (noteBack)
         {
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.localPosition, positionInitial, velocidade * Time.deltaTime);
-            gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, rotationInitial, velocidadeRotacao * Time.deltaTime);
+            gameObject.transform.position = Vector3.MoveTowards(
+                gameObject.transform.localPosition,
+                positionInitial,
+                velocidade * Time.deltaTime);
+
+            gameObject.transform.rotation = Quaternion.Slerp(
+                gameObject.transform.rotation,
+                rotationInitial,
+                velocidadeRotacao * Time.deltaTime);
+
             gameObject.transform.localScale = scaleInitial;
-            if(triggerAc != null)
+
+            if (triggerAc != null)
             {
                 triggerAc.SetActive(true);
                 le.AcenderLuzes(arrLights);
-                Instantiate(sombra, new Vector3(7.5f,1f,-7f), Quaternion.identity);
+                Instantiate(sombra, new Vector3(7.5f, 1f, -7f), Quaternion.identity);
                 ph.ChangeCutsceneBool(true);
                 triggerAc = null;
             }
