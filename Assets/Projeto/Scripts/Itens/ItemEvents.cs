@@ -24,6 +24,12 @@ public class ItemEvents : MonoBehaviour
     [Header("Camera")]
     private Camera cameraPrincipal;
 
+    [Header("Necroterio")]
+    [SerializeField] private Cutscenes cut;
+
+    private bool receiturarioLido = false;
+    private bool obituarioLido = false;
+
     private void Start()
     {
         cameraPrincipal = Camera.main;
@@ -33,8 +39,10 @@ public class ItemEvents : MonoBehaviour
 
     public void Update()
     {
+        if(receiturarioLido && obituarioLido) cut.Necroterio();
+
         bool click = Input.GetMouseButtonDown(0);
-        if (click)
+        if(click)
         {
             if (ic.itemActive != -1)
             {
@@ -78,4 +86,7 @@ public class ItemEvents : MonoBehaviour
 
         confusion.DesativarEfeito(); // Desativa confusão
     }
+
+    public void receituario() => receiturarioLido = true;
+    public void obituario() => obituarioLido = true;
 }

@@ -95,6 +95,17 @@ public class Cutscenes : MonoBehaviour
         StartCoroutine(CutMirror());
     }
 
+    public void Necroterio()
+    {
+        pov.Cutscene(true);
+        mov.PlayMovement(true);
+        rb.isKinematic = true;
+
+        sm.DiminuirVolumeGradual(2);
+
+        StartCoroutine(CutNecro());
+    }
+
     IEnumerator CutBailarina()
     {
         playerMovingCutscene = true;
@@ -131,5 +142,14 @@ public class Cutscenes : MonoBehaviour
 
         sm.PlayOST(0);
         sm.AumentarVolumeGradual(3);
+    }
+    IEnumerator CutNecro()
+    {
+        sm.PlayOST(0);
+        sm.AumentarVolumeGradual(3);
+
+        yield return new WaitForSeconds(1f);
+
+        memories.MemoriaNecroterio();
     }
 }

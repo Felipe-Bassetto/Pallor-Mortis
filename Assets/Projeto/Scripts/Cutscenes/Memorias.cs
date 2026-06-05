@@ -39,6 +39,10 @@ public class Memorias : MonoBehaviour
     [SerializeField] private GameObject luz1;
     [SerializeField] private GameObject luz2;
 
+    [Header("Camera")]
+    [SerializeField] private GameObject camPlayer;
+    [SerializeField] private GameObject camNecro;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +71,12 @@ public class Memorias : MonoBehaviour
     {
         gerenciador.AtivarMemorias();
         StartCoroutine(MemoriesMirror());
+    }
+
+    public void MemoriaNecroterio()
+    {
+        gerenciador.AtivarMemorias();
+        StartCoroutine(MemoriesNecro());
     }
 
     IEnumerator MemoriesBailarina()
@@ -153,8 +163,48 @@ public class Memorias : MonoBehaviour
 
         pov.Cutscene(false);
         mov.PlayMovement(false);
-        rb.isKinematic = false;
+        rb.isKinematic = false; 
+    }
 
-        
+    IEnumerator MemoriesNecro()
+    {
+        imageMemorie.texture = arrTexturas[0];
+
+        fadeIn = true;
+        yield return new WaitForSeconds(1f);
+        fadeOut = true;
+
+        yield return new WaitForSeconds(2.7f);
+
+        imageMemorie.texture = arrTexturas[1];
+        fadeIn = true;
+
+        yield return new WaitForSeconds(1f);
+        fadeOut = true;
+
+        yield return new WaitForSeconds(2.7f);
+
+        imageMemorie.texture = arrTexturas[2];
+        fadeIn = true;
+
+        yield return new WaitForSeconds(1f);
+        fadeOut = true;
+
+        yield return new WaitForSeconds(2.7f);
+
+        imageMemorie.texture = arrTexturas[4];
+        fadeIn = true;
+
+        yield return new WaitForSeconds(1f);
+        fadeOut = true;
+
+        yield return new WaitForSeconds(2.7f);
+
+        imageMemorie.texture = arrTexturas[5];
+
+        fadeIn = true;
+
+        yield return new WaitForSeconds(1f);
+        fadeOut = true;
     }
 }
