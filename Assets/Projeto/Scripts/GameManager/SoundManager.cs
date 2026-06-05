@@ -56,6 +56,11 @@ public class SoundManager : MonoBehaviour
         sources[0].PlayOneShot(audios[index]);
     }
 
+    public void StopSound()
+    {
+        sources[0].Stop();
+    }
+
     public void PlayLoop(int index)
     {
         sources[1].clip = audios[index];

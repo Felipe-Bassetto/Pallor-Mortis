@@ -11829,6 +11829,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrTexturas:
   - {fileID: 2800000, guid: 3dc854e3011b8b94aad3c45054857086, type: 3}
+  - {fileID: 2800000, guid: 2e07f622cc9185641adb493db2a69dca, type: 3}
+  - {fileID: 2800000, guid: 1ef52ad2ebb065848814fdc74216bce6, type: 3}
+  - {fileID: 2800000, guid: a5dca68271204214b8d368329e4874ee, type: 3}
+  - {fileID: 2800000, guid: 71faf44cc37fa2b43bc70389b599b86c, type: 3}
+  - {fileID: 2800000, guid: d6ee258b2ede19947b30dfc78329644a, type: 3}
+  - {fileID: 2800000, guid: 7e2bf8877700b344a8955a23651a616d, type: 3}
+  - {fileID: 2800000, guid: 7ec1d92a9464f564dbaae26e38d53c13, type: 3}
+  - {fileID: 2800000, guid: ea65337bc787f85489c688cfcd86f0fa, type: 3}
+  - {fileID: 2800000, guid: 630c7dd96a56ef949aa87b9a13c5bfea, type: 3}
+  - {fileID: 2800000, guid: 8b7ad3115e8ce7c4e9ca81cabb1594c6, type: 3}
   memoriaObj: {fileID: 3401252814112159740}
   imageMemorie: {fileID: 1588315670519017499}
   prefabCartao: {fileID: 0}
