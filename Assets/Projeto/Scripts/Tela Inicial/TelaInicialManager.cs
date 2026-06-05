@@ -74,7 +74,11 @@ public class TelaInicialManager : MonoBehaviour
         btnJogar.SetActive(false);
         btnSair.SetActive(false);
         StartCoroutine(MessageTyping());
-        yield return new WaitForSeconds(29f);
+        yield return new WaitForSeconds(28f);
+
+        sm.DiminuirVolumeGradual(2);
+
+        yield return new WaitForSeconds(1f);
         MOV.PlayMovement(false);
         POV.CamLock(true);
     }
