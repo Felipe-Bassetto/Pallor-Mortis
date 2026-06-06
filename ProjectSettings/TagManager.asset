@@ -16,6 +16,7 @@ TagManager:
   - Ursinho
   - "Sensor Cart\xE3o"
   - "Cart\xE3o"
+  - Garrafa
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - Dropable
   - Sombra
   - ParedeEspecial
-  - 
+  - Vidro
   - 
   - 
   - 
