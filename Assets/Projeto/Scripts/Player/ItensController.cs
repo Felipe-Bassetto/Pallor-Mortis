@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItensController : MonoBehaviour
 {
     [Header("Itens")]
+    [SerializeField] private GameObject slotAtivo1;
+    [SerializeField] private GameObject slotAtivo2;
+    [SerializeField] private RawImage item1;
+    [SerializeField] private RawImage item2;
+
     public List<GameObject> arrItens = new List<GameObject>();
     public int itemActive;
 
@@ -28,6 +35,21 @@ public class ItensController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        switch (itemActive)
+        {
+            case 0:
+                slotAtivo1.SetActive(true);
+                slotAtivo2.SetActive(false);
+                break;
+            case 1:
+                slotAtivo1.SetActive(false);
+                slotAtivo2.SetActive(true);
+                break;
+            case -1:
+                slotAtivo1.SetActive(false);
+                slotAtivo2.SetActive(false);
+                break;
+        }
 
         bool keyQHolding = Input.GetKey(KeyCode.Q) && itemActive != -1;
         bool keyQReleased = Input.GetKeyUp(KeyCode.Q);
@@ -48,6 +70,8 @@ public class ItensController : MonoBehaviour
         {
             changeItem();
         }
+
+
     }
 
     public int addItem(GameObject item) // Adiciona item a mão
@@ -101,6 +125,19 @@ public class ItensController : MonoBehaviour
 
             objActive = null;
             
+            switch(itemActive)
+            {
+                case 0:
+                    item1.texture = null; 
+                    item1.gameObject.SetActive(false);
+                    slotAtivo1.SetActive(false);
+                    break;
+                case 1:
+                    item2.texture = null;
+                    item2.gameObject.SetActive(false);
+                    slotAtivo2.SetActive(false);
+                    break;
+            }
 
             Destroy(prefabDrop);
             prefabDrop = null;
