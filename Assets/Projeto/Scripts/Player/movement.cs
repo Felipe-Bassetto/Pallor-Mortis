@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
     Animator anim;
 
     [Header("Colliders")]
-    public Collider collider;
+    public Collider colliderEmpe;
     public Collider colliderAgachada;
 
     [Header("Scripts")]
@@ -77,11 +77,11 @@ public class Movement : MonoBehaviour
     public void AtiveCollider()
     {
         colliderAgachada.enabled = false;
-        collider.enabled = true;
+        colliderEmpe.enabled = true;
     }
     public void AtiveColliderAgachada()
     {
         colliderAgachada.enabled = true;
-        collider.enabled = false;
+        colliderEmpe.enabled = false;
     }
 }
