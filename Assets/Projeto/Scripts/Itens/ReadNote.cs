@@ -44,7 +44,7 @@ public class ReadNote : MonoBehaviour
     [SerializeField] private GameObject sombra;
 
     [Header("Scripts")]
-    [SerializeField] private Cutscenes cutscene;
+    [SerializeField] private ItemEvents ie;
 
     void Start()
     {
@@ -150,7 +150,11 @@ public class ReadNote : MonoBehaviour
                 triggerAc = null;
             }
 
-            if (cutscene != null) ;
+            if (ie != null)
+            {
+                ie.DocumentoLido();
+                ie = null;
+            }
         }
     }
 }
