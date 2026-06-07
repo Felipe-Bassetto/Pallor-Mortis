@@ -39,10 +39,6 @@ public class Memorias : MonoBehaviour
     [SerializeField] private GameObject luz1;
     [SerializeField] private GameObject luz2;
 
-    [Header("Camera")]
-    [SerializeField] private GameObject camPlayer;
-    [SerializeField] private GameObject camNecro;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -167,22 +163,21 @@ public class Memorias : MonoBehaviour
 
     IEnumerator MemoriesNecro()
     {
-
-        camPlayer.gameObject.SetActive(false);
-        camNecro.gameObject.SetActive(true);
-
-        imageMemorie.texture = arrTexturas[6];
+        imageMemorie.texture = arrTexturas[6];       
 
         fadeIn = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
+
+        velocidadeFade = 5;
+
         fadeOut = true;
 
-        yield return new WaitForSeconds(2.7f);
+        yield return new WaitForSeconds(3f);
 
         imageMemorie.texture = arrTexturas[7];
         fadeIn = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         fadeOut = true;
 
         yield return new WaitForSeconds(2.7f);
@@ -190,7 +185,7 @@ public class Memorias : MonoBehaviour
         imageMemorie.texture = arrTexturas[8];
         fadeIn = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         fadeOut = true;
 
         yield return new WaitForSeconds(2.7f);
@@ -198,7 +193,7 @@ public class Memorias : MonoBehaviour
         imageMemorie.texture = arrTexturas[9];
         fadeIn = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         fadeOut = true;
 
         yield return new WaitForSeconds(2.7f);
@@ -207,7 +202,8 @@ public class Memorias : MonoBehaviour
 
         fadeIn = true;
 
-        yield return new WaitForSeconds(1f);
-        fadeOut = true;
+        yield return new WaitForSeconds(5f);
+
+        imageMemorie.color = preto;
     }
 }
