@@ -50,18 +50,21 @@ public class Movement : MonoBehaviour
                 rb.velocity = new Vector3(movement.x * speedRunning, rb.velocity.y, movement.z * speedRunning);
                 anim.SetBool("Agaixada", false);
                 pov.CamAgaixada(false);
+                AtiveCollider();
             }
             else if(Input.GetKey(KeyCode.LeftControl))
             {
                 rb.velocity = new Vector3(movement.x * speedCrouched, rb.velocity.y, movement.z * speed);
                 anim.SetBool("Agaixada", true);
                 pov.CamAgaixada(true);
+                AtiveColliderAgachada();
             }
             else
             {
                 rb.velocity = new Vector3(movement.x * speed, rb.velocity.y, movement.z * speed);
                 anim.SetBool("Agaixada", false);
                 pov.CamAgaixada(false);
+                AtiveCollider();
             }
         }
     }
