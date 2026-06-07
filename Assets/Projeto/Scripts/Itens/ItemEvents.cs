@@ -28,6 +28,7 @@ public class ItemEvents : MonoBehaviour
     [SerializeField] private Cutscenes cut;
 
     public int countLeitura = 0;
+    private bool cutAcionada = false;
 
     private void Start()
     {
@@ -38,7 +39,11 @@ public class ItemEvents : MonoBehaviour
 
     public void Update()
     {
-        if(countLeitura == 2) cut.Necroterio();
+        if(countLeitura == 2 && !cutAcionada)
+        {
+            cut.Necroterio();
+            cutAcionada = true;
+        }
 
         bool click = Input.GetMouseButtonDown(0);
         if(click)

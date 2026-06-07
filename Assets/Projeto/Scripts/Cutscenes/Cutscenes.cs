@@ -98,7 +98,7 @@ public class Cutscenes : MonoBehaviour
     public void Necroterio()
     {
         pov.Cutscene(true);
-        mov.PlayMovement(true);
+        mov.PlayMovement(false);
         rb.isKinematic = true;
 
         sm.DiminuirVolumeGradual(2);
