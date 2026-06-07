@@ -34,6 +34,14 @@ public class GrabItem : MonoBehaviour
     [Header("Prefab")]
     public GameObject prefabDrop;
 
+    private void Awake()
+    {
+        Transform itens = transform.Find("Canvas/InGame/Itens");
+
+        item1 = itens.Find("Item 1").GetComponent<RawImage>();
+        item2 = itens.Find("Item 2").GetComponent<RawImage>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
