@@ -58,8 +58,11 @@ public class Cutscenes : MonoBehaviour
 
         if(camMovingCutscene) cam.gameObject.transform.position = Vector3.MoveTowards(cam.gameObject.transform.position, pontoFinal.position, speedMoving * Time.deltaTime);
 
-        if(cam.gameObject.transform.position == pontoFinal.position)  camMovingCutscene = false;
-
+        if(pontoFinal != null)
+        {
+            if(cam.gameObject.transform.position == pontoFinal.position)  camMovingCutscene = false;
+        }
+        
         if (playerMovingCutscene) player.position = Vector3.MoveTowards(player.position, pontoFinal.position, speedMoving * Time.deltaTime);
 
         if (cam.transform.rotation == lookDirection) camRotationCutscene = false;

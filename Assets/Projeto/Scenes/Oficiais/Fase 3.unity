@@ -193,8 +193,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b147bc1acdb11844f95cbb684a6be17c, type: 3}
   - {fileID: 8300000, guid: 44b1afed00806c9499d8e80a82ea9b5d, type: 3}
   - {fileID: 8300000, guid: d23f99b59d693cd4abc565d822fe9485, type: 3}
+  - {fileID: 8300000, guid: 5af31333551e6914aa9a5b0acd1be38d, type: 3}
+  - {fileID: 8300000, guid: 2aa92a61cc4a72a46a1ef38196e9e254, type: 3}
   musicas:
-  - {fileID: 8300000, guid: 4140cd009f987974ba505ad80cf269d8, type: 3}
+  - {fileID: 8300000, guid: 83cf1c06cf1088842b958f1e7a848e5a, type: 3}
   - {fileID: 8300000, guid: a844213c1861ce9489571a7fc7430416, type: 3}
   speedGradual: 0.15
 --- !u!82 &98872221
@@ -356,6 +358,7 @@ MonoBehaviour:
     type: 3}
   caixa: {fileID: 0}
   pontoC: {fileID: 0}
+  player: {fileID: 0}
   preto: {r: 0, g: 0, b: 0, a: 1}
   branco: {r: 1, g: 1, b: 1, a: 1}
   transparente: {r: 0, g: 0, b: 0, a: 0}
@@ -1396,6 +1399,8 @@ MonoBehaviour:
   pontoEsquerda: {fileID: 0}
   caixinha: {fileID: 0}
   pontoFinal: {fileID: 0}
+  pontoFrente: {fileID: 0}
+  pontoLado: {fileID: 0}
   speedRotation: 0.5
   speedMoving: 0.5
   memoriaBailarinaAtiva: 1
@@ -2359,23 +2364,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4151410592000095449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &920813684371460049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6451391258851517786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62195a30c8639df4fa1701dd082531ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeMemorias: {fileID: 0}
-  canvasMemorias: {fileID: 0}
-  velocidadeTransicao: 0.5
-  velocidadeVignette: 2
-  memoriasAtivas: 0
 --- !u!1 &938173136116346754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,7 +2757,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.48, y: 0.258, z: -3.047}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1882256536401012075}
@@ -3828,7 +3816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4394,7 +4382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDesteObjeto: Pressione MB1 para interagir
+  textoDesteObjeto: Pressione "MB1" para interagir
   textoHUD: {fileID: 0}
   distanciaLimite: 3
   layersInterativas:
@@ -5295,7 +5283,6 @@ GameObject:
   - component: {fileID: 1023677594404952191}
   - component: {fileID: 9143592559142543407}
   - component: {fileID: 8252794723217639239}
-  - component: {fileID: 920813684371460049}
   m_Layer: 8
   m_Name: pov
   m_TagString: MainCamera
@@ -5716,8 +5703,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoDesteObjeto: 
-  textoHUD: {fileID: 0}
-  distanciaLimite: 3
+  textoHUD: {fileID: 7375949136186971749}
+  distanciaLimite: 2
   layersInterativas:
     serializedVersion: 2
     m_Bits: 456
@@ -6676,7 +6663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDesteObjeto: Pressione MB1 para interagir
+  textoDesteObjeto: Pressione "MB1" para interagir
   textoHUD: {fileID: 0}
   distanciaLimite: 3
   layersInterativas:

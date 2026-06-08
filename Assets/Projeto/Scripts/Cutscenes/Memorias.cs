@@ -193,33 +193,43 @@ public class Memorias : MonoBehaviour
         imageMemorie.texture = arrTexturas[7];
         fadeIn = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         fadeOut = true;
 
-        yield return new WaitForSeconds(2.7f);
+        yield return new WaitForSeconds(2.6f);
 
         imageMemorie.texture = arrTexturas[8];
+        sm.PlaySound(15);
+        fadeOut = false;
         fadeIn = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2.6f);
         fadeOut = true;
 
-        yield return new WaitForSeconds(2.7f);
+        yield return new WaitForSeconds(2.6f);
 
         imageMemorie.texture = arrTexturas[9];
+        sm.PlaySound(15);
+        fadeOut = false;
         fadeIn = true;
-
-        yield return new WaitForSeconds(5f);
+        
+        yield return new WaitForSeconds(2.6f);
         fadeOut = true;
 
         yield return new WaitForSeconds(2.7f);
 
         imageMemorie.texture = arrTexturas[10];
-
         fadeIn = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
+        fadeOut = false;
+        fadeIn = true;
 
-        imageMemorie.color = preto;
+        yield return new WaitForSeconds(2.5f);
+
+        fadeIn = false;
+        fadeOut = true;
+        yield return new WaitForSeconds(1f);
+        sm.PlaySound(16);
     }
 }
