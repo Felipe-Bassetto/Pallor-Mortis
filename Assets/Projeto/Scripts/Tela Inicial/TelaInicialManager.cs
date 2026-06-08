@@ -13,6 +13,7 @@ public class TelaInicialManager : MonoBehaviour
     [SerializeField] private GameObject nameGame;
     [SerializeField] private GameObject memoriesObj;
     [SerializeField] private TextMeshProUGUI memoriesUI;
+    [SerializeField] private GameObject canvasPlayer;
 
     [Header("Scripts")]
     [SerializeField] private PlayerPOV POV;
@@ -20,6 +21,7 @@ public class TelaInicialManager : MonoBehaviour
     [SerializeField] private CamMenu CamMenu;
     [SerializeField] private GameDatabase db;
     [SerializeField] private SoundManager sm;
+    [SerializeField] private Cutscenes cut;
 
     private List<Memories> memories;
 
@@ -78,7 +80,16 @@ public class TelaInicialManager : MonoBehaviour
 
         sm.DiminuirVolumeGradual(2);
 
-        yield return new WaitForSeconds(6f);
+        canvasPlayer.SetActive(true);
+
+        yield return new WaitForSeconds(10f);
+
+        cut.Inicio();
+
+        yield return new WaitForSeconds(15f);
+
+        CamMenu.CamPos();
+
         MOV.PlayMovement(false);
         POV.CamLock(true);
     }

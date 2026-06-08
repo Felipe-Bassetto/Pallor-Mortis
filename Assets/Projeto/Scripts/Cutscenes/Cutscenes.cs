@@ -18,7 +18,13 @@ public class Cutscenes : MonoBehaviour
     [SerializeField] private Transform pontoDireita;
     [SerializeField] private Transform pontoEsquerda;
     [SerializeField] private Transform caixinha;
+
+    [Header("Cutscenes Gerais")]
     [SerializeField] private Transform pontoFinal;
+
+    [Header("Cutscene Inicial")]
+    [SerializeField] private Transform pontoFrente;
+    [SerializeField] private Transform pontoLado;
 
     [Header("Variaveis Gerais")]
     [SerializeField] private float speedRotation;
@@ -26,6 +32,7 @@ public class Cutscenes : MonoBehaviour
 
     private bool camRotationCutscene;
     private bool playerMovingCutscene;
+    private bool camMovingCutscene;
     [SerializeField] private bool memoriaBailarinaAtiva = false;
     [SerializeField] private bool memoriaEspelhoAtiva = true;
     private Quaternion lookDirection;
@@ -49,7 +56,11 @@ public class Cutscenes : MonoBehaviour
     {
         if(camRotationCutscene) cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, lookDirection, speedRotation * Time.deltaTime);
 
-        if(playerMovingCutscene) player.position = Vector3.MoveTowards(player.position, pontoFinal.position, speedMoving * Time.deltaTime);
+        if(camMovingCutscene) cam.gameObject.transform.position = Vector3.MoveTowards(cam.gameObject.transform.position, pontoFinal.position, speedMoving * Time.deltaTime);
+
+        if(cam.gameObject.transform.position == pontoFinal.position)  camMovingCutscene = false;
+
+        if (playerMovingCutscene) player.position = Vector3.MoveTowards(player.position, pontoFinal.position, speedMoving * Time.deltaTime);
 
         if (cam.transform.rotation == lookDirection) camRotationCutscene = false;
 
@@ -71,6 +82,11 @@ public class Cutscenes : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Inicio()
+    {
+        StartCoroutine(CutInicio());
     }
 
     public void Bailarina()
@@ -104,6 +120,28 @@ public class Cutscenes : MonoBehaviour
         sm.DiminuirVolumeGradual(2);
 
         StartCoroutine(CutNecro());
+    }
+
+    IEnumerator CutInicio()
+    {
+        camMovingCutscene = true;
+
+        speedRotation = 0.5f;
+        lookDirection = Quaternion.LookRotation(pontoFrente.position - cam.transform.position);
+        camRotationCutscene = true;
+
+        yield return new WaitForSeconds(2f);
+
+        camMovingCutscene = false;
+        lookDirection = Quaternion.LookRotation(pontoLado.position - cam.transform.position);
+        camRotationCutscene = true;
+
+        yield return new WaitForSeconds(2f);
+
+        lookDirection = Quaternion.LookRotation(pontoFrente.position - cam.transform.position);
+        camRotationCutscene = true;
+
+        memories.InicioGame();
     }
 
     IEnumerator CutBailarina()
