@@ -98,6 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPivot: {fileID: 6487912309099264997}
+  itemTexture: {fileID: 2800000, guid: 86cad8435357d7447a770a5294167d64, type: 3}
+  item1: {fileID: 0}
+  item2: {fileID: 0}
   ie: {fileID: 0}
   gc: {fileID: 0}
   craft: {fileID: 0}

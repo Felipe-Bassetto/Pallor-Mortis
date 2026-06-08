@@ -131,6 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPivot: {fileID: 2919816959026070309}
+  itemTexture: {fileID: 2800000, guid: 0bda1844fc0f7bf40a58662dc5ab670b, type: 3}
+  item1: {fileID: 0}
+  item2: {fileID: 0}
   ie: {fileID: 0}
   gc: {fileID: 0}
   craft: {fileID: 0}

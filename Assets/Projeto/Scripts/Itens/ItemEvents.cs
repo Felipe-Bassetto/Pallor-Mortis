@@ -27,8 +27,8 @@ public class ItemEvents : MonoBehaviour
     [Header("Necroterio")]
     [SerializeField] private Cutscenes cut;
 
-    private bool receiturarioLido = false;
-    private bool obituarioLido = false;
+    public int countLeitura = 0;
+    private bool cutAcionada = false;
 
     private void Start()
     {
@@ -39,7 +39,11 @@ public class ItemEvents : MonoBehaviour
 
     public void Update()
     {
-        if(receiturarioLido && obituarioLido) cut.Necroterio();
+        if(countLeitura == 2 && !cutAcionada)
+        {
+            cut.Necroterio();
+            cutAcionada = true;
+        }
 
         bool click = Input.GetMouseButtonDown(0);
         if(click)
@@ -87,6 +91,5 @@ public class ItemEvents : MonoBehaviour
         confusion.DesativarEfeito(); // Desativa confusão
     }
 
-    public void receituario() => receiturarioLido = true;
-    public void obituario() => obituarioLido = true;
+    public void DocumentoLido() => countLeitura++;
 }

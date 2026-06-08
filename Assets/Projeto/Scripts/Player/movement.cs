@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
     Animator anim;
 
     [Header("Colliders")]
-    public Collider collider;
+    public Collider colliderEmpe;
     public Collider colliderAgachada;
 
     [Header("Scripts")]
@@ -50,18 +50,21 @@ public class Movement : MonoBehaviour
                 rb.velocity = new Vector3(movement.x * speedRunning, rb.velocity.y, movement.z * speedRunning);
                 anim.SetBool("Agaixada", false);
                 pov.CamAgaixada(false);
+                AtiveCollider();
             }
             else if(Input.GetKey(KeyCode.LeftControl))
             {
                 rb.velocity = new Vector3(movement.x * speedCrouched, rb.velocity.y, movement.z * speed);
                 anim.SetBool("Agaixada", true);
                 pov.CamAgaixada(true);
+                AtiveColliderAgachada();
             }
             else
             {
                 rb.velocity = new Vector3(movement.x * speed, rb.velocity.y, movement.z * speed);
                 anim.SetBool("Agaixada", false);
                 pov.CamAgaixada(false);
+                AtiveCollider();
             }
         }
     }
@@ -74,11 +77,11 @@ public class Movement : MonoBehaviour
     public void AtiveCollider()
     {
         colliderAgachada.enabled = false;
-        collider.enabled = true;
+        colliderEmpe.enabled = true;
     }
     public void AtiveColliderAgachada()
     {
         colliderAgachada.enabled = true;
-        collider.enabled = false;
+        colliderEmpe.enabled = false;
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class GrabItem : MonoBehaviour
 {
@@ -10,8 +11,12 @@ public class GrabItem : MonoBehaviour
 
     [Header("Item")]
     [SerializeField] private GameObject itemPivot;
+    [SerializeField] private Texture itemTexture;
+    [SerializeField] private RawImage item1;
+    [SerializeField] private RawImage item2;
 
     LayerMask layerMask;
+
     
 
     [Header("Scripts")]
@@ -28,6 +33,14 @@ public class GrabItem : MonoBehaviour
 
     [Header("Prefab")]
     public GameObject prefabDrop;
+
+    private void Awake()
+    {
+        Transform itens = GameObject.Find("Canvas").transform.Find("InGame/Itens");
+
+        item1 = itens.Find("Item 1").GetComponent<RawImage>();
+        item2 = itens.Find("Item 2").GetComponent<RawImage>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +70,18 @@ public class GrabItem : MonoBehaviour
                     itemPivot.transform.position = it.gameObject.transform.Find("Hand").transform.position;
 
                     var variables = Variables.Object(gameObject);
+
+                    switch(maoAdicionada)
+                    {
+                        case 0:
+                            item1.texture = itemTexture; 
+                            item1.gameObject.SetActive(true);
+                            break;
+                        case 1:
+                            item2.texture = itemTexture;
+                            item2.gameObject.SetActive(true);
+                            break;
+                    }
 
                     if (variables.IsDefined("triggerActived"))
                     {

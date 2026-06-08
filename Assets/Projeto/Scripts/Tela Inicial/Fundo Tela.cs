@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class FundoTela : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Variaveis")]
+    [SerializeField] private float velocidade;
+    [SerializeField] private Vector3 rePos;
 
     // Update is called once per frame
     void Update()
     {
-        
+        gameObject.transform.position += Vector3.left * velocidade * Time.deltaTime;
+
+        if(gameObject.transform.position.x <= -950f) gameObject.transform.position = rePos;
     }
 }

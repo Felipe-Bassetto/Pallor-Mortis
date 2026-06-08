@@ -39,10 +39,6 @@ public class Memorias : MonoBehaviour
     [SerializeField] private GameObject luz1;
     [SerializeField] private GameObject luz2;
 
-    [Header("Camera")]
-    [SerializeField] private GameObject camPlayer;
-    [SerializeField] private GameObject camNecro;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +71,6 @@ public class Memorias : MonoBehaviour
 
     public void MemoriaNecroterio()
     {
-        gerenciador.AtivarMemorias();
         StartCoroutine(MemoriesNecro());
     }
 
@@ -168,43 +163,47 @@ public class Memorias : MonoBehaviour
 
     IEnumerator MemoriesNecro()
     {
-        imageMemorie.texture = arrTexturas[0];
+        imageMemorie.texture = arrTexturas[6];       
 
         fadeIn = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
+
+        velocidadeFade = 5;
+
+        fadeOut = true;
+
+        yield return new WaitForSeconds(3f);
+
+        imageMemorie.texture = arrTexturas[7];
+        fadeIn = true;
+
+        yield return new WaitForSeconds(5f);
         fadeOut = true;
 
         yield return new WaitForSeconds(2.7f);
 
-        imageMemorie.texture = arrTexturas[1];
+        imageMemorie.texture = arrTexturas[8];
         fadeIn = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         fadeOut = true;
 
         yield return new WaitForSeconds(2.7f);
 
-        imageMemorie.texture = arrTexturas[2];
+        imageMemorie.texture = arrTexturas[9];
         fadeIn = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         fadeOut = true;
 
         yield return new WaitForSeconds(2.7f);
 
-        imageMemorie.texture = arrTexturas[4];
-        fadeIn = true;
-
-        yield return new WaitForSeconds(1f);
-        fadeOut = true;
-
-        yield return new WaitForSeconds(2.7f);
-
-        imageMemorie.texture = arrTexturas[5];
+        imageMemorie.texture = arrTexturas[10];
 
         fadeIn = true;
 
-        yield return new WaitForSeconds(1f);
-        fadeOut = true;
+        yield return new WaitForSeconds(5f);
+
+        imageMemorie.color = preto;
     }
 }
