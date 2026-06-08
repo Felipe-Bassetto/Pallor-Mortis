@@ -11,8 +11,8 @@ public class FundoTela : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position += Vector3.left * velocidade * Time.deltaTime;
+        gameObject.transform.localPosition += Vector3.left * velocidade * Time.deltaTime;
 
-        if(gameObject.transform.position.x <= -950f) gameObject.transform.position = rePos;
+        if(gameObject.transform.localPosition.x <= -980f) gameObject.transform.localPosition = rePos;
     }
 }

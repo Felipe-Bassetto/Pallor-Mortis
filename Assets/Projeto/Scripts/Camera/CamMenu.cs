@@ -39,6 +39,7 @@ public class CamMenu : MonoBehaviour
 
     public void CamPos()
     {
-        cam.transform.position = camLocation;
+        camMove = false;
+        cam.transform.position = camSpot.gameObject.transform.position;
     }
 }

@@ -84,7 +84,7 @@ public class Memorias : MonoBehaviour
     IEnumerator InicioGameLevantando()
     {
         fadeOut = true;
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         camMenu.CamPos();
         player.transform.rotation = Quaternion.identity;
 

@@ -70,7 +70,6 @@ public class TelaInicialManager : MonoBehaviour
     IEnumerator InicioGame()
     {
         CamMenu.CameraMovement(true);
-        memoriesObj.SetActive(true);
         nameGame.SetActive(false);
         btnOpcoes.SetActive(false);
         btnJogar.SetActive(false);
@@ -82,7 +81,7 @@ public class TelaInicialManager : MonoBehaviour
 
         canvasPlayer.SetActive(true);
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
 
         cut.Inicio();
 
@@ -97,17 +96,18 @@ public class TelaInicialManager : MonoBehaviour
         int line = 0;
         bool textShowing = true;
         yield return new WaitForSeconds(1f);
+        memoriesObj.SetActive(true);
         sm.PlaySound(5);
         while (textShowing)
         {
             memoriesUI.text = memories[line].Fala;
-            if (line == 0) yield return new WaitForSeconds(3.9f);
+            if (line == 0) yield return new WaitForSeconds(4.5f);
             else if (line == 1) yield return new WaitForSeconds(2.6f);
-            else if (line == 2) yield return new WaitForSeconds(2.8f);
-            else if (line == 3) yield return new WaitForSeconds(2.5f);
+            else if (line == 2) yield return new WaitForSeconds(2.4f);
+            else if (line == 3) yield return new WaitForSeconds(2.7f);
             else if (line == 4) yield return new WaitForSeconds(2f);
             else if (line == 5) yield return new WaitForSeconds(3.5f);
-            else if (line == 6) yield return new WaitForSeconds(3.5f);
+            else if (line == 6) yield return new WaitForSeconds(3.7f);
             else if (line == 7) yield return new WaitForSeconds(5f);
 
             line++;
