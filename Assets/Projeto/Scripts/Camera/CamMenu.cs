@@ -13,6 +13,9 @@ public class CamMenu : MonoBehaviour
     Camera cam;
     private Vector3 camLocation;
 
+    [Header("Scripts")]
+    [SerializeField] private Cutscenes cut;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +27,18 @@ public class CamMenu : MonoBehaviour
     void Update()
     {
         if (camMove) cam.transform.position = Vector3.MoveTowards(cam.transform.position, camLocation, velocidade * Time.unscaledDeltaTime);
-        if (cam.transform.position == camLocation) CameraMovement(false);
+
+        if (cam.transform.position == camLocation)
+        {
+            CameraMovement(false);
+            cut.Inicio();
+        }
     }
-    public void CameraMovement(bool move)
+
+    public void CameraMovement(bool move) => camMove = move;
+
+    public void CamPos()
     {
-        camMove = move;
+        cam.transform.position = camLocation;
     }
 }

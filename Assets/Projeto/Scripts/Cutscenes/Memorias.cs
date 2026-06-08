@@ -14,6 +14,7 @@ public class Memorias : MonoBehaviour
     [SerializeField] private GameObject prefabCartao;
     [SerializeField] private GameObject caixa;
     [SerializeField] private GameObject pontoC;
+    [SerializeField] private GameObject player;
 
     [Header("Cores")]
     [SerializeField] private Color preto;
@@ -72,6 +73,21 @@ public class Memorias : MonoBehaviour
     public void MemoriaNecroterio()
     {
         StartCoroutine(MemoriesNecro());
+    }
+
+    public void InicioGame()
+    {
+        StartCoroutine(InicioGameLevantando());
+    }
+
+    IEnumerator InicioGameLevantando()
+    {
+        fadeOut = true;
+        yield return new WaitForSeconds(4f);
+
+        player.transform.rotation = Quaternion.identity;
+
+        desativar = true;
     }
 
     IEnumerator MemoriesBailarina()
