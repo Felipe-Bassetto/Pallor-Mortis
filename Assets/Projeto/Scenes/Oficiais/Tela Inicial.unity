@@ -3056,6 +3056,7 @@ MonoBehaviour:
   pov: {fileID: 2501247990114369054}
   mov: {fileID: 1906909797444472322}
   gerenciador: {fileID: 0}
+  camMenu: {fileID: 730769978}
   rb: {fileID: 6014190271812342545}
   luz1: {fileID: 0}
   luz2: {fileID: 0}

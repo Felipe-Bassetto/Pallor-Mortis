@@ -86,9 +86,7 @@ public class TelaInicialManager : MonoBehaviour
 
         cut.Inicio();
 
-        yield return new WaitForSeconds(15f);
-
-        CamMenu.CamPos();
+        yield return new WaitForSeconds(15f);    
 
         MOV.PlayMovement(false);
         POV.CamLock(true);
