@@ -78,7 +78,7 @@ public class TelaInicialManager : MonoBehaviour
 
         sm.DiminuirVolumeGradual(2);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(6f);
         MOV.PlayMovement(false);
         POV.CamLock(true);
     }
