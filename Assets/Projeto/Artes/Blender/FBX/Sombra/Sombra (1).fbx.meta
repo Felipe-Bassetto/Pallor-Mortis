@@ -24,14 +24,43 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      internalID: 4781951162920444690
+      firstFrame: 0
+      lastFrame: 138
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -82,7 +111,1597 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Sombra (1)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Sombra (1)(Clone)
+      position: {x: 0, y: 5.661201, z: 0}
+      rotation: {x: -0, y: -0.7071067, z: -0.7071068, w: 0}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Bone
+      parentName: Armature
+      position: {x: -0, y: 0.002131502, z: 0.012361196}
+      rotation: {x: 0.715168, y: -0.000000083321666, z: -0.00000008525468, w: 0.6989527}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.002
+      parentName: Bone
+      position: {x: 2.6645352e-17, y: 0.010582635, z: 1.11758706e-10}
+      rotation: {x: -0.011465937, y: 1.4210855e-14, z: 0.0000000027336995, w: 0.9999343}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.003
+      parentName: Bone.002
+      position: {x: -0, y: 0.003985178, z: 0}
+      rotation: {x: 0.01546854, y: -1.4320029e-14, z: -0.000000003687987, w: 0.9998804}
+      scale: {x: 1, y: 0.9999998, z: 0.9999998}
+    - name: Bone.003_end
+      parentName: Bone.003
+      position: {x: -0, y: 0.009459651, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone_L
+      parentName: Bone
+      position: {x: 2.6645352e-17, y: 0.010582635, z: 1.11758706e-10}
+      rotation: {x: -0.0066594174, y: -0.009333754, z: -0.8139967, w: 0.58075637}
+      scale: {x: 0.99999964, y: 0.99999976, z: 1}
+    - name: Bone_L.001
+      parentName: Bone_L
+      position: {x: 0.0000000016310591, y: 0.0035426638, z: -9.31837e-11}
+      rotation: {x: -0.006335585, y: -0.0010323295, z: 0.16079879, w: 0.9869664}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1}
+    - name: Bone_L.002
+      parentName: Bone_L.001
+      position: {x: -2.8937316e-10, y: 0.011057813, z: 2.6542693e-10}
+      rotation: {x: 0.0130730225, y: -0.00000084249757, z: -0.0036747206, w: 0.99990785}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: Bone_L.003
+      parentName: Bone_L.002
+      position: {x: 4.4703483e-10, y: 0.010666976, z: -8.4401104e-11}
+      rotation: {x: -0.0066147153, y: -0.00071199326, z: -0.08242887, w: 0.9965748}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+    - name: Bone_L.004
+      parentName: Bone_L.003
+      position: {x: 0.0000000010058283, y: 0.004175973, z: 1.11758706e-10}
+      rotation: {x: -0.00000006658956, y: -0.0000000051222737, z: 0.14861397, w: -0.9888953}
+      scale: {x: 1.0000002, y: 1.0000006, z: 0.9999998}
+    - name: Bone_L.004_end
+      parentName: Bone_L.004
+      position: {x: -0, y: 0.0031889605, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone_R
+      parentName: Bone
+      position: {x: 2.6645352e-17, y: 0.010582635, z: 1.11758706e-10}
+      rotation: {x: -0.006659179, y: 0.0093338825, z: 0.8139967, w: 0.58075637}
+      scale: {x: 0.9999997, y: 0.99999976, z: 1}
+    - name: Bone_R.001
+      parentName: Bone_R
+      position: {x: -0.0000000017068723, y: 0.003542664, z: -4.8986717e-11}
+      rotation: {x: -0.006335551, y: 0.0010323646, z: -0.1607987, w: 0.98696643}
+      scale: {x: 1.0000007, y: 1.0000006, z: 1}
+    - name: Bone_R.002
+      parentName: Bone_R.001
+      position: {x: 5.9732574e-10, y: 0.011057812, z: -1.6298145e-11}
+      rotation: {x: 0.013073002, y: 0.00000077823626, z: 0.003674601, w: 0.9999078}
+      scale: {x: 1.0000005, y: 1.0000006, z: 0.99999994}
+    - name: Bone_R.003
+      parentName: Bone_R.002
+      position: {x: 1.7818401e-10, y: 0.010666977, z: -5.7043505e-11}
+      rotation: {x: -0.00661472, y: 0.00071204384, z: 0.082428746, w: 0.9965748}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
+    - name: Bone_R.004
+      parentName: Bone_R.003
+      position: {x: -3.4010014e-10, y: 0.0041759727, z: -1.14901616e-10}
+      rotation: {x: 0.000000016763803, y: -0.000000058207647, z: 0.1486138, w: 0.9888953}
+      scale: {x: 1.0000002, y: 1.0000002, z: 0.99999976}
+    - name: Bone_R.004_end
+      parentName: Bone_R.004
+      position: {x: -0, y: 0.0031889605, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.001
+      parentName: Armature
+      position: {x: -0, y: 0.002131502, z: 0.012361196}
+      rotation: {x: 0.7365121, y: -0, z: -0, w: -0.6764243}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: Bone.001_L
+      parentName: Bone.001
+      position: {x: -0, y: 0.0064374227, z: -7.4505804e-11}
+      rotation: {x: 0.0042504077, y: 0.045979705, z: -0.12983464, w: 0.9904599}
+      scale: {x: 0.99999994, y: 1.0000005, z: 1.0000006}
+    - name: Bone.001_L.001
+      parentName: Bone.001_L
+      position: {x: 7.450572e-11, y: 0.006690047, z: 5.8464095e-11}
+      rotation: {x: 0.037588004, y: -0.062020276, z: 0.24615753, w: 0.96651286}
+      scale: {x: 1.0000002, y: 0.99999976, z: 0.9999998}
+    - name: Bone.001_L.002
+      parentName: Bone.001_L.001
+      position: {x: 1.891749e-10, y: 0.022818096, z: -8.1490726e-12}
+      rotation: {x: 0.09406058, y: 0.80107176, z: -0.06850709, w: 0.5871485}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: Bone.001_L.003
+      parentName: Bone.001_L.002
+      position: {x: -2.561137e-10, y: 0.032108523, z: -6.9475387e-10}
+      rotation: {x: 0.0081342505, y: -0.00006778929, z: -0.0043919506, w: 0.99995726}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+    - name: Bone.001_L.004
+      parentName: Bone.001_L.003
+      position: {x: -1.2092641e-10, y: 0.0040012756, z: 9.767609e-10}
+      rotation: {x: -0.69413525, y: -0.06653556, z: 0.06846962, w: -0.71348524}
+      scale: {x: 0.9999999, y: 1.0000007, z: 1.0000002}
+    - name: Bone.001_L.005
+      parentName: Bone.001_L.004
+      position: {x: 1.4901161e-10, y: 0.003093013, z: -1.8077116e-10}
+      rotation: {x: -0.03285766, y: -0.0067919614, z: -0.012711862, w: 0.99935615}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000005}
+    - name: Bone.001_L.005_end
+      parentName: Bone.001_L.005
+      position: {x: -0, y: 0.003330846, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.001_R
+      parentName: Bone.001
+      position: {x: -0, y: 0.0064374227, z: -7.4505804e-11}
+      rotation: {x: 0.0042504077, y: -0.045979705, z: 0.12983464, w: 0.9904599}
+      scale: {x: 0.99999994, y: 1.0000005, z: 1.0000006}
+    - name: Bone.001_R.001
+      parentName: Bone.001_R
+      position: {x: -7.450572e-11, y: 0.006690047, z: 5.8464095e-11}
+      rotation: {x: 0.037588064, y: 0.06202027, z: -0.24615753, w: 0.96651286}
+      scale: {x: 1.0000002, y: 0.9999999, z: 0.9999999}
+    - name: Bone.001_R.002
+      parentName: Bone.001_R.001
+      position: {x: -5.1804817e-11, y: 0.022818096, z: -1.44355e-10}
+      rotation: {x: 0.09405906, y: -0.8010593, z: 0.068509236, w: 0.58716565}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000004}
+    - name: Bone.001_R.003
+      parentName: Bone.001_R.002
+      position: {x: 1.1259544e-10, y: 0.032108527, z: 1.9535946e-11}
+      rotation: {x: 0.00813417, y: 0.00006778993, z: 0.004391919, w: 0.99995726}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: Bone.001_R.004
+      parentName: Bone.001_R.003
+      position: {x: 1.5284968e-10, y: 0.004001272, z: 5.624679e-10}
+      rotation: {x: -0.69413525, y: 0.06653558, z: -0.06846962, w: -0.7134852}
+      scale: {x: 1.0000001, y: 1.000001, z: 1.000001}
+    - name: Bone.001_R.005
+      parentName: Bone.001_R.004
+      position: {x: 3.72529e-10, y: 0.0030930163, z: 0.0000000045757043}
+      rotation: {x: -0.03285772, y: 0.00679198, z: 0.01271184, w: 0.99935615}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+    - name: Bone.001_R.005_end
+      parentName: Bone.001_R.005
+      position: {x: -0, y: 0.003330846, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CABELOFRENTE
+      parentName: Sombra (1)(Clone)
+      position: {x: -0, y: -0.1779135, z: -3.7398446}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 294.67175, y: 294.67175, z: 294.67175}
+    - name: CABELOLADO
+      parentName: Sombra (1)(Clone)
+      position: {x: -0.22209366, y: -0.048678126, z: 0}
+      rotation: {x: 6.088853e-15, y: 1, z: -0.00000008146035, w: 0.0000000754979}
+      scale: {x: 290.5003, y: 290.5003, z: 290.5003}
+    - name: "CORPA\xC7O"
+      parentName: Sombra (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1521"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0043109064, y: 0.0024744228, z: -0.055094656}
+      rotation: {x: 0.18966617, y: -0.3613434, z: 0.8956659, w: -0.17674936}
+      scale: {x: 0.96000004, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1522"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.00005098909, y: 0.0062255547, z: 0.010149327}
+      rotation: {x: 0.39371932, y: 0.17200808, z: 0.19651449, w: 0.8813515}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1523"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0035520224, y: -0.0008386086, z: 0.03582536}
+      rotation: {x: -0.54254776, y: 0.28146964, z: 0.33701387, w: 0.7161274}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1524"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.010099148, y: 0.0030469443, z: 0.0059229503}
+      rotation: {x: -0.09111709, y: 0.55677515, z: 0.823919, w: -0.053447563}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1525"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0010488661, y: -0.0017239937, z: 0.012455766}
+      rotation: {x: 0.12958013, y: -0.3419636, z: -0.7365801, w: 0.5689637}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1526"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.00079757284, y: 0.004961226, z: 0.0143892905}
+      rotation: {x: -0.23459369, y: -0.34363675, z: -0.08465223, w: 0.90538037}
+      scale: {x: 0.9599999, y: 0.96000004, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1527"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0043656486, y: 0.0017027009, z: 0.0073721027}
+      rotation: {x: 0.10668867, y: 0.68186253, z: -0.03158891, w: 0.7229683}
+      scale: {x: 0.96, y: 0.9600001, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1528"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0021963094, y: 0.00073702005, z: 0.020145189}
+      rotation: {x: 0.49546647, y: -0.13565233, z: 0.77703285, w: 0.36377376}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1529"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0026789515, y: -0.014429959, z: -0.03777451}
+      rotation: {x: -0.2526911, y: 0.49382883, z: 0.115270205, w: 0.8240104}
+      scale: {x: 0.96000004, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1530"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.005096415, y: 0.0020519488, z: -0.021440122}
+      rotation: {x: 0.13173008, y: -0.11894744, z: -0.29235405, w: 0.93969566}
+      scale: {x: 0.9600001, y: 0.9600001, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1531"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.009339261, y: 0.003733552, z: 0.004984665}
+      rotation: {x: -0.34766996, y: -0.35519266, z: 0.009588755, w: 0.8676819}
+      scale: {x: 0.96, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1532"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0042089312, y: -0.00273264, z: -0.03845483}
+      rotation: {x: 0.22701155, y: -0.6132156, z: -0.2702571, w: 0.7066778}
+      scale: {x: 0.9599998, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1533"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0023911116, y: 0.0027415375, z: -0.048926193}
+      rotation: {x: 0.03124657, y: -0.34494844, z: 0.9069434, w: 0.23976658}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1534"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0015658084, y: 0.0003932757, z: -0.0124518145}
+      rotation: {x: 0.39908075, y: -0.1283181, z: 0.74277425, w: 0.5220685}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1535"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.004111567, y: -0.002940374, z: -0.023809876}
+      rotation: {x: 0.077938184, y: 0.46586278, z: 0.4214953, w: 0.7741054}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1536"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0025683537, y: 0.0020661044, z: 0.014824109}
+      rotation: {x: 0.7622742, y: 0.15912572, z: 0.5968018, w: -0.19350614}
+      scale: {x: 0.95999986, y: 0.9599998, z: 0.95999986}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1537"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0067968606, y: 0.00012178711, z: -0.035136368}
+      rotation: {x: -0.31557837, y: 0.26189047, z: 0.8586447, w: -0.3074946}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1538"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.002534012, y: 0.0010436218, z: 0.011035568}
+      rotation: {x: -0.26459017, y: -0.18535903, z: -0.48139447, w: 0.81479657}
+      scale: {x: 0.9599998, y: 0.9599998, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1539"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.009442757, y: 0.0047669634, z: 0.0038872056}
+      rotation: {x: -0.21753345, y: -0.8074849, z: 0.18722773, w: 0.5153574}
+      scale: {x: 0.9599998, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1540"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0035226666, y: 0.002968316, z: 0.0211929}
+      rotation: {x: 0.28366816, y: -0.37568122, z: 0.10472317, w: 0.87603027}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1541"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0027400693, y: 0.002168472, z: -0.0023040064}
+      rotation: {x: -0.14819086, y: -0.44151428, z: -0.5863302, w: 0.66281337}
+      scale: {x: 0.96000004, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1542"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0015797393, y: 0.00061140885, z: 0.009424118}
+      rotation: {x: -0.14456284, y: -0.68930554, z: -0.49445677, w: 0.5093839}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1543"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0043729986, y: -0.00023760989, z: -0.01462967}
+      rotation: {x: 0.24616398, y: -0.36433765, z: -0.10070372, w: 0.8924798}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1544"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0021559948, y: -0.00016781523, z: -0.017079469}
+      rotation: {x: -0.24191584, y: -0.33449227, z: 0.13867532, w: 0.9002004}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1545"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0051679374, y: -0.0012924667, z: -0.0060032518}
+      rotation: {x: -0.015306895, y: -0.5789837, z: -0.1991125, w: 0.79050475}
+      scale: {x: 0.96000016, y: 0.96000016, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1546"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0036129, y: -0.003602393, z: -0.019316928}
+      rotation: {x: 0.23334055, y: -0.5349634, z: 0.6820232, w: -0.4406934}
+      scale: {x: 0.9600003, y: 0.9600002, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1547"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0007876071, y: -0.0022928545, z: -0.0048796874}
+      rotation: {x: 0.48101828, y: 0.008639678, z: 0.7887022, w: -0.3827475}
+      scale: {x: 0.96000016, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1548"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0036069395, y: -0.0082661975, z: -0.033273082}
+      rotation: {x: 0.01269327, y: 0.504804, z: -0.6601205, w: 0.55610496}
+      scale: {x: 0.9600002, y: 0.96000016, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1549"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.006211871, y: 0.0012925242, z: 0.015668968}
+      rotation: {x: 0.4341476, y: -0.07784647, z: 0.82074916, w: 0.36307937}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1550"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.011355594, y: 0.0046367813, z: -0.0008495664}
+      rotation: {x: -0.06653668, y: 0.5381969, z: 0.83996946, w: 0.019189814}
+      scale: {x: 0.95999986, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1551"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0008741384, y: 0.0008566178, z: 0.011629262}
+      rotation: {x: 0.21361955, y: -0.38164395, z: 0.89624727, w: 0.07386111}
+      scale: {x: 0.96000004, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1552"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.014855772, y: 0.0012129614, z: -0.0048356727}
+      rotation: {x: 0.2721667, y: -0.049960006, z: 0.9023703, w: -0.33038944}
+      scale: {x: 0.96, y: 0.96, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1553"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0031064367, y: 0.00408376, z: 0.008302613}
+      rotation: {x: -0.16115384, y: -0.53653026, z: -0.6316525, w: 0.53589183}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1554"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0029869282, y: 0.00028034433, z: -0.038336087}
+      rotation: {x: 0.17731164, y: -0.55765563, z: 0.3458471, w: 0.7334648}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1555"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0027082055, y: 0.0012207287, z: 0.0006736695}
+      rotation: {x: 0.30015793, y: -0.47853464, z: 0.6751598, w: -0.4744144}
+      scale: {x: 0.96000016, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1556"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.004542055, y: -0.01695225, z: -0.05678213}
+      rotation: {x: 0.56401306, y: 0.08622735, z: 0.55887765, w: 0.6017557}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1557"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00047767392, y: -0.00019615449, z: 0.02661421}
+      rotation: {x: -0.62601393, y: 0.110044636, z: -0.4927258, w: 0.5943215}
+      scale: {x: 0.96, y: 0.96000004, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1558"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.005883003, y: -0.0010310733, z: -0.0007594631}
+      rotation: {x: 0.008052683, y: 0.46738115, z: 0.42920902, w: 0.7728322}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1559"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.010082837, y: 0.0051688827, z: 0.0057049626}
+      rotation: {x: 0.27381295, y: -0.25677383, z: -0.030232713, w: 0.92637986}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1560"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0016674133, y: -0.00012760858, z: -0.013402735}
+      rotation: {x: -0.25394133, y: -0.21171696, z: 0.82189256, w: -0.46387753}
+      scale: {x: 0.9600002, y: 0.9600003, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1561"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0034750374, y: -0.0022262533, z: -0.04527625}
+      rotation: {x: -0.5226639, y: -0.092648946, z: -0.24871075, w: 0.81017387}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1562"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0021996954, y: -0.0010974029, z: -0.012432053}
+      rotation: {x: -0.045534246, y: -0.5569723, z: -0.6171399, w: 0.55393755}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1563"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.011956972, y: 0.001280185, z: -0.0020665755}
+      rotation: {x: -0.049209703, y: -0.4269595, z: -0.3276732, w: 0.8413764}
+      scale: {x: 0.95999986, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1564"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0023550193, y: -0.0016349027, z: 0.0036723511}
+      rotation: {x: -0.061210092, y: -0.37756637, z: 0.9060098, w: -0.18122695}
+      scale: {x: 0.96, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1565"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.005198164, y: -0.0009744501, z: -0.009980289}
+      rotation: {x: 0.40360183, y: -0.037571974, z: -0.06564454, w: 0.911803}
+      scale: {x: 0.96000004, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1566"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.002561379, y: 0.0047375094, z: 0.0033771163}
+      rotation: {x: -0.48246732, y: -0.13559848, z: 0.1304836, w: 0.85546035}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1567"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.002798553, y: 0.00010818273, z: -0.008540466}
+      rotation: {x: -0.18982896, y: 0.70302063, z: -0.3609169, w: 0.5826371}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1568"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0062127626, y: -0.01144919, z: -0.030347986}
+      rotation: {x: 0.19815071, y: -0.16911983, z: 0.8807243, w: 0.3955497}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1569"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0037002133, y: 0.000022746455, z: -0.013656322}
+      rotation: {x: 0.14026862, y: 0.4042173, z: -0.2733945, w: 0.86150366}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1570"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.013666877, y: 0.0065477835, z: 0.000022159666}
+      rotation: {x: 0.74483055, y: -0.013576567, z: -0.4379392, w: 0.50324196}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1571"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.005244391, y: 0.00087198865, z: -0.0040632985}
+      rotation: {x: -0.32521024, y: 0.18558596, z: -0.2980478, w: 0.8780454}
+      scale: {x: 0.9599998, y: 0.95999974, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1572"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0062794364, y: 0.007239117, z: -0.056890715}
+      rotation: {x: 0.3450131, y: 0.33660918, z: 0.8708646, w: -0.09620319}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1573"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00078553974, y: 0.0036904241, z: 0.0014278562}
+      rotation: {x: -0.49834734, y: 0.36936015, z: -0.3719657, w: 0.6905538}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1574"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.010924132, y: 0.00478258, z: -0.0003302139}
+      rotation: {x: 0.4366943, y: 0.20327549, z: -0.2985029, w: 0.8239376}
+      scale: {x: 0.96, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1575"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0029306172, y: -0.000370965, z: -0.014954879}
+      rotation: {x: -0.6115806, y: 0.10068432, z: -0.3923344, w: 0.67963636}
+      scale: {x: 0.9600001, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1576"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0063195894, y: -0.013425463, z: -0.036100674}
+      rotation: {x: -0.13025369, y: 0.24759081, z: 0.10193287, w: 0.9546426}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1577"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.013618224, y: 0.007080095, z: -0.0017423789}
+      rotation: {x: 0.62843597, y: 0.13859613, z: -0.18943863, w: 0.7416012}
+      scale: {x: 0.96, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1578"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0041834963, y: -0.0018555307, z: -0.018989468}
+      rotation: {x: -0.54183644, y: 0.1739947, z: -0.19523415, w: 0.7987633}
+      scale: {x: 0.95999986, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1579"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0044253534, y: 0.0028486361, z: 0.020812657}
+      rotation: {x: 0.101200595, y: 0.4127396, z: 0.3774495, w: 0.8227614}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1580"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0068743555, y: -0.0012336692, z: 0.000722928}
+      rotation: {x: 0.43490326, y: -0.23718204, z: -0.14694703, w: 0.8561603}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1581"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0013182309, y: 0.0029108843, z: 0.015289862}
+      rotation: {x: -0.39621726, y: -0.31094423, z: 0.66249233, w: 0.55446327}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1582"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0034687305, y: -0.0009893082, z: 0.004369829}
+      rotation: {x: 0.6911305, y: -0.5606165, z: -0.4160913, w: 0.18685788}
+      scale: {x: 0.96000004, y: 0.9599999, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1583"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.002166313, y: -0.01252292, z: -0.033804864}
+      rotation: {x: -0.13602863, y: 0.1634983, z: 0.1264199, w: 0.9689079}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1584"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0037554197, y: -0.0005518227, z: 0.029195525}
+      rotation: {x: 0.21054137, y: 0.10842604, z: 0.8420986, w: -0.48454735}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1585"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.006047326, y: 0.003161392, z: -0.001733185}
+      rotation: {x: -0.11075812, y: -0.15939157, z: 0.8805729, w: -0.43234047}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1586"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0037228821, y: 0.0019281828, z: 0.007569918}
+      rotation: {x: 0.7281892, y: 0.22682385, z: -0.13714391, w: 0.6320467}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1587"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0031175213, y: -0.008078648, z: -0.032181326}
+      rotation: {x: -0.50542665, y: 0.60501176, z: 0.43800226, w: 0.4320402}
+      scale: {x: 0.9600002, y: 0.9599999, z: 0.96000034}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1588"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0018323115, y: 0.0027566669, z: 0.03686932}
+      rotation: {x: 0.38573346, y: 0.30825838, z: 0.72218704, w: 0.48438865}
+      scale: {x: 0.9599999, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1589"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00058296614, y: 0.004765449, z: 0.012262051}
+      rotation: {x: 0.048187863, y: 0.68212855, z: -0.11876845, w: 0.7199115}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1590"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0020350828, y: 0.0009108402, z: 0.010035289}
+      rotation: {x: 0.40761262, y: -0.050458577, z: 0.88138956, w: -0.23336315}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1591"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00403862, y: 0.0025341245, z: 0.018201575}
+      rotation: {x: 0.11589144, y: 0.4265189, z: 0.7574842, w: 0.48048782}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1592"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.004943433, y: -0.013257656, z: -0.044268444}
+      rotation: {x: -0.05693371, y: -0.58232653, z: 0.76202947, w: 0.27742654}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1593"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0047052926, y: 0.0022760492, z: 0.017097281}
+      rotation: {x: 0.4184066, y: -0.05373034, z: -0.07974695, w: 0.90315527}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1594"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.004539072, y: -0.0023460842, z: -0.044888858}
+      rotation: {x: -0.5987746, y: -0.005723742, z: 0.65946436, w: -0.45446998}
+      scale: {x: 0.95999974, y: 0.9599998, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1595"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0053488063, y: -0.0010628401, z: -0.013419957}
+      rotation: {x: -0.4645256, y: 0.053606022, z: 0.7355427, w: 0.49022368}
+      scale: {x: 0.96000004, y: 0.96, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1596"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0005702521, y: 0.0033325162, z: 0.01374373}
+      rotation: {x: -0.6747428, y: 0.033014033, z: 0.34258157, w: 0.6528936}
+      scale: {x: 0.96000004, y: 0.96, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1597"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0023112108, y: 0.00005377963, z: 0.009340587}
+      rotation: {x: -0.39386174, y: 0.07138735, z: 0.9024201, w: 0.15942001}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1598"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.012251778, y: 0.0065519665, z: -0.0021428345}
+      rotation: {x: -0.61261123, y: -0.18703645, z: 0.4100122, w: 0.64931875}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1599"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0024068896, y: -0.0022953423, z: -0.008083387}
+      rotation: {x: -0.31467366, y: 0.49868384, z: -0.07643799, w: 0.8040225}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1600"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.004215821, y: 0.0028965245, z: -0.018755954}
+      rotation: {x: 0.10647471, y: 0.0022512658, z: -0.20202135, w: 0.97357357}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1601"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0027612045, y: 0.0003881853, z: 0.014403439}
+      rotation: {x: -0.2582128, y: -0.1556371, z: 0.94694823, w: -0.11132064}
+      scale: {x: 0.9600001, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1602"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.001143766, y: 0.002506827, z: -0.028646506}
+      rotation: {x: -0.58248264, y: -0.24711375, z: 0.7729853, w: -0.04628753}
+      scale: {x: 0.9599999, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1603"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.011762061, y: 0.004646524, z: 0.0048394864}
+      rotation: {x: -0.65859944, y: -0.026454655, z: -0.4898052, w: 0.57064694}
+      scale: {x: 0.9600001, y: 0.96000016, z: 0.96000016}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1604"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.01440457, y: 0.003663658, z: -0.0048189135}
+      rotation: {x: -0.25523505, y: 0.30698693, z: -0.014490956, w: 0.9167356}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1605"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.002313936, y: -0.001773954, z: -0.0025648882}
+      rotation: {x: 0.47876117, y: 0.2104838, z: 0.7075411, w: 0.47525772}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1606"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0055275694, y: 0.0031105608, z: -0.058567524}
+      rotation: {x: -0.36006486, y: 0.6201778, z: 0.625006, w: -0.3083833}
+      scale: {x: 0.95999986, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1607"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0033862153, y: -0.0110335145, z: -0.037362814}
+      rotation: {x: 0.0106878225, y: -0.19051084, z: 0.9465156, w: -0.26019135}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1608"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.001987376, y: 0.0058970023, z: 0.03535157}
+      rotation: {x: -0.371445, y: -0.39447013, z: -0.5407008, w: 0.6434785}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1609"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0054448163, y: 0.00005287826, z: -0.004501674}
+      rotation: {x: -0.14325744, y: 0.7216989, z: -0.66696376, w: 0.11741985}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1610"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0023441894, y: -0.001865023, z: -0.010915856}
+      rotation: {x: 0.24118215, y: 0.011803367, z: -0.04365716, w: 0.96942556}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1611"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0033527063, y: 0.002580977, z: 0.015458714}
+      rotation: {x: -0.5152987, y: -0.17023054, z: 0.76461095, w: 0.34764767}
+      scale: {x: 0.95999986, y: 0.9599998, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1612"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0046022087, y: -0.017842013, z: -0.053560182}
+      rotation: {x: -0.67015237, y: 0.050927993, z: 0.49615297, w: 0.54966766}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000016}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1613"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.013461466, y: 0.0030045605, z: 0.0014198157}
+      rotation: {x: -0.36577904, y: 0.43105054, z: 0.8153513, w: 0.12491352}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1614"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0023544044, y: 0.002805696, z: 0.035159264}
+      rotation: {x: -0.05683273, y: -0.035452127, z: 0.89711344, w: 0.4366929}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1615"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.002535378, y: -0.0005869795, z: -0.0032976742}
+      rotation: {x: -0.64375365, y: -0.35007033, z: 0.16244386, w: 0.66079044}
+      scale: {x: 0.9599999, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1616"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.005241384, y: -0.019253952, z: -0.0557186}
+      rotation: {x: -0.034753654, y: 0.42443648, z: -0.23196395, w: 0.8745505}
+      scale: {x: 0.96, y: 0.96000004, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1617"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0032268534, y: 0.0030562163, z: 0.031612232}
+      rotation: {x: 0.2914913, y: 0.22609632, z: -0.24095, w: 0.89769506}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1618"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0012633163, y: 0.007157887, z: 0.031552304}
+      rotation: {x: -0.64440066, y: 0.066228464, z: 0.27226642, w: 0.7115002}
+      scale: {x: 0.95999986, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1619"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00018873555, y: 0.0020511723, z: 0.025571654}
+      rotation: {x: -0.0582715, y: 0.15688147, z: 0.9336905, w: -0.31656706}
+      scale: {x: 0.9600003, y: 0.9600003, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1620"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0019657216, y: 0.0015954493, z: -0.056032762}
+      rotation: {x: -0.20987622, y: -0.28942707, z: 0.3195058, w: 0.8775534}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1621"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0021505875, y: -0.003086332, z: -0.0380421}
+      rotation: {x: -0.012033433, y: -0.47033414, z: -0.27401653, w: 0.8387824}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1622"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.005212917, y: -0.017718935, z: -0.055916008}
+      rotation: {x: -0.08671597, y: -0.5397097, z: 0.23288344, w: 0.8043377}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1623"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0003846662, y: 0.0005160038, z: 0.035729937}
+      rotation: {x: -0.40915942, y: 0.77441466, z: 0.22199842, w: -0.4284708}
+      scale: {x: 0.9600001, y: 0.96, z: 0.96000016}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1624"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0018566364, y: 0.0029168625, z: 0.013837244}
+      rotation: {x: -0.049244154, y: -0.0616275, z: -0.26628432, w: 0.9606611}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1625"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.005961393, y: -0.0012463784, z: -0.031014804}
+      rotation: {x: -0.44279623, y: -0.5310973, z: -0.48213005, w: 0.5379757}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1626"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0018043607, y: 0.0025325827, z: 0.019942166}
+      rotation: {x: -0.28525737, y: 0.4851547, z: -0.5581226, w: 0.609715}
+      scale: {x: 0.95999986, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1627"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.005225863, y: 0.006604899, z: -0.058324188}
+      rotation: {x: 0.31760696, y: 0.28908834, z: -0.28308555, w: 0.85756415}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1628"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.006323145, y: -0.010114248, z: -0.031284783}
+      rotation: {x: 0.7256152, y: 0.012840869, z: -0.5993142, w: -0.33784634}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1629"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.00084547966, y: -0.0031898646, z: 0.0044725453}
+      rotation: {x: -0.41884607, y: 0.21998367, z: 0.6982579, w: 0.5372253}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1630"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0020421096, y: 0.001817277, z: -0.013208225}
+      rotation: {x: 0.044526, y: 0.4557438, z: 0.88475007, w: 0.0867896}
+      scale: {x: 0.96000004, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1631"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0024662511, y: 0.004216831, z: 0.02825121}
+      rotation: {x: 0.07696505, y: -0.3484952, z: -0.111849666, w: 0.927425}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1632"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0026453356, y: -0.00091079023, z: 0.027850823}
+      rotation: {x: -0.022909349, y: -0.26620984, z: 0.91787696, w: -0.293444}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1633"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0052039158, y: -0.0026896398, z: -0.0114999255}
+      rotation: {x: -0.518581, y: -0.34290627, z: -0.25820783, w: 0.7394714}
+      scale: {x: 0.95999986, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1634"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0141536435, y: 0.0035747027, z: -0.003944933}
+      rotation: {x: -0.25267315, y: 0.65610516, z: 0.53802204, w: 0.46498895}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1635"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.005435073, y: 0.0018592017, z: -0.0056211087}
+      rotation: {x: 0.012635289, y: -0.15865822, z: 0.9703186, w: -0.18207066}
+      scale: {x: 0.96000004, y: 0.96, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1636"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00283498, y: -0.013717755, z: -0.044323273}
+      rotation: {x: -0.45273677, y: -0.2856364, z: -0.67094815, w: 0.5130983}
+      scale: {x: 0.9600001, y: 0.9600003, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1637"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.003602631, y: -0.0017360791, z: -0.005419072}
+      rotation: {x: 0.1640955, y: -0.58447737, z: -0.25119022, w: 0.7538982}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1638"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0015938501, y: 0.00002489917, z: -0.006558833}
+      rotation: {x: -0.035041325, y: -0.45205823, z: 0.5835727, w: 0.67369014}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1639"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0049819145, y: -0.018802136, z: -0.059396695}
+      rotation: {x: 0.3351195, y: -0.2756355, z: 0.54101694, w: 0.7204309}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1640"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.005393488, y: -0.021033093, z: -0.05161306}
+      rotation: {x: -0.2003221, y: -0.3466138, z: 0.8846139, w: 0.23914084}
+      scale: {x: 0.96, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1641"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.005123732, y: -0.0110178655, z: -0.032415863}
+      rotation: {x: 0.43307957, y: 0.11413223, z: -0.2973006, w: 0.843225}
+      scale: {x: 0.9600003, y: 0.9600003, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1642"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.01381288, y: 0.0066527445, z: -0.003430219}
+      rotation: {x: -0.5102229, y: 0.08902694, z: 0.33315796, w: 0.7878785}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1643"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0037880116, y: -0.001235741, z: -0.004719008}
+      rotation: {x: -0.13673843, y: 0.40877995, z: 0.49260166, w: 0.75600606}
+      scale: {x: 0.96, y: 0.9599999, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1644"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0025579515, y: -0.018370317, z: -0.04997707}
+      rotation: {x: 0.012707948, y: 0.28991023, z: -0.7337137, w: 0.6143735}
+      scale: {x: 0.95999986, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1645"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0026278864, y: 0.000059091934, z: 0.015474844}
+      rotation: {x: 0.55940896, y: 0.17480592, z: 0.79222226, w: 0.16996595}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1646"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0043054107, y: -0.00017293527, z: -0.017208649}
+      rotation: {x: -0.06688199, y: 0.69330466, z: 0.3886901, w: 0.603138}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000016}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1647"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.011142067, y: 0.00064701086, z: 0.0010732026}
+      rotation: {x: 0.23522028, y: 0.1795655, z: -0.34892696, w: 0.88920057}
+      scale: {x: 0.95999986, y: 0.9599998, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1648"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0030813233, y: -0.0020125739, z: 0.0049810866}
+      rotation: {x: -0.56130284, y: 0.065592535, z: 0.8227466, w: -0.061031077}
+      scale: {x: 0.96000004, y: 0.96, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1649"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0054450217, y: 0.005908374, z: -0.05701445}
+      rotation: {x: -0.5159364, y: 0.14188166, z: -0.27950042, w: 0.7972194}
+      scale: {x: 0.9599998, y: 0.9599998, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1650"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0016455374, y: 0.0044665216, z: 0.028416099}
+      rotation: {x: -0.0114153465, y: 0.37584555, z: 0.3327835, w: 0.8647919}
+      scale: {x: 0.96, y: 0.96, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1651"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0032756494, y: -0.0021259633, z: -0.003689766}
+      rotation: {x: 0.33632395, y: -0.06962477, z: -0.003521969, w: 0.9391625}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1652"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0024337843, y: -0.00011856478, z: -0.030030722}
+      rotation: {x: -0.5514153, y: -0.17857654, z: 0.62787026, w: 0.5194521}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1653"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0019090178, y: -0.016659707, z: -0.049793117}
+      rotation: {x: -0.32037884, y: 0.38775447, z: -0.49418262, w: 0.70907503}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1654"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0041624927, y: 0.0044154897, z: 0.0181123}
+      rotation: {x: 0.19152361, y: 0.15936746, z: 0.22670504, w: 0.94155484}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1655"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.005703186, y: 0.00151785, z: -0.05755212}
+      rotation: {x: 0.6687088, y: -0.013223762, z: -0.3409281, w: 0.66062224}
+      scale: {x: 0.9600001, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1656"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0043481747, y: -0.0062771747, z: -0.028290888}
+      rotation: {x: 0.6211208, y: 0.3328019, z: 0.5361092, w: -0.46479982}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1657"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0024334597, y: -0.0023186395, z: 0.030685982}
+      rotation: {x: 0.0035353897, y: 0.28621894, z: 0.92290694, w: -0.2575054}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1658"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.004543961, y: 0.0012612051, z: -0.026537597}
+      rotation: {x: -0.1420709, y: -0.5186787, z: 0.8212714, w: 0.1905299}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|1659"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0025602162, y: 0.000080468875, z: 0.018292954}
+      rotation: {x: 0.407438, y: -0.42072782, z: 0.80054957, w: -0.126897}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3042"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0030368897, y: 0.0022474544, z: -0.054559525}
+      rotation: {x: 0.18966617, y: -0.3613434, z: 0.8956659, w: -0.17674936}
+      scale: {x: 0.96000004, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3043"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.001417382, y: 0.00462227, z: 0.011060742}
+      rotation: {x: 0.39371932, y: 0.17200808, z: 0.19651449, w: 0.8813515}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3044"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0029474155, y: 0.00069968594, z: 0.03549633}
+      rotation: {x: -0.54254776, y: 0.28146964, z: 0.33701387, w: 0.7161274}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3045"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.009024097, y: 0.004209944, z: 0.0063768933}
+      rotation: {x: -0.09111709, y: 0.55677515, z: 0.823919, w: -0.053447563}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3046"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.000331152, y: -0.0008472301, z: 0.011027158}
+      rotation: {x: 0.12958013, y: -0.3419636, z: -0.7365801, w: 0.5689637}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3047"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.00058146485, y: 0.0053938464, z: 0.0156079335}
+      rotation: {x: -0.23459369, y: -0.34363675, z: -0.08465223, w: 0.90538037}
+      scale: {x: 0.9599999, y: 0.96000004, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3048"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.004012252, y: 0.001654257, z: 0.007189398}
+      rotation: {x: 0.10668867, y: 0.68186253, z: -0.03158891, w: 0.7229683}
+      scale: {x: 0.96, y: 0.9600001, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3049"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0027702407, y: 0.0017072491, z: 0.021990199}
+      rotation: {x: 0.49546647, y: -0.13565233, z: 0.77703285, w: 0.36377376}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3050"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0031478321, y: -0.0141786095, z: -0.037753098}
+      rotation: {x: -0.2526911, y: 0.49382883, z: 0.115270205, w: 0.8240104}
+      scale: {x: 0.96000004, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3051"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.003840899, y: 0.0013475153, z: -0.021726843}
+      rotation: {x: 0.13173008, y: -0.11894744, z: -0.29235405, w: 0.93969566}
+      scale: {x: 0.9600001, y: 0.9600001, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3052"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.010478449, y: 0.0035858667, z: 0.0052312366}
+      rotation: {x: -0.34766996, y: -0.35519266, z: 0.009588755, w: 0.8676819}
+      scale: {x: 0.96, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3053"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0050882534, y: -0.0027042066, z: -0.038347967}
+      rotation: {x: 0.22701155, y: -0.6132156, z: -0.2702571, w: 0.7066778}
+      scale: {x: 0.9599998, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3054"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.003555443, y: 0.0019888293, z: -0.047258448}
+      rotation: {x: 0.03124657, y: -0.34494844, z: 0.9069434, w: 0.23976658}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3055"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0014368219, y: 0.0003494316, z: -0.012032714}
+      rotation: {x: 0.39908075, y: -0.1283181, z: 0.74277425, w: 0.5220685}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3056"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0033523818, y: -0.0027740833, z: -0.024872381}
+      rotation: {x: 0.077938184, y: 0.46586278, z: 0.4214953, w: 0.7741054}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3057"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0032350316, y: 0.0023310157, z: 0.015624082}
+      rotation: {x: 0.7622742, y: 0.15912572, z: 0.5968018, w: -0.19350614}
+      scale: {x: 0.95999986, y: 0.9599998, z: 0.95999986}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3058"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0061067343, y: 0.00047673387, z: -0.035153795}
+      rotation: {x: -0.31557837, y: 0.26189047, z: 0.8586447, w: -0.3074946}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3059"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0025088578, y: 0.0003474246, z: 0.009855396}
+      rotation: {x: -0.26459017, y: -0.18535903, z: -0.48139447, w: 0.81479657}
+      scale: {x: 0.9599998, y: 0.9599998, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3060"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.010058385, y: 0.0040649115, z: 0.0029587361}
+      rotation: {x: -0.21753345, y: -0.8074849, z: 0.18722773, w: 0.5153574}
+      scale: {x: 0.9599998, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3061"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0017999557, y: 0.0031838154, z: 0.0224053}
+      rotation: {x: 0.28366816, y: -0.37568122, z: 0.10472317, w: 0.87603027}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3062"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0031132614, y: 0.00282413, z: -0.0017971675}
+      rotation: {x: -0.14819086, y: -0.44151428, z: -0.5863302, w: 0.66281337}
+      scale: {x: 0.96000004, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3063"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.001366405, y: 0.0012249455, z: 0.009166053}
+      rotation: {x: -0.14456284, y: -0.68930554, z: -0.49445677, w: 0.5093839}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3064"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.003972196, y: -0.00088637404, z: -0.013543755}
+      rotation: {x: 0.24616398, y: -0.36433765, z: -0.10070372, w: 0.8924798}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3065"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0013209309, y: 0.0012762214, z: -0.01491007}
+      rotation: {x: -0.24191584, y: -0.33449227, z: 0.13867532, w: 0.9002004}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3066"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0039946255, y: -0.0013519431, z: -0.007628627}
+      rotation: {x: -0.015306895, y: -0.5789837, z: -0.1991125, w: 0.79050475}
+      scale: {x: 0.96000016, y: 0.96000016, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3067"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0025532895, y: -0.0020738111, z: -0.01977915}
+      rotation: {x: 0.23334055, y: -0.5349634, z: 0.6820232, w: -0.4406934}
+      scale: {x: 0.9600003, y: 0.9600002, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3068"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0028339173, y: -0.0010161471, z: -0.0038926}
+      rotation: {x: 0.48101828, y: 0.008639678, z: 0.7887022, w: -0.3827475}
+      scale: {x: 0.96000016, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3069"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0039484045, y: -0.008779897, z: -0.032982986}
+      rotation: {x: 0.01269327, y: 0.504804, z: -0.6601205, w: 0.55610496}
+      scale: {x: 0.9600002, y: 0.96000016, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3070"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0055016447, y: 0.0014443686, z: 0.013741634}
+      rotation: {x: 0.4341476, y: -0.07784647, z: 0.82074916, w: 0.36307937}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3071"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.01240813, y: 0.004710541, z: -0.0006939636}
+      rotation: {x: -0.06653668, y: 0.5381969, z: 0.83996946, w: 0.019189814}
+      scale: {x: 0.95999986, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3072"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0016678186, y: -0.00024278622, z: 0.012445544}
+      rotation: {x: 0.21361955, y: -0.38164395, z: 0.89624727, w: 0.07386111}
+      scale: {x: 0.96000004, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3073"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.015276124, y: 0.0014596909, z: -0.006431352}
+      rotation: {x: 0.2721667, y: -0.049960006, z: 0.9023703, w: -0.33038944}
+      scale: {x: 0.96, y: 0.96, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3074"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0023752742, y: 0.003026455, z: 0.009847166}
+      rotation: {x: -0.16115384, y: -0.53653026, z: -0.6316525, w: 0.53589183}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3075"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0020143557, y: 0.0013561924, z: -0.037818007}
+      rotation: {x: 0.17731164, y: -0.55765563, z: 0.3458471, w: 0.7334648}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3076"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0011396924, y: 0.00097245304, z: 0.000102860475}
+      rotation: {x: 0.30015793, y: -0.47853464, z: 0.6751598, w: -0.4744144}
+      scale: {x: 0.96000016, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3077"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0042907414, y: -0.0154550625, z: -0.05646473}
+      rotation: {x: 0.56401306, y: 0.08622735, z: 0.55887765, w: 0.6017557}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3078"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00057421863, y: 0.0009795718, z: 0.026293486}
+      rotation: {x: -0.62601393, y: 0.110044636, z: -0.4927258, w: 0.5943215}
+      scale: {x: 0.96, y: 0.96000004, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3079"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.005494553, y: -0.0022218819, z: 0.00044234158}
+      rotation: {x: 0.008052683, y: 0.46738115, z: 0.42920902, w: 0.7728322}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3080"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.010613403, y: 0.0049006986, z: 0.0062259054}
+      rotation: {x: 0.27381295, y: -0.25677383, z: -0.030232713, w: 0.92637986}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3081"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0017042836, y: 0.00008928366, z: -0.014043418}
+      rotation: {x: -0.25394133, y: -0.21171696, z: 0.82189256, w: -0.46387753}
+      scale: {x: 0.9600002, y: 0.9600003, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3082"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.003161168, y: -0.0024956479, z: -0.04519133}
+      rotation: {x: -0.5226639, y: -0.092648946, z: -0.24871075, w: 0.81017387}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3083"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0017991657, y: -0.002370893, z: -0.011502204}
+      rotation: {x: -0.045534246, y: -0.5569723, z: -0.6171399, w: 0.55393755}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3084"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.012779237, y: 0.0017753012, z: -0.0015511081}
+      rotation: {x: -0.049209703, y: -0.4269595, z: -0.3276732, w: 0.8413764}
+      scale: {x: 0.95999986, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3085"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0035281756, y: -0.0020972835, z: 0.0047896984}
+      rotation: {x: -0.061210092, y: -0.37756637, z: 0.9060098, w: -0.18122695}
+      scale: {x: 0.96, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3086"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0036216283, y: 0.00038001977, z: -0.011387196}
+      rotation: {x: 0.40360183, y: -0.037571974, z: -0.06564454, w: 0.911803}
+      scale: {x: 0.96000004, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3087"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.00221358, y: 0.0023728043, z: 0.0019652175}
+      rotation: {x: -0.48246732, y: -0.13559848, z: 0.1304836, w: 0.85546035}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3088"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.002454732, y: 0.00024169474, z: -0.0084906835}
+      rotation: {x: -0.18982896, y: 0.70302063, z: -0.3609169, w: 0.5826371}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3089"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0047952854, y: -0.009722177, z: -0.030384766}
+      rotation: {x: 0.19815071, y: -0.16911983, z: 0.8807243, w: 0.3955497}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3090"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.002665584, y: -0.00068573095, z: -0.0151086915}
+      rotation: {x: 0.14026862, y: 0.4042173, z: -0.2733945, w: 0.86150366}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3091"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.01392284, y: 0.0048941374, z: -0.0011899753}
+      rotation: {x: 0.74483055, y: -0.013576567, z: -0.4379392, w: 0.50324196}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3092"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.007642653, y: 0.00071192486, z: -0.005623347}
+      rotation: {x: -0.32521024, y: 0.18558596, z: -0.2980478, w: 0.8780454}
+      scale: {x: 0.9599998, y: 0.95999974, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3093"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.005682711, y: 0.0060280394, z: -0.059108075}
+      rotation: {x: 0.3450131, y: 0.33660918, z: 0.8708646, w: -0.09620319}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3094"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.00079819805, y: 0.0021850744, z: 0.00083426735}
+      rotation: {x: -0.49834734, y: 0.36936015, z: -0.3719657, w: 0.6905538}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3095"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0114341825, y: 0.0037457393, z: 0.0010037496}
+      rotation: {x: 0.4366943, y: 0.20327549, z: -0.2985029, w: 0.8239376}
+      scale: {x: 0.96, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3096"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0024647086, y: -0.0015514003, z: -0.015092286}
+      rotation: {x: -0.6115806, y: 0.10068432, z: -0.3923344, w: 0.67963636}
+      scale: {x: 0.9600001, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3097"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0054928535, y: -0.013903806, z: -0.03730113}
+      rotation: {x: -0.13025369, y: 0.24759081, z: 0.10193287, w: 0.9546426}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3098"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.012280102, y: 0.007408092, z: -0.0011015154}
+      rotation: {x: 0.62843597, y: 0.13859613, z: -0.18943863, w: 0.7416012}
+      scale: {x: 0.96, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3099"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.004055083, y: -0.001711084, z: -0.018954352}
+      rotation: {x: -0.54183644, y: 0.1739947, z: -0.19523415, w: 0.7987633}
+      scale: {x: 0.95999986, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3100"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0023793657, y: 0.0032413779, z: 0.02254252}
+      rotation: {x: 0.101200595, y: 0.4127396, z: 0.3774495, w: 0.8227614}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3101"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.00719287, y: -0.0019804186, z: 0.0012711257}
+      rotation: {x: 0.43490326, y: -0.23718204, z: -0.14694703, w: 0.8561603}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3102"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0021369467, y: 0.002614558, z: 0.015826134}
+      rotation: {x: -0.39621726, y: -0.31094423, z: 0.66249233, w: 0.55446327}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3103"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0029830679, y: -0.0030367118, z: 0.0031028995}
+      rotation: {x: 0.6911305, y: -0.5606165, z: -0.4160913, w: 0.18685788}
+      scale: {x: 0.96000004, y: 0.9599999, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3104"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.002004148, y: -0.0127399955, z: -0.034502983}
+      rotation: {x: -0.13602863, y: 0.1634983, z: 0.1264199, w: 0.9689079}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3105"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.004273861, y: 0.00028878215, z: 0.030158967}
+      rotation: {x: 0.21054137, y: 0.10842604, z: 0.8420986, w: -0.48454735}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3106"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.006012982, y: 0.002659745, z: -0.00032051883}
+      rotation: {x: -0.11075812, y: -0.15939157, z: 0.8805729, w: -0.43234047}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3107"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0017616097, y: 0.0025041315, z: 0.00878679}
+      rotation: {x: 0.7281892, y: 0.22682385, z: -0.13714391, w: 0.6320467}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3108"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0027548897, y: -0.010153992, z: -0.033685554}
+      rotation: {x: -0.50542665, y: 0.60501176, z: 0.43800226, w: 0.4320402}
+      scale: {x: 0.9600002, y: 0.9599999, z: 0.96000034}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3109"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0020018392, y: 0.0026247639, z: 0.03671884}
+      rotation: {x: 0.38573346, y: 0.30825838, z: 0.72218704, w: 0.48438865}
+      scale: {x: 0.9599999, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3110"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.00092692394, y: 0.005254577, z: 0.0135097345}
+      rotation: {x: 0.048187863, y: 0.68212855, z: -0.11876845, w: 0.7199115}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3111"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.001951306, y: 0.0006657047, z: 0.010702113}
+      rotation: {x: 0.40761262, y: -0.050458577, z: 0.88138956, w: -0.23336315}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3112"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0030381659, y: 0.0043445094, z: 0.017787635}
+      rotation: {x: 0.11589144, y: 0.4265189, z: 0.7574842, w: 0.48048782}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3113"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00318654, y: -0.01329299, z: -0.043580506}
+      rotation: {x: -0.05693371, y: -0.58232653, z: 0.76202947, w: 0.27742654}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3114"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.006406481, y: 0.0028857293, z: 0.016809586}
+      rotation: {x: 0.4184066, y: -0.05373034, z: -0.07974695, w: 0.90315527}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3115"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0046812347, y: -0.0012585623, z: -0.043539133}
+      rotation: {x: -0.5987746, y: -0.005723742, z: 0.65946436, w: -0.45446998}
+      scale: {x: 0.95999974, y: 0.9599998, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3116"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0042672423, y: -0.0005199859, z: -0.011946104}
+      rotation: {x: -0.4645256, y: 0.053606022, z: 0.7355427, w: 0.49022368}
+      scale: {x: 0.96000004, y: 0.96, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3117"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0034370879, y: 0.0043096994, z: 0.011935665}
+      rotation: {x: -0.6747428, y: 0.033014033, z: 0.34258157, w: 0.6528936}
+      scale: {x: 0.96000004, y: 0.96, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3118"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.000070010574, y: -0.00077142677, z: 0.008125707}
+      rotation: {x: -0.39386174, y: 0.07138735, z: 0.9024201, w: 0.15942001}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3119"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.012354191, y: 0.007018795, z: -0.0022182714}
+      rotation: {x: -0.61261123, y: -0.18703645, z: 0.4100122, w: 0.64931875}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3120"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0010744521, y: -0.0022529901, z: -0.007588972}
+      rotation: {x: -0.31467366, y: 0.49868384, z: -0.07643799, w: 0.8040225}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3121"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0035320232, y: 0.002748734, z: -0.019419353}
+      rotation: {x: 0.10647471, y: 0.0022512658, z: -0.20202135, w: 0.97357357}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3122"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.003221133, y: -0.00007898565, z: 0.015663711}
+      rotation: {x: -0.2582128, y: -0.1556371, z: 0.94694823, w: -0.11132064}
+      scale: {x: 0.9600001, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3123"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0020178815, y: 0.0020037605, z: -0.028264675}
+      rotation: {x: -0.58248264, y: -0.24711375, z: 0.7729853, w: -0.04628753}
+      scale: {x: 0.9599999, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3124"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.010913814, y: 0.0053120586, z: 0.0038268731}
+      rotation: {x: -0.65859944, y: -0.026454655, z: -0.4898052, w: 0.57064694}
+      scale: {x: 0.9600001, y: 0.96000016, z: 0.96000016}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3125"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0135373045, y: 0.002867119, z: -0.0065076337}
+      rotation: {x: -0.25523505, y: 0.30698693, z: -0.014490956, w: 0.9167356}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3126"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0018333022, y: -0.00032465547, z: -0.0013794446}
+      rotation: {x: 0.47876117, y: 0.2104838, z: 0.7075411, w: 0.47525772}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3127"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0064062113, y: 0.0053240834, z: -0.058531355}
+      rotation: {x: -0.36006486, y: 0.6201778, z: 0.625006, w: -0.3083833}
+      scale: {x: 0.95999986, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3128"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0028956046, y: -0.010935226, z: -0.038229812}
+      rotation: {x: 0.0106878225, y: -0.19051084, z: 0.9465156, w: -0.26019135}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3129"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0021096906, y: 0.0047357935, z: 0.03455768}
+      rotation: {x: -0.371445, y: -0.39447013, z: -0.5407008, w: 0.6434785}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3130"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.006068507, y: 0.00067429215, z: -0.00448986}
+      rotation: {x: -0.14325744, y: 0.7216989, z: -0.66696376, w: 0.11741985}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3131"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0036767845, y: -0.001072146, z: -0.012669012}
+      rotation: {x: 0.24118215, y: 0.011803367, z: -0.04365716, w: 0.96942556}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3132"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0033059185, y: 0.0036607948, z: 0.014209309}
+      rotation: {x: -0.5152987, y: -0.17023054, z: 0.76461095, w: 0.34764767}
+      scale: {x: 0.95999986, y: 0.9599998, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3133"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.005848739, y: -0.016998839, z: -0.055154923}
+      rotation: {x: -0.67015237, y: 0.050927993, z: 0.49615297, w: 0.54966766}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000016}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3134"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.012200663, y: 0.0048130862, z: 0.002115806}
+      rotation: {x: -0.36577904, y: 0.43105054, z: 0.8153513, w: 0.12491352}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3135"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0030138285, y: 0.0032876853, z: 0.037076082}
+      rotation: {x: -0.05683273, y: -0.035452127, z: 0.89711344, w: 0.4366929}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3136"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0036102913, y: -0.002744171, z: -0.0038255092}
+      rotation: {x: -0.64375365, y: -0.35007033, z: 0.16244386, w: 0.66079044}
+      scale: {x: 0.9599999, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3137"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.006023997, y: -0.019068161, z: -0.053934373}
+      rotation: {x: -0.034753654, y: 0.42443648, z: -0.23196395, w: 0.8745505}
+      scale: {x: 0.96, y: 0.96000004, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3138"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0038397866, y: 0.003432952, z: 0.030128306}
+      rotation: {x: 0.2914913, y: 0.22609632, z: -0.24095, w: 0.89769506}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3139"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0006521742, y: 0.0036800967, z: 0.03114046}
+      rotation: {x: -0.64440066, y: 0.066228464, z: 0.27226642, w: 0.7115002}
+      scale: {x: 0.95999986, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3140"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.000640552, y: 0.0012900097, z: 0.025280418}
+      rotation: {x: -0.0582715, y: 0.15688147, z: 0.9336905, w: -0.31656706}
+      scale: {x: 0.9600003, y: 0.9600003, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3141"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.003375576, y: 0.0015134052, z: -0.05501839}
+      rotation: {x: -0.20987622, y: -0.28942707, z: 0.3195058, w: 0.8775534}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3142"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0033407952, y: -0.0020566937, z: -0.039364357}
+      rotation: {x: -0.012033433, y: -0.47033414, z: -0.27401653, w: 0.8387824}
+      scale: {x: 0.96000004, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3143"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.006015574, y: -0.01812922, z: -0.057413105}
+      rotation: {x: -0.08671597, y: -0.5397097, z: 0.23288344, w: 0.8043377}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3144"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.000873809, y: -0.00082991406, z: 0.037631717}
+      rotation: {x: -0.40915942, y: 0.77441466, z: 0.22199842, w: -0.4284708}
+      scale: {x: 0.9600001, y: 0.96, z: 0.96000016}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3145"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0025649283, y: 0.0023601, z: 0.012082493}
+      rotation: {x: -0.049244154, y: -0.0616275, z: -0.26628432, w: 0.9606611}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3146"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0062478483, y: 0.00091294374, z: -0.03172594}
+      rotation: {x: -0.44279623, y: -0.5310973, z: -0.48213005, w: 0.5379757}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3147"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0026032433, y: 0.0037922142, z: 0.020608315}
+      rotation: {x: -0.28525737, y: 0.4851547, z: -0.5581226, w: 0.609715}
+      scale: {x: 0.95999986, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3148"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.006543035, y: 0.0077778175, z: -0.05797489}
+      rotation: {x: 0.31760696, y: 0.28908834, z: -0.28308555, w: 0.85756415}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3149"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0061241696, y: -0.009378644, z: -0.032254897}
+      rotation: {x: 0.7256152, y: 0.012840869, z: -0.5993142, w: -0.33784634}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3150"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.001805, y: -0.0016251587, z: 0.0071795527}
+      rotation: {x: -0.41884607, y: 0.21998367, z: 0.6982579, w: 0.5372253}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3151"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0011901861, y: 0.0013986642, z: -0.013619285}
+      rotation: {x: 0.044526, y: 0.4557438, z: 0.88475007, w: 0.0867896}
+      scale: {x: 0.96000004, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3152"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0024842634, y: 0.0043026027, z: 0.02786438}
+      rotation: {x: 0.07696505, y: -0.3484952, z: -0.111849666, w: 0.927425}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3153"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0033308738, y: -0.0017486569, z: 0.029854964}
+      rotation: {x: -0.022909349, y: -0.26620984, z: 0.91787696, w: -0.293444}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3154"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00530101, y: -0.002505976, z: -0.011276149}
+      rotation: {x: -0.518581, y: -0.34290627, z: -0.25820783, w: 0.7394714}
+      scale: {x: 0.95999986, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3155"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.013679572, y: 0.0048684943, z: -0.0039134803}
+      rotation: {x: -0.25267315, y: 0.65610516, z: 0.53802204, w: 0.46498895}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3156"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0067260438, y: 0.0014116926, z: -0.0057992116}
+      rotation: {x: 0.012635289, y: -0.15865822, z: 0.9703186, w: -0.18207066}
+      scale: {x: 0.96000004, y: 0.96, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3157"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0022170474, y: -0.015268975, z: -0.045601986}
+      rotation: {x: -0.45273677, y: -0.2856364, z: -0.67094815, w: 0.5130983}
+      scale: {x: 0.9600001, y: 0.9600003, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3158"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0044176644, y: -0.000808601, z: -0.006543065}
+      rotation: {x: 0.1640955, y: -0.58447737, z: -0.25119022, w: 0.7538982}
+      scale: {x: 0.96, y: 0.96, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3159"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0011557066, y: 0.001219742, z: -0.0064762775}
+      rotation: {x: -0.035041325, y: -0.45205823, z: 0.5835727, w: 0.67369014}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3160"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0054273778, y: -0.017230442, z: -0.05868743}
+      rotation: {x: 0.3351195, y: -0.2756355, z: 0.54101694, w: 0.7204309}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3161"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0046395315, y: -0.02074975, z: -0.051568717}
+      rotation: {x: -0.2003221, y: -0.3466138, z: 0.8846139, w: 0.23914084}
+      scale: {x: 0.96, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3162"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0046677245, y: -0.012237148, z: -0.031178003}
+      rotation: {x: 0.43307957, y: 0.11413223, z: -0.2973006, w: 0.843225}
+      scale: {x: 0.9600003, y: 0.9600003, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3163"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.014164547, y: 0.00804232, z: -0.0032408023}
+      rotation: {x: -0.5102229, y: 0.08902694, z: 0.33315796, w: 0.7878785}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3164"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0023204521, y: -0.0038527336, z: -0.0047601215}
+      rotation: {x: -0.13673843, y: 0.40877995, z: 0.49260166, w: 0.75600606}
+      scale: {x: 0.96, y: 0.9599999, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3165"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0017773674, y: -0.019620512, z: -0.051473454}
+      rotation: {x: 0.012707948, y: 0.28991023, z: -0.7337137, w: 0.6143735}
+      scale: {x: 0.95999986, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3166"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0006104722, y: -0.00023634465, z: 0.015235991}
+      rotation: {x: 0.55940896, y: 0.17480592, z: 0.79222226, w: 0.16996595}
+      scale: {x: 0.9599999, y: 0.96, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3167"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.00397635, y: 0.000781946, z: -0.019047283}
+      rotation: {x: -0.06688199, y: 0.69330466, z: 0.3886901, w: 0.603138}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000016}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3168"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.011564657, y: 0.0016273346, z: -0.000070820024}
+      rotation: {x: 0.23522028, y: 0.1795655, z: -0.34892696, w: 0.88920057}
+      scale: {x: 0.95999986, y: 0.9599998, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3169"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.005240909, y: -0.002211414, z: 0.003544349}
+      rotation: {x: -0.56130284, y: 0.065592535, z: 0.8227466, w: -0.061031077}
+      scale: {x: 0.96000004, y: 0.96, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3170"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0066101663, y: 0.006290935, z: -0.057268944}
+      rotation: {x: -0.5159364, y: 0.14188166, z: -0.27950042, w: 0.7972194}
+      scale: {x: 0.9599998, y: 0.9599998, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3171"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0004571959, y: 0.005312354, z: 0.028571956}
+      rotation: {x: -0.0114153465, y: 0.37584555, z: 0.3327835, w: 0.8647919}
+      scale: {x: 0.96, y: 0.96, z: 0.9600001}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3172"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.004995301, y: -0.0015501126, z: -0.004285137}
+      rotation: {x: 0.33632395, y: -0.06962477, z: -0.003521969, w: 0.9391625}
+      scale: {x: 0.9600001, y: 0.96000004, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3173"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0024729904, y: 0.00069373264, z: -0.03041244}
+      rotation: {x: -0.5514153, y: -0.17857654, z: 0.62787026, w: 0.5194521}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3174"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0013229751, y: -0.015103291, z: -0.049540494}
+      rotation: {x: -0.32037884, y: 0.38775447, z: -0.49418262, w: 0.70907503}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3175"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.003285962, y: 0.0048576007, z: 0.018011726}
+      rotation: {x: 0.19152361, y: 0.15936746, z: 0.22670504, w: 0.94155484}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.9599999}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3176"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0052010557, y: 0.00002344273, z: -0.058007903}
+      rotation: {x: 0.6687088, y: -0.013223762, z: -0.3409281, w: 0.66062224}
+      scale: {x: 0.9600001, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3177"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.003969048, y: -0.0073540383, z: -0.028166883}
+      rotation: {x: 0.6211208, y: 0.3328019, z: 0.5361092, w: -0.46479982}
+      scale: {x: 0.96000004, y: 0.9600001, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3178"
+      parentName: "CORPA\xC7O"
+      position: {x: 0.0016538369, y: -0.0031140745, z: 0.030329883}
+      rotation: {x: 0.0035353897, y: 0.28621894, z: 0.92290694, w: -0.2575054}
+      scale: {x: 0.9599999, y: 0.9599999, z: 0.96000004}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3179"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0049150903, y: 0.0024619976, z: -0.026985751}
+      rotation: {x: -0.1420709, y: -0.5186787, z: 0.8212714, w: 0.1905299}
+      scale: {x: 0.9599999, y: 0.95999986, z: 0.96}
+    - name: "CORPA\xC7O|Icosphere|Dupli|3180"
+      parentName: "CORPA\xC7O"
+      position: {x: -0.0035352213, y: 0.0013026521, z: 0.017502815}
+      rotation: {x: 0.407438, y: -0.42072782, z: 0.80054957, w: -0.126897}
+      scale: {x: 0.96, y: 0.9599999, z: 0.96}
+    - name: FRENTE
+      parentName: Sombra (1)(Clone)
+      position: {x: 0.29056004, y: 0.09380876, z: -3.5557482}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454313, w: 0.7071068}
+      scale: {x: 276.3219, y: 276.3219, z: 276.3219}
+    - name: Icosphere
+      parentName: Sombra (1)(Clone)
+      position: {x: 0.054935455, y: 0.5371896, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: LADO
+      parentName: Sombra (1)(Clone)
+      position: {x: -0.16037427, y: 0.002684174, z: 2.0608459}
+      rotation: {x: -0.009721142, y: 0.9999528, z: -0.00000008273097, w: 0.00000019552068}
+      scale: {x: 280.79797, y: 280.79797, z: 280.79797}
+    - name: Plane
+      parentName: Sombra (1)(Clone)
+      position: {x: -0, y: -7.2271824, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1405.1046, y: 1405.1046, z: 1405.1046}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -93,7 +1712,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
