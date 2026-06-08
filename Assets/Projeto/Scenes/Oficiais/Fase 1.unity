@@ -14583,7 +14583,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6a69f63e29867b74897d9e43b194e4d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15437,7 +15437,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6a69f63e29867b74897d9e43b194e4d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15750,7 +15750,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6a69f63e29867b74897d9e43b194e4d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16376,11 +16376,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.498
       objectReference: {fileID: 0}
+    - target: {fileID: 1448449263539784259, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a69f63e29867b74897d9e43b194e4d7, type: 2}
+    - target: {fileID: 1787527274875908996, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a69f63e29867b74897d9e43b194e4d7, type: 2}
     - target: {fileID: 1995010695224536501, guid: 257fe12e0bb50d1409b555f925d48edf,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3465335565896113540, guid: 257fe12e0bb50d1409b555f925d48edf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a69f63e29867b74897d9e43b194e4d7, type: 2}
     - target: {fileID: 3791912599831840968, guid: 257fe12e0bb50d1409b555f925d48edf,
         type: 3}
       propertyPath: m_StaticEditorFlags

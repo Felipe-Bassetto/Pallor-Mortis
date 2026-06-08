@@ -186,7 +186,7 @@ public class Cutscenes : MonoBehaviour
         sm.PlayOST(0);
         sm.AumentarVolumeGradual(3);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         memories.MemoriaNecroterio();
     }
