@@ -367,6 +367,7 @@ MonoBehaviour:
   pov: {fileID: 0}
   mov: {fileID: 0}
   gerenciador: {fileID: 0}
+  camMenu: {fileID: 0}
   rb: {fileID: 0}
   luz1: {fileID: 0}
   luz2: {fileID: 0}
@@ -534,8 +535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerPorta4: {fileID: 0}
   arrLuzes: []
-  prefabChave2: {fileID: 6487912309099264997, guid: 7c585730bd5ac594f91c00727363130e,
-    type: 3}
+  prefabChave2: {fileID: 0}
   prefabUrsinhoCortado: {fileID: 0}
   le: {fileID: 0}
   door: {fileID: 0}
@@ -4336,8 +4336,8 @@ Transform:
   m_GameObject: {fileID: 3505258856818428882}
   serializedVersion: 2
   m_LocalRotation: {x: -0.6916804, y: -0.14689563, z: -0.1468956, w: 0.6916804}
-  m_LocalPosition: {x: -2.855, y: 2.2926033, z: 0.186}
-  m_LocalScale: {x: 21.87, y: 14.804491, z: 0.51075935}
+  m_LocalPosition: {x: -2.855, y: 2.275, z: 0.186}
+  m_LocalScale: {x: 21.87, y: 14.804497, z: 0.5107595}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1708799860}
@@ -4354,8 +4354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012d28181691aca4b8acb1266d30eb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 1
-  velocidadeRotacao: 3
+  velocidade: 6
+  velocidadeRotacao: 3.5
   distanceClick: 2
   triggerAc: {fileID: 0}
   lightBlink: {fileID: 0}
@@ -4585,7 +4585,7 @@ Transform:
   m_GameObject: {fileID: 5408495848519082475}
   serializedVersion: 2
   m_LocalRotation: {x: -0.4813492, y: 0.51797974, z: 0.51797974, w: 0.4813492}
-  m_LocalPosition: {x: -3.0281098, y: 2.3006032, z: -1.009997}
+  m_LocalPosition: {x: -3.0281098, y: 2.358, z: -1.009997}
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4916,9 +4916,9 @@ GameObject:
   - component: {fileID: 4631115475627539281}
   - component: {fileID: 8640962274893821172}
   - component: {fileID: 5768594496791511102}
-  - component: {fileID: 8640962274893821175}
   - component: {fileID: 8640962274893821174}
   - component: {fileID: 8640962274893821173}
+  - component: {fileID: 8640962274893821175}
   m_Layer: 7
   m_Name: Receituario
   m_TagString: Untagged
@@ -6290,8 +6290,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019999998, y: 0.01999999, z: 0.39017045}
-  m_Center: {x: 8.219432e-17, y: 2.6596866e-10, z: 0.1850851}
+  m_Size: {x: 0.019999998, y: 0.01999999, z: 0.38519415}
+  m_Center: {x: 0, y: -8.849046e-18, z: -0.19278717}
 --- !u!1 &8124390670778809801
 GameObject:
   m_ObjectHideFlags: 0
@@ -6681,8 +6681,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012d28181691aca4b8acb1266d30eb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 1
-  velocidadeRotacao: 3
+  velocidade: 6
+  velocidadeRotacao: 3.5
   distanceClick: 2
   triggerAc: {fileID: 0}
   lightBlink: {fileID: 0}
@@ -6696,7 +6696,7 @@ MonoBehaviour:
   doorInt: {fileID: 0}
   qtdLightsBlink: 0
   sombra: {fileID: 0}
-  ie: {fileID: 403850852}
+  ie: {fileID: 0}
 --- !u!1 &8703281626089178858
 GameObject:
   m_ObjectHideFlags: 0
