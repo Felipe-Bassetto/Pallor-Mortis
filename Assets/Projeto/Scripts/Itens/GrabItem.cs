@@ -36,7 +36,7 @@ public class GrabItem : MonoBehaviour
 
     private void Awake()
     {
-        Transform itens = transform.Find("Canvas/InGame/Itens");
+        Transform itens = GameObject.Find("Canvas").transform.Find("InGame/Itens");
 
         item1 = itens.Find("Item 1").GetComponent<RawImage>();
         item2 = itens.Find("Item 2").GetComponent<RawImage>();
