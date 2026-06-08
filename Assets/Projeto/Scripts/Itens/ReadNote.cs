@@ -65,6 +65,7 @@ public class ReadNote : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, distanceClick, layerMask) && !noteMove && gameObject.name == hit.collider.gameObject.name)
             {
+                
                 gameObject.transform.SetParent(cameraPrincipal.transform);
                 noteMove = true;
                 noteBack = false;

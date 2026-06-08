@@ -141,6 +141,8 @@ public class Cutscenes : MonoBehaviour
         lookDirection = Quaternion.LookRotation(pontoFrente.position - cam.transform.position);
         camRotationCutscene = true;
 
+        yield return new WaitForSeconds(2f);
+
         memories.InicioGame();
     }
 

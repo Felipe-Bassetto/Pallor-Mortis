@@ -32,6 +32,7 @@ public class Memorias : MonoBehaviour
     [SerializeField] private PlayerPOV pov;
     [SerializeField] private Movement mov;
     [SerializeField] private GerenciadorMemorias gerenciador;
+    [SerializeField] private CamMenu camMenu;
 
     [Header("Componentes")]
     [SerializeField] private Rigidbody rb;
@@ -84,7 +85,7 @@ public class Memorias : MonoBehaviour
     {
         fadeOut = true;
         yield return new WaitForSeconds(4f);
-
+        camMenu.CamPos();
         player.transform.rotation = Quaternion.identity;
 
         desativar = true;

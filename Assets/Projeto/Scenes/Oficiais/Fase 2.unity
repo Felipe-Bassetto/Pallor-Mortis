@@ -750,6 +750,7 @@ MonoBehaviour:
     type: 3}
   caixa: {fileID: 2000911895}
   pontoC: {fileID: 1219193179}
+  player: {fileID: 0}
   preto: {r: 0, g: 0, b: 0, a: 1}
   branco: {r: 1, g: 1, b: 1, a: 1}
   transparente: {r: 0, g: 0, b: 0, a: 0}
@@ -3495,7 +3496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 6
   velocidadeRotacao: 2
-  distanceClick: 1.5
+  distanceClick: 3
   triggerAc: {fileID: 0}
   lightBlink: {fileID: 0}
   arrLights: []
@@ -12960,6 +12961,8 @@ MonoBehaviour:
   pontoEsquerda: {fileID: 1116952017}
   caixinha: {fileID: 1355557877}
   pontoFinal: {fileID: 1227757879}
+  pontoFrente: {fileID: 0}
+  pontoLado: {fileID: 0}
   speedRotation: 0.5
   speedMoving: 0.27
   memoriaBailarinaAtiva: 0
@@ -13457,9 +13460,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5525860822230636136}
-  - {fileID: 1749009119838826580}
-  - {fileID: 4932126262743279820}
-  - {fileID: 543450653092986952}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1654630799
@@ -16711,12 +16711,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148554767090}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.46225736, y: 0.53508705, z: 0.53508705, w: 0.4622573}
-  m_LocalPosition: {x: 300.01306, y: 373.38306, z: 390.21933}
-  m_LocalScale: {x: 32.300003, y: 21.864893, z: 0.7543454}
+  m_LocalRotation: {x: -0.4622574, y: 0.53508705, z: 0.5350871, w: 0.4622573}
+  m_LocalPosition: {x: -7.7099915, y: 2.1329956, z: 16.701996}
+  m_LocalScale: {x: 32.3, y: 21.864891, z: 0.7543454}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1625063194}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: -81.647}
 --- !u!4 &543450653163685287 stripped
 Transform:
@@ -17694,7 +17694,7 @@ GameObject:
   - component: {fileID: 3452678795996594164}
   m_Layer: 7
   m_Name: "Certid\xE3oObitoM\xE3e"
-  m_TagString: Nota
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17986,11 +17986,11 @@ Transform:
   m_GameObject: {fileID: 1373151672437123822}
   serializedVersion: 2
   m_LocalRotation: {x: -0.31052974, y: -0.6352726, z: -0.6352726, w: 0.31052974}
-  m_LocalPosition: {x: 321.54205, y: 373.15906, z: 351.76434}
+  m_LocalPosition: {x: 13.819, y: 1.9089966, z: -21.75299}
   m_LocalScale: {x: 15, y: 10.153973, z: 0.3503151}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1625063194}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: -37.9, z: -90}
 --- !u!23 &1749308155728967112
 MeshRenderer:
@@ -19495,9 +19495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012d28181691aca4b8acb1266d30eb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.1
-  velocidadeRotacao: 1
-  distanceClick: 0
+  velocidade: 6
+  velocidadeRotacao: 3.5
+  distanceClick: 3
   triggerAc: {fileID: 0}
   lightBlink: {fileID: 0}
   arrLights: []
@@ -20625,11 +20625,11 @@ Transform:
   m_GameObject: {fileID: 5708803016388276854}
   serializedVersion: 2
   m_LocalRotation: {x: -0.23778136, y: 0.66592795, z: 0.66592795, w: 0.23778136}
-  m_LocalPosition: {x: 304.15866, y: 373.58005, z: 375.5065}
-  m_LocalScale: {x: 26.550003, y: 17.972532, z: 0.6200577}
+  m_LocalPosition: {x: -3.564392, y: 2.3299866, z: 1.9891663}
+  m_LocalScale: {x: 26.550001, y: 17.972532, z: 0.6200577}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1625063194}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 230.7, z: -90}
 --- !u!1 &4941881235489907854
 GameObject:
@@ -21470,7 +21470,7 @@ GameObject:
   - component: {fileID: 8349028437825890156}
   m_Layer: 7
   m_Name: PesamesMillena
-  m_TagString: Nota
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23859,7 +23859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 6
   velocidadeRotacao: 3.5
-  distanceClick: 1.5
+  distanceClick: 3
   triggerAc: {fileID: 0}
   lightBlink: {fileID: 0}
   arrLights: []
@@ -25021,6 +25021,9 @@ SceneRoots:
   - {fileID: 228122034}
   - {fileID: 864971239}
   - {fileID: 1625063194}
+  - {fileID: 1749009119838826580}
+  - {fileID: 4932126262743279820}
+  - {fileID: 543450653092986952}
   - {fileID: 1187841193}
   - {fileID: 8046958510804801059}
   - {fileID: 940128225}
