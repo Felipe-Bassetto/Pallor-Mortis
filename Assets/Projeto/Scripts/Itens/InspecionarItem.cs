@@ -18,12 +18,14 @@ public class InspecionarItem : MonoBehaviour
     LayerMask layerMask;
     private bool objMove = false;
     private bool objBack = false;
-    private Vector3 objInspecting = new Vector3(0, 0, 0.5f);
+    public Vector3 objInspecting;
     private Vector3 positionInitial;
     private Quaternion rotationInitial;
     private Vector3 scaleInitial;
     private bool isIspecting = false;
     private Quaternion rotationInspecting;
+    private bool canRotate;
+    private Quaternion lookRot;
 
     [Header("Scripts")]
     [SerializeField] private Movement mov;
@@ -54,9 +56,12 @@ public class InspecionarItem : MonoBehaviour
                 gameObject.transform.SetParent(cameraPrincipal.transform);
                 objMove = true;
                 objBack = false;
+                canRotate = true;
                 mov.PlayMovement(true);
                 pov.CamLock(false);
                 isIspecting = true;
+
+                lookRot = Quaternion.LookRotation(cameraPrincipal.transform.position - gameObject.transform.position, Vector3.up);
 
                 switch (hit.collider.gameObject.tag)
                 {
@@ -85,12 +90,17 @@ public class InspecionarItem : MonoBehaviour
                 pov.CamLock(true);
                 objBack = true;
                 objMove = false;
+
+                isIspecting = false;
             }
 
             gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, objInspecting, velocidade * Time.deltaTime);
-            Quaternion lookRot = Quaternion.LookRotation(cameraPrincipal.transform.position - gameObject.transform.position, Vector3.up);
 
-            gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, lookRot, velocidadeRotacao * Time.deltaTime);
+            Debug.Log(lookRot.ToString());
+
+            if(gameObject.transform.rotation == lookRot) canRotate = false;
+
+            if(canRotate) gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, lookRot, velocidadeRotacao * Time.deltaTime);
         }
 
         if (objBack)
