@@ -21,12 +21,17 @@ public class EnemyManager : MonoBehaviour
 
     [Header("Scripts")]
     [SerializeField] private GameManager gm;
+    [SerializeField] private Morte mt;
+    [SerializeField] private PlayerPOV POV;
+    [SerializeField] private Movement MOV;
 
     void Start()
     {
         agente = GetComponent<NavMeshAgent>();
-
+        mt = FindObjectOfType<Morte>();
         gm = FindObjectOfType<GameManager>();
+        POV = FindObjectOfType<PlayerPOV>();
+        MOV = FindObjectOfType<Movement>();
 
         // BUSCA AUTOMÁTICA DO PLAYER (Solução para o Prefab)
         if (player == null)
@@ -141,7 +146,9 @@ public class EnemyManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            gm.Restart();
+            mt.PlayerDeath();
+            MOV.PlayMovement(true);
+            POV.CamLock(false);
         }
     }
 }
