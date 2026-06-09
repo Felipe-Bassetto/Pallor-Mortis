@@ -2105,7 +2105,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 44b1afed00806c9499d8e80a82ea9b5d, type: 3}
   - {fileID: 8300000, guid: d23f99b59d693cd4abc565d822fe9485, type: 3}
   musicas:
-  - {fileID: 8300000, guid: e7ace707b8ae435429325f735a824cae, type: 3}
+  - {fileID: 8300000, guid: a844213c1861ce9489571a7fc7430416, type: 3}
   speedGradual: 0.15
 --- !u!1 &366585459
 GameObject:
@@ -3013,7 +3013,7 @@ Transform:
   m_GameObject: {fileID: 466201410}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.7816666, z: -2.09}
+  m_LocalPosition: {x: 0, y: -1.636, z: -1.997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3438,13 +3438,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634011215}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.273, z: 0}
+  m_LocalRotation: {x: -0, y: 0.99893373, z: -0.04616873, w: 0}
+  m_LocalPosition: {x: -0, y: -0.157, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1525759391}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.292, y: 180, z: 0}
 --- !u!114 &634011217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8626,7 +8626,7 @@ MonoBehaviour:
   pontoFrente: {fileID: 0}
   pontoLado: {fileID: 0}
   speedRotation: 0.5
-  speedMoving: 0.5
+  speedMoving: 0.55
   memoriaBailarinaAtiva: 1
   memoriaEspelhoAtiva: 0
   rb: {fileID: 2950774603519485256}
@@ -8940,7 +8940,7 @@ Transform:
   m_GameObject: {fileID: 1349760090}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.66, y: -3.525528, z: -17.24}
+  m_LocalPosition: {x: -30.66, y: -3.525528, z: -17.524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23198,7 +23198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5880460162134693174
 Transform:
   m_ObjectHideFlags: 0
@@ -25111,7 +25111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoDesteObjeto: 
   textoHUD: {fileID: 3490221585721996778}
-  distanciaLimite: 3
+  distanciaLimite: 1.5
   layersInterativas:
     serializedVersion: 2
     m_Bits: 456

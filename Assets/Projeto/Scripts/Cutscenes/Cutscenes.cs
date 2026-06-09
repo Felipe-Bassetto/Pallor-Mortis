@@ -183,11 +183,19 @@ public class Cutscenes : MonoBehaviour
 
     IEnumerator CutMirror()
     {
+        mov.PlayMovement(false);
+        pov.CamLock(true);
         playerMovingCutscene = true;
+        sm.PlayOST(0);
+
         yield return new WaitForSeconds(1f);
 
-        sm.PlayOST(0);
         sm.AumentarVolumeGradual(3);
+
+        yield return new WaitForSeconds(3.5f);
+
+        mov.PlayMovement(true);
+        pov.CamLock(false);
     }
     IEnumerator CutNecro()
     {
