@@ -31,7 +31,6 @@ public class CamMenu : MonoBehaviour
         if (cam.transform.position == camLocation)
         {
             CameraMovement(false);
-            cut.Inicio();
         }
     }
 

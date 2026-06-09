@@ -50,7 +50,6 @@ public class DoorAction : MonoBehaviour
                 {
                     if (Physics.Raycast(ray, out hit, distanceClick, layerMask))
                     {
-                        Debug.Log("trocou");
                         StartCoroutine("ChangeScene");
                     }
                 }
