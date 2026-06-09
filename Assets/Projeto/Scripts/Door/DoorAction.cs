@@ -50,6 +50,7 @@ public class DoorAction : MonoBehaviour
                 {
                     if (Physics.Raycast(ray, out hit, distanceClick, layerMask))
                     {
+                        Debug.Log("Troca de Cena");
                         StartCoroutine("ChangeScene");
                     }
                 }

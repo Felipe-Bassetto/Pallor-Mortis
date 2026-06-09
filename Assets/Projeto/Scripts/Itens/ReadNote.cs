@@ -86,6 +86,10 @@ public class ReadNote : MonoBehaviour
                     case "Carteirinha":
                         sm.PlaySound(8);
                         break;
+
+                    case "Paciente":
+                        sm.PlaySound(17);
+                        break;
                 }
             }
         }

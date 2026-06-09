@@ -17,6 +17,8 @@ TagManager:
   - "Sensor Cart\xE3o"
   - "Cart\xE3o"
   - Garrafa
+  - CaixaDeMusica
+  - Paciente
   layers:
   - Default
   - TransparentFX
@@ -34,8 +36,8 @@ TagManager:
   - Sombra
   - ParedeEspecial
   - Vidro
-  - CaixinhaDeSom
-  - 
+  - CaixinhaDeMusica
+  - Ursinho
   - 
   - 
   - 

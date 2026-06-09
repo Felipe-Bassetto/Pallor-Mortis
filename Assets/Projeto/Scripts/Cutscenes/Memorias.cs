@@ -33,6 +33,7 @@ public class Memorias : MonoBehaviour
     [SerializeField] private Movement mov;
     [SerializeField] private GerenciadorMemorias gerenciador;
     [SerializeField] private CamMenu camMenu;
+    [SerializeField] private Creditos creditos;
 
     [Header("Componentes")]
     [SerializeField] private Rigidbody rb;
@@ -232,5 +233,8 @@ public class Memorias : MonoBehaviour
         fadeOut = true;
         yield return new WaitForSeconds(1f);
         sm.PlaySound(16);
+
+        yield return new WaitForSeconds(0.5f);
+        creditos.IniciarCreditos();
     }
 }

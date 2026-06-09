@@ -68,6 +68,18 @@ public class InspecionarItem : MonoBehaviour
                     case "Retrato":
                         sm.PlaySound(10);
                         break;
+
+                    case "CaixaDeMusica":
+                        sm.PlaySound(17);
+                        break;
+
+                    case "Garrafa":
+                        sm.PlaySound(18);
+                        break;
+
+                    case "Ursinho":
+                        sm.PlaySound(19);
+                        break;
                 }
             }
         }

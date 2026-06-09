@@ -31,6 +31,7 @@ public class TelaInicialManager : MonoBehaviour
     {
         POV.CamLock(false);
         memories = db.CarregarMemoria(0);
+        Screen.SetResolution(1920, 1080, true);
     }
 
     // Update is called once per frame

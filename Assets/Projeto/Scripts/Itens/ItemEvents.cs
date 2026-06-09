@@ -20,6 +20,7 @@ public class ItemEvents : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource audioSource;
+    [SerializeField] private SoundManager sm;
 
     [Header("Camera")]
     private Camera cameraPrincipal;
@@ -59,6 +60,7 @@ public class ItemEvents : MonoBehaviour
                 {
                     if (hit.collider.tag == "Ursinho" && go.tag == "Canivete")
                     {
+                        sm.PlaySound(19);
                         Instantiate(prefabChave2, hit.transform.position, Quaternion.identity);
                         Instantiate(prefabUrsinhoCortado, hit.transform.position, Quaternion.identity);
                         Destroy(hit.collider.gameObject);
@@ -67,6 +69,7 @@ public class ItemEvents : MonoBehaviour
                     if(hit.collider.tag == "Sensor Cartão"  && go.tag == "Cartão")
                     {
                         door.AltState(false);
+                        sm.PlaySound(3);
                     }
                 }
             }
