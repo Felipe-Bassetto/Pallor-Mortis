@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6098394665950886181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Cart\xE3o parte 2 pivot"
-  m_TagString: Untagged
+  m_TagString: "Parte Cart\xE3o"
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,9 +46,9 @@ GameObject:
   - component: {fileID: 3926712453462163533}
   - component: {fileID: 1260380203669012247}
   - component: {fileID: 6123354169434456470}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Cart\xE3o parte 2"
-  m_TagString: Untagged
+  m_TagString: "Parte Cart\xE3o"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fab40415221d144b363fe9d435785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDesteObjeto: Pressione MB1 para interagir
+  textoDesteObjeto: Pressione "E" para interagir
   textoHUD: {fileID: 0}
   distanciaLimite: 3
   layersInterativas:

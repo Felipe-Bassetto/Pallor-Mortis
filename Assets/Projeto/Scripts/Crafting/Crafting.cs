@@ -13,6 +13,7 @@ public class Crafting : MonoBehaviour
 
     [Header("Prefabs")]
     [SerializeField] private GameObject prafabCartao;
+    [SerializeField] private Collider craftC;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,8 @@ public class Crafting : MonoBehaviour
 
                     listObjects.Clear();
 
-                    Instantiate(prafabCartao, new Vector3(-14, 2.3f, 14), Quaternion.identity);
+                    Instantiate(prafabCartao, new Vector3(-13.36f, 2.3f, 13), Quaternion.identity);
+                    craftC.enabled = false;
                 }
             }
         }

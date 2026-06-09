@@ -63,7 +63,8 @@ public class DoorInteraction : MonoBehaviour
                             if (ic.itemActive != -1)
                             {
                                 key = ic.arrItens[ic.itemActive].GetComponentInChildren<Transform>().tag == "Chave";
-                                ic.DestroyKey();
+                                //ic.DestroyKey();
+                                Debug.Log(key);
                             }
                             else key = false;
 
