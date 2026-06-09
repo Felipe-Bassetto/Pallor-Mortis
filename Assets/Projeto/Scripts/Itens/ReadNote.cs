@@ -146,7 +146,10 @@ public class ReadNote : MonoBehaviour
             {
                 triggerAc.SetActive(true);
                 le.AcenderLuzes(arrLights);
-                Instantiate(sombra, new Vector3(7.5f, 1f, -7f), Quaternion.identity);
+                GameObject sombraInstanciada = Instantiate(sombra, new Vector3(7.5f, 1f, -7f), Quaternion.identity);
+
+                sombraInstanciada.transform.localScale = Vector3.one * 0.2f;
+
                 ph.ChangeCutsceneBool(true);
                 triggerAc = null;
             }
