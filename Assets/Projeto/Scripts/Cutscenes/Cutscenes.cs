@@ -129,22 +129,22 @@ public class Cutscenes : MonoBehaviour
     {
         camMovingCutscene = true;
 
-        speedRotation = 0.6f;
+        speedRotation = 0.7f;
         lookDirection = Quaternion.LookRotation(pontoFrente.position - cam.transform.position);
         camRotationCutscene = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
 
         camMovingCutscene = false;
         lookDirection = Quaternion.LookRotation(pontoLado.position - cam.transform.position);
         camRotationCutscene = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
 
         lookDirection = Quaternion.LookRotation(pontoFrente.position - cam.transform.position);
         camRotationCutscene = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
 
         camRotationCutscene = false;
         camMovingCutscene = false;

@@ -81,11 +81,11 @@ public class TelaInicialManager : MonoBehaviour
 
         canvasPlayer.SetActive(true);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.7f);
 
         cut.Inicio();
 
-        yield return new WaitForSeconds(15f);    
+        yield return new WaitForSeconds(6.5f);
 
         MOV.PlayMovement(false);
         POV.CamLock(true);
