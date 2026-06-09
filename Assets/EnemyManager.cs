@@ -69,7 +69,7 @@ public class EnemyManager : MonoBehaviour
             Vector3 direcaoParaAlvo = (alvo.position - transform.position).normalized;
 
             // Verifica se o alvo está dentro do cone de visão
-            if (Vector3.Angle(transform.forward, direcaoParaAlvo) < anguloVisao / 2)
+            if (Vector3.Angle(-transform.forward, direcaoParaAlvo) < anguloVisao / 2)
             {
                 float distanciaAteAlvo = Vector3.Distance(transform.position, alvo.position);
 
