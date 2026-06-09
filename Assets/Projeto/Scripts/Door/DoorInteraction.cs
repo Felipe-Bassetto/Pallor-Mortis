@@ -11,7 +11,7 @@ public class DoorInteraction : MonoBehaviour
     public bool aberta;
     public bool needKey;
 
-    private float distanceClick = 2f;
+    private float distanceClick = 3f;
     private float velocidadeRotacao;
     private bool canClick = true;
 

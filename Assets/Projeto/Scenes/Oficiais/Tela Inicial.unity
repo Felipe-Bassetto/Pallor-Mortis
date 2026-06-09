@@ -3290,6 +3290,7 @@ MonoBehaviour:
   mov: {fileID: 1906909797444472322}
   gerenciador: {fileID: 0}
   camMenu: {fileID: 730769978}
+  creditos: {fileID: 0}
   rb: {fileID: 6014190271812342545}
   luz1: {fileID: 0}
   luz2: {fileID: 0}
@@ -5533,9 +5534,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b53791733b6d8b47bfcc0a7a0fa1f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.2
-  speedRunning: 4.7
-  speedCrouched: 1.1
+  speed: 2.4
+  speedRunning: 5.2
+  speedCrouched: 1.9
   playerLocked: 0
   colliderEmpe: {fileID: 8660661865219832680}
   colliderAgachada: {fileID: 1454332257683668477}

@@ -7117,9 +7117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b53791733b6d8b47bfcc0a7a0fa1f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.2
-  speedRunning: 4.7
-  speedCrouched: 1.1
+  speed: 2.4
+  speedRunning: 5.2
+  speedCrouched: 1.9
   playerLocked: 0
   colliderEmpe: {fileID: 2198666372206804874}
   colliderAgachada: {fileID: 8258812291783915807}
