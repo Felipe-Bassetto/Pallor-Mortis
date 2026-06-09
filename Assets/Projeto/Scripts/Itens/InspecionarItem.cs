@@ -96,8 +96,6 @@ public class InspecionarItem : MonoBehaviour
 
             gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, objInspecting, velocidade * Time.deltaTime);
 
-            Debug.Log(lookRot.ToString());
-
             if(gameObject.transform.rotation == lookRot) canRotate = false;
 
             if(canRotate) gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, lookRot, velocidadeRotacao * Time.deltaTime);
