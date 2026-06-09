@@ -8442,6 +8442,8 @@ MonoBehaviour:
   pontoEsquerda: {fileID: 0}
   caixinha: {fileID: 0}
   pontoFinal: {fileID: 466201411}
+  pontoFrente: {fileID: 0}
+  pontoLado: {fileID: 0}
   speedRotation: 0.5
   speedMoving: 0.5
   memoriaBailarinaAtiva: 0
@@ -11527,6 +11529,7 @@ MonoBehaviour:
   prefabCartao: {fileID: 0}
   caixa: {fileID: 0}
   pontoC: {fileID: 0}
+  player: {fileID: 0}
   preto: {r: 0, g: 0, b: 0, a: 1}
   branco: {r: 1, g: 1, b: 1, a: 1}
   transparente: {r: 0, g: 0, b: 0, a: 0}
@@ -11535,6 +11538,7 @@ MonoBehaviour:
   pov: {fileID: 8048428978486801916}
   mov: {fileID: 7058063886865021019}
   gerenciador: {fileID: 1292939615979109738}
+  camMenu: {fileID: 0}
   rb: {fileID: 2950774603519485256}
   luz1: {fileID: 0}
   luz2: {fileID: 0}
@@ -19055,7 +19059,7 @@ MonoBehaviour:
   canViewCut: 0
   doorInt: {fileID: 8816084312100168545}
   doorInt2: {fileID: 0}
-  mov: {fileID: 0}
+  mov: {fileID: 7058063886865021019}
   pov: {fileID: 8048428978486801916}
   stateCon: {fileID: 9031800033645161863}
   sm: {fileID: 366486228}
