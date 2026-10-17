@@ -942,7 +942,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -962,11 +968,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 2427c665-6dd2-4e42-909c-b6184485f7c0
+  cloudProjectId: a72278d2-1df0-4870-be92-26a2298d2b5c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Pallor Mortis 2026-03-04_14-05-23
-  organizationId: unity_8aac51a20c95147cd091
+  projectName: Pallor Mortis
+  organizationId: unity_50751a5f4942625f6625
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

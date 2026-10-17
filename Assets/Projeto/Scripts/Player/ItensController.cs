@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,15 +23,12 @@ public class ItensController : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private Crafting craft;
 
-    // Start is called before the first frame update
     void Start()
     {
         cameraPrincipal = Camera.main;
-
         layerMask = LayerMask.GetMask("Dropable");
     }
 
-    // Update is called once per frame
     void Update()
     {
         switch (itemActive)
@@ -70,11 +66,9 @@ public class ItensController : MonoBehaviour
         {
             changeItem();
         }
-
-
     }
 
-    public int addItem(GameObject item) // Adiciona item a mão
+    public int addItem(GameObject item)
     {
         int returnNum = -1;
         
@@ -94,34 +88,31 @@ public class ItensController : MonoBehaviour
         }
         
         return returnNum;
-
     }
 
-    public void dropItem() // Solta o item da mão
+    public void dropItem()
     {
         if(itemActive == -1) return;
 
         GameObject objActive = arrItens[itemActive];
 
-        if (prefabDrop == null) // Verifica se ja está mostrando a previsualização do local
+        if (prefabDrop == null)
         {
             GrabItem grab = objActive.GetComponentInChildren<GrabItem>();
-
             prefabDrop = Instantiate(grab.prefabDrop);
         }
 
         Ray ray = cameraPrincipal.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) prefabDrop.transform.position = hit.point; // Mostra o local aonde é possivel soltar o item
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) prefabDrop.transform.position = hit.point;
 
-
-        if (Input.GetMouseButtonDown(0)) // Solta o item
+        if (Input.GetMouseButtonDown(0))
         {
             objActive.transform.SetParent(null);
             objActive.transform.position = prefabDrop.transform.position;
 
-            if (hit.collider.tag == "Crafting") craft.AddItem(objActive); // Caso seja mesa de craft, adiciona o item ao script
+            if (hit.collider.tag == "Crafting") craft.AddItem(objActive);
 
             objActive = null;
             
@@ -151,7 +142,7 @@ public class ItensController : MonoBehaviour
     {
         for(int i = 0; i < 2; i++)
         {
-            if(i == itemActive)continue;
+            if(i == itemActive) continue;
             else if(arrItens[i] != null)
             {                
                 if(itemActive != -1)
@@ -168,7 +159,7 @@ public class ItensController : MonoBehaviour
                     arrItens[i].SetActive(true);
                     itemActive = i;
                 }
-                break;                    
+                break;                
             }
             else
             {
@@ -184,9 +175,7 @@ public class ItensController : MonoBehaviour
     public void DestroyKey()
     {
         GameObject objActive = arrItens[itemActive];
-
         Destroy(objActive);
-
         arrItens[itemActive] = null;
         itemActive = -1;
     }

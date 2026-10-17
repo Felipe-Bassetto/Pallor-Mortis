@@ -1,4 +1,3 @@
-using UnityEditor.SearchService;
 using UnityEngine;
 
 public class DoorInteraction : MonoBehaviour
@@ -63,7 +62,6 @@ public class DoorInteraction : MonoBehaviour
                             if (ic.itemActive != -1)
                             {
                                 key = ic.arrItens[ic.itemActive].GetComponentInChildren<Transform>().tag == "Chave";
-                                //ic.DestroyKey();
                                 Debug.Log(key);
                             }
                             else key = false;
